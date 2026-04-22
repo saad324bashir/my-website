@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Junoon Journeys</title>
+<meta name="description" content="Who leads this. Saad Bashir — Pakistani-American, former commercial fisherman, Darién Gap hiker, and the person behind Junoon Journeys. The road he took to get here.">
+<link rel="canonical" href="https://www.junoonjourneys.com/about.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — Junoon Journeys">
+<meta property="og:description" content="Who leads this. Saad Bashir — the road he took to get here.">
+<meta property="og:url" content="https://www.junoonjourneys.com/about.html">
+<meta property="og:image" content="https://www.junoonjourneys.com/images/route-hunza-lake.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Junoon Journeys">
+<meta name="twitter:description" content="Who leads this. Saad Bashir — the road he took to get here.">
+<meta name="twitter:image" content="https://www.junoonjourneys.com/images/route-hunza-lake.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── about.html page-specific styles ── */
+
+.page-hero {
+  min-height: 52vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 56px 88px;
+  position: relative;
+  overflow: hidden;
+  background: var(--char);
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.038) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(196,88,10,.04), transparent);
+  pointer-events: none;
+}
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+.page-hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(60px, 9vw, 130px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: .9;
+  margin-bottom: 22px;
+}
+.page-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 1.9vw, 24px);
+  color: var(--ash);
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* CONTACT BLOCK */
+.about-contact-sec {
+  background: var(--char);
+  padding: 100px 56px;
+  border-top: 1px solid rgba(196,88,10,.06);
+  overflow: hidden;
+  position: relative;
+}
+.about-contact-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.025) 1px, transparent 1px);
+  background-size: 13px 13px;
+  pointer-events: none;
+}
+.about-contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.about-contact-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(38px, 4vw, 60px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: 1.0;
+  margin-bottom: 8px;
+}
+.about-contact-sub {
+  font-size: 14px;
+  color: var(--smoke);
+  font-weight: 300;
+  line-height: 1.75;
+  margin-top: 14px;
+}
+.about-contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 8px;
+}
+.about-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: 1px solid rgba(212,201,184,.05);
+  padding-bottom: 28px;
+}
+.about-contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.about-contact-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 6px;
+}
+.about-contact-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 28px);
+  color: var(--parchment);
+  font-weight: 300;
+  text-decoration: none;
+  transition: color .2s;
+  display: block;
+}
+.about-contact-val:hover { color: var(--amber); }
+
+.page-end-nav {
+  background: var(--char);
+  padding: 80px 56px;
+  border-top: 1px solid rgba(212,201,184,.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.page-back-top {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.25);
+  text-decoration: none;
+  transition: color .2s;
+  display: block;
+}
+.page-back-top:hover { color: var(--amber); }
+.page-tick {
+  font-size: 13px;
+  color: rgba(212,201,184,.15);
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+@media(max-width:960px) {
+  .page-hero { padding: 0 24px 72px; min-height: 44vh; }
+  .about-contact-sec { padding: 72px 24px; }
+  .about-contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .page-end-nav { padding: 60px 24px; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <ul class="nav-links">
+    <li><a href="expedition.html">Expedition</a></li>
+    <li><a href="pakistan.html">Pakistan</a></li>
+    <li><a href="junoon.html">Junoon</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="https://tally.so/r/xXNDY9" class="nav-apply" target="_blank" rel="noopener">Apply</a>
+</nav>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- HERO                                        -->
+<!-- ─────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="sec-label">Who Leads This</span>
+    <h1 class="page-hero-h1">Who<br>Leads This</h1>
+    <p class="page-hero-sub">Saad Bashir. The road he's taken to get here.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- FULL ABOUT                                  -->
+<!-- ─────────────────────────────────────────── -->
+<section class="about-sec" id="about">
+  <div class="sec-inner about-grid">
+    <div class="about-text">
+      <span class="sec-label">Who Leads This</span>
+
+      <h2 class="about-h2 serif">How Did We<br>Get Here?</h2>
+
+      <div class="about-body">
+        <p>I grew up Pakistani-American in the deep south post-9/11 — which meant spending a long time feeling like I belonged fully to neither world, before realizing that was exactly the point. Being a bridge between identities teaches you things about connection that belonging to only one side never could.</p>
+
+        <p>For about five years I went looking — hard. Hiked the Darién Gap solo. Fished commercially in Alaska. Hitchhiked through the Sudanese revolution. Went to the places most people don't go, for reasons I couldn't fully explain at the time.</p>
+
+        <p>Then I cooled down. Focused on other things. Started asking why I'd done any of it.</p>
+
+        <p>I always felt that pull to just move, to experience and live. Sometimes regular life — with all its restrictions, the logic and reason we tell ourselves — isn't enough. The courage to live on my own terms, to learn, create and connect. That was it.</p>
+
+        <p>The answer kept coming back to the same word.</p>
+
+        <p class="about-junoon urdu" aria-label="Junoon">جنون</p>
+      </div>
+
+      <h3 class="about-sub-h serif">The Word</h3>
+
+      <div class="about-body">
+        <p>The Sufi poets had a name for it. The divine madness of longing. The thing that drives you toward something before reason has a chance to talk you out of it. I realized that everything I'd done had been an expression of Junoon — unrefined, compulsive, pointed in every direction at once. The question became: what does it look like when you refine it? When you point it somewhere intentional?</p>
+
+        <p>Pakistan kept pulling me back. Not just because of my roots — because of what the place actually is. A land that has been connecting people across this corridor for over a thousand years. Three mountain ranges meeting in one country. Dozens of languages, cultures, and ways of living within a single day's ride of each other. A people who turned hospitality into something closer to sacred law. And a road — the Karakoram Highway — that the world built at enormous cost because the connection it created was worth it.</p>
+
+        <p>Junoon Journeys came out of that. Not as a travel company — as an expression of what I believe connection actually means. To the land, to the culture, to the people you encounter, to the people riding beside you, and eventually — if the road does what I believe it does — to yourself.</p>
+
+        <p>Creating communities in places people didn't know could hold them. That's the mission.</p>
+
+        <p><em>The Karakoram Ignition is the first one.</em></p>
+      </div>
+    </div>
+
+    <div class="about-photo-col">
+      <img src="images/Saad-photo.jpg" alt="Saad Bashir — Junoon Journeys" class="about-photo">
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- CONTACT                                     -->
+<!-- ─────────────────────────────────────────── -->
+<section class="about-contact-sec">
+  <div class="about-contact-inner">
+    <div>
+      <h2 class="about-contact-h serif">Get in<br>touch</h2>
+      <p class="about-contact-sub">Questions about the expedition, the application, or anything else — reach out directly. Every message gets a personal reply.</p>
+    </div>
+    <div class="about-contact-links">
+      <div class="about-contact-item">
+        <span class="about-contact-label">Email</span>
+        <a href="mailto:saad@junoonjourneys.com" class="about-contact-val">saad@junoonjourneys.com</a>
+      </div>
+      <div class="about-contact-item">
+        <span class="about-contact-label">Instagram</span>
+        <a href="https://instagram.com/junoonjourneys" class="about-contact-val" target="_blank" rel="noopener">@junoonjourneys</a>
+      </div>
+      <div class="about-contact-item">
+        <span class="about-contact-label">Applications</span>
+        <a href="https://tally.so/r/xXNDY9" class="about-contact-val" target="_blank" rel="noopener">Apply via Tally →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- END NAV                                     -->
+<!-- ─────────────────────────────────────────── -->
+<div class="page-end-nav">
+  <span class="page-tick">↑</span>
+  <a href="#top" class="page-back-top">Back to Top</a>
+  <a href="index.html" class="btn-secondary" style="margin-top:8px">← Back to Main</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <img class="foot-logo" src="images/junoon-logo-white.png" alt="Junoon Journeys">
+    <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
+    <div class="foot-links">
+      <a href="expedition.html">Expedition</a>
+      <a href="pakistan.html">Pakistan</a>
+      <a href="junoon.html">Junoon</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="https://instagram.com/junoonjourneys" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:saad@junoonjourneys.com">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-copy mono">© 2026 Junoon LLC · All rights reserved</span>
+    <span class="foot-copy mono">saad@junoonjourneys.com · junoonjourneys.com</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

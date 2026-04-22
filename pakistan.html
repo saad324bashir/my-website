@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan — Junoon Journeys</title>
+<meta name="description" content="Three mountain ranges. One country. The land, the people, and a culture that will outlast your assumptions. Why Pakistan, and why the north.">
+<link rel="canonical" href="https://www.junoonjourneys.com/pakistan.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pakistan — Junoon Journeys">
+<meta property="og:description" content="Three mountain ranges. One country. The land, the people, and a culture that will outlast your assumptions.">
+<meta property="og:url" content="https://www.junoonjourneys.com/pakistan.html">
+<meta property="og:image" content="https://www.junoonjourneys.com/images/route-hunza-lake.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pakistan — Junoon Journeys">
+<meta name="twitter:description" content="Three mountain ranges. One country. The land, the people, and a culture that will outlast your assumptions.">
+<meta name="twitter:image" content="https://www.junoonjourneys.com/images/route-hunza-lake.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── pakistan.html page-specific styles ── */
+
+/* HERO */
+.pp-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 56px 96px;
+}
+.pp-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: saturate(.7) brightness(.45);
+}
+.pp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(15,13,11,.98) 0%, rgba(15,13,11,.6) 38%, rgba(15,13,11,.12) 70%, transparent 100%),
+    linear-gradient(to right, rgba(15,13,11,.35) 0%, transparent 60%);
+}
+.pp-hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+.pp-hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(72px, 10vw, 148px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: .9;
+  margin-bottom: 24px;
+}
+.pp-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--ash);
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* INTRO */
+.pp-intro-sec {
+  background: var(--char-warm);
+  padding: 100px 56px 0;
+  border-top: 1px solid rgba(196,88,10,.07);
+  overflow: hidden;
+  position: relative;
+}
+.pp-intro-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.03) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.pp-intro-read {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.pp-intro-p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+.pp-intro-p:last-of-type { margin-bottom: 0; }
+
+/* TAB BAR */
+.pp-tab-bar-wrap {
+  max-width: 700px;
+  margin: 56px auto 0;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+}
+.pp-tab-bar {
+  display: flex;
+  gap: 2px;
+  border-bottom: 1px solid rgba(196,88,10,.12);
+}
+.pp-tab-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.32);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: all .2s;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+.pp-tab-btn:hover { color: var(--parchment); }
+.pp-tab-btn.active {
+  color: var(--amber);
+  border-bottom-color: var(--ember);
+}
+
+/* TAB CONTENT */
+.pp-tabs-sec {
+  background: var(--char-warm);
+  padding: 72px 56px 120px;
+  overflow: hidden;
+  position: relative;
+}
+.pp-tabs-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.03) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.pp-panel {
+  display: none;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.pp-panel.active { display: block; }
+.pp-body-p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.pp-pull {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--amber);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.55;
+  border-left: 2px solid var(--ember-deep);
+  padding-left: 22px;
+  margin: 36px 0;
+}
+.pp-ember { margin: 28px 0; }
+
+/* Culture subsections */
+.pp-sub-block { margin-bottom: 64px; }
+.pp-sub-block:last-child { margin-bottom: 0; }
+.pp-sub-h {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-bottom: 24px;
+  display: block;
+}
+.pp-sub-p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+.pp-sub-p:last-child { margin-bottom: 0; }
+
+/* IS IT SAFE */
+.pp-safe-sec {
+  background: var(--char);
+  padding: 130px 56px;
+  border-top: 1px solid rgba(196,88,10,.06);
+  overflow: hidden;
+  position: relative;
+}
+.pp-safe-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.025) 1px, transparent 1px);
+  background-size: 13px 13px;
+  pointer-events: none;
+}
+.pp-safe-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 96px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.pp-safe-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 5.5vw, 84px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: .97;
+  position: sticky;
+  top: 120px;
+}
+.pp-safe-body { display: flex; flex-direction: column; gap: 0; }
+.pp-safe-p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+.pp-safe-p:last-child { margin-bottom: 0; }
+.pp-safe-close {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  color: var(--parchment);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.45;
+  margin-top: 12px;
+  border-left: 2px solid var(--ember-deep);
+  padding-left: 22px;
+}
+
+/* QUOTES */
+.pp-quotes-sec {
+  background: var(--char-warm);
+  padding: 100px 56px;
+  border-top: 1px solid rgba(196,88,10,.07);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.pp-quotes-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.025) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.pp-quotes-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.pp-quotes-placeholder {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  color: rgba(212,201,184,.25);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+/* END NAV — shared with junoon.html */
+.jn-end-nav {
+  background: var(--char);
+  padding: 80px 56px;
+  border-top: 1px solid rgba(212,201,184,.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.jn-back-top {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.25);
+  text-decoration: none;
+  transition: color .2s;
+  display: block;
+}
+.jn-back-top:hover { color: var(--amber); }
+.jn-tick {
+  font-size: 13px;
+  color: rgba(212,201,184,.15);
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+@media(max-width:960px) {
+  .pp-hero { padding: 0 24px 72px; }
+  .pp-intro-sec { padding: 72px 24px 0; }
+  .pp-tab-bar-wrap { margin: 44px auto 0; }
+  .pp-tab-bar { flex-wrap: wrap; border-bottom: none; gap: 6px; }
+  .pp-tab-btn { border: 1px solid rgba(196,88,10,.2); margin-bottom: 0; padding: 10px 18px; }
+  .pp-tab-btn.active { background: rgba(196,88,10,.1); }
+  .pp-tabs-sec { padding: 56px 24px 88px; }
+  .pp-safe-sec { padding: 88px 24px; }
+  .pp-safe-inner { grid-template-columns: 1fr; gap: 40px; }
+  .pp-safe-h { position: static; }
+  .pp-quotes-sec { padding: 72px 24px; }
+  .jn-end-nav { padding: 60px 24px; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <ul class="nav-links">
+    <li><a href="expedition.html">Expedition</a></li>
+    <li><a href="pakistan.html">Pakistan</a></li>
+    <li><a href="junoon.html">Junoon</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="https://tally.so/r/xXNDY9" class="nav-apply" target="_blank" rel="noopener">Apply</a>
+</nav>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- HERO                                        -->
+<!-- ─────────────────────────────────────────── -->
+<section class="pp-hero">
+  <img class="pp-hero-img" src="images/route-hunza-lake.jpg" alt="Attabad Lake — turquoise water, Hunza valley">
+  <div class="pp-hero-overlay"></div>
+  <div class="pp-hero-inner">
+    <span class="sec-label">Before You Arrive</span>
+    <h1 class="pp-hero-h1">Pakistan</h1>
+    <p class="pp-hero-sub">Set aside what you think you know.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- INTRO + TABS                                -->
+<!-- ─────────────────────────────────────────── -->
+<section class="pp-intro-sec">
+  <div class="pp-intro-read">
+    <span class="sec-label">Before You Arrive</span>
+    <p class="pp-intro-p">There is a version of Pakistan you have probably seen. Set it aside.</p>
+    <p class="pp-intro-p">Three things define this country for everyone who actually goes: the mountains, the people, and the culture.</p>
+  </div>
+
+  <div class="pp-tab-bar-wrap">
+    <div class="pp-tab-bar" role="tablist">
+      <button class="pp-tab-btn active" data-tab="panel-mountains" role="tab" aria-selected="true">The Mountains</button>
+      <button class="pp-tab-btn" data-tab="panel-people" role="tab" aria-selected="false">The People</button>
+      <button class="pp-tab-btn" data-tab="panel-culture" role="tab" aria-selected="false">Culture</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- TAB CONTENT                                 -->
+<!-- ─────────────────────────────────────────── -->
+<section class="pp-tabs-sec">
+
+  <!-- THE MOUNTAINS -->
+  <div class="pp-panel active" id="panel-mountains" role="tabpanel">
+    <p class="pp-body-p">Three mountain ranges meet in one country. The Karakoram, the Himalayas, the Hindu Kush — converging in the north like a geological argument that was never resolved.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-body-p">Pakistan runs from sea level to 8,611 meters within the same borders — more than 7,000 glaciers, more than anywhere outside the poles, with rivers that run colours that don't have names in English. K2 among them, every mountaineer's ultimate challenge, in a country that holds more summits above 7,000 meters than anywhere else on earth.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-pull">Travelling through the northern valleys feels like riding between battle-hardened goliaths — mountains so large and so close they stop feeling like landscape and start feeling like presence.</p>
+    <p class="pp-body-p">Each valley is its own world. Shina and Burusho and Khowar and Wakhi spoken within hours of each other on the same road. Ismaili and Sunni communities and ancient Buddhist rock carvings in the same stretch of valley.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-body-p">This corridor has carried people for over a thousand years — Silk Road traders, pilgrims, armies, wanderers — leaving behind forts and battlegrounds and stories still embedded in the rock. Even to this day history happens before our very eyes. In 2010, an entire village was drowned by the flooding after a landslide, leaving only the beautiful turquoise water of Attabad Lake.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-body-p">The glaciers move through all of it — ancient, indifferent, feeding rivers that have been running longer than any of the borders drawn around them. On this expedition you will ride alongside them, see them from the road, and where the route allows, walk out onto them. Ice that has been moving since before any of this was mapped.</p>
+  </div>
+
+  <!-- THE PEOPLE -->
+  <div class="pp-panel" id="panel-people" role="tabpanel">
+    <p class="pp-body-p">Hospitality here isn't politeness. It isn't manners. It's sacred — written into the culture so deeply that a stranger at your door is not an inconvenience but an honor.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-pull">I was in Lahore's Old City when the monsoon hit. Streets flooded in minutes. I ran for cover and a henna-red bearded old man pulled me into his carpet shop. Blanket on my shoulders. Chai in my hands. Two hours followed — every carpet, every pattern, every family that made one, the years of labour each one took. I lost count of how many times I declined his offer of a free carpet before I finally escaped.</p>
+    <p class="pp-body-p">The random man in the corner of a restaurant who already paid your bill before you even asked for it. You're lost, asking for directions, and the next thing you know you're sitting on the floor eating dinner with a stranger's family. The old grandmother with henna-dyed hair who can't speak a word you understand and just reaches out and touches your head.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-body-p">These aren't stories you go looking for. They find you.</p>
+    <div class="ember-rule pp-ember"></div>
+    <p class="pp-body-p">Then there are the quieter moments. A shepherd moving his flock of fat-tailed sheep across the road, unhurried and entirely unbothered by your schedule. Kids chasing cricket balls in every space that can hold a game. A chai walla refilling your glass before you've noticed it's empty. The kind of stillness that makes whatever you left behind feel very far away — and strangely, very small.</p>
+  </div>
+
+  <!-- CULTURE -->
+  <div class="pp-panel" id="panel-culture" role="tabpanel">
+
+    <div class="pp-sub-block">
+      <span class="pp-sub-h">Food</span>
+      <p class="pp-sub-p">Chai arrives before you ask. It arrives after you ask. It arrives when you didn't ask at all. Sweet, milky, cardamom. Served in glasses small enough that finishing one means you're ready for another. You will drink more of it than you thought was humanly possible.</p>
+      <p class="pp-sub-p">Chapli Kebabs — flat, spiced, pan-fried, eaten standing at a roadside stall with bread and nothing else. The kind of food that makes you question every meal you've had before it.</p>
+      <p class="pp-sub-p">Chapshurro — yak meat, slow cooked, wrapped in bread, eaten at altitude. The north doesn't carry the heat of the rest of Pakistan. Sorry to disappoint.</p>
+    </div>
+
+    <div class="pp-sub-block">
+      <span class="pp-sub-h">Music</span>
+      <p class="pp-sub-p">Start with Qawwali. Sufi devotional music — repetition, call-and-response, rising intensity that doesn't stop until something in the room shifts. Nusrat Fateh Ali Khan brought it to the world. Hearing it live in a courtyard at night is different.</p>
+      <p class="pp-sub-p">The north has its own sounds. Chitrali and Wakhi folk — Rabab strings and hand drums passed through these valleys for centuries. Nothing like what plays on the radio in Lahore.</p>
+      <p class="pp-sub-p">You will also hear Bollywood. Everywhere. Every chai stop. Every passing vehicle. Every roadside stall. Resistance is futile. You will know all the words by day four.</p>
+    </div>
+
+    <div class="pp-sub-block">
+      <span class="pp-sub-h">Art & Architecture</span>
+      <p class="pp-sub-p">The trucks you pass on the Karakoram Highway are not trucks. They are moving exhibitions. No two alike — each one a story connected to the driver and the region he's from. Drivers away from home for months decorated their trucks as a way of carrying home with them. One truck artist described the process as preparing a bride. The style tells you where the driver is from before he says a word.</p>
+      <p class="pp-sub-p">Lahore's Mughal architecture exists in another category entirely — minarets and marble and geometry that took centuries and thousands of hands to build. You won't be riding through Lahore on this expedition. Worth knowing it's there.</p>
+      <p class="pp-sub-p">Along the KKH, Buddhist rock carvings appear on cliff faces — left by pilgrims and travellers moving through this same corridor centuries before the road existed. The wooden mosques of Chitral are something else — carved lattice, ancient timber, a different architectural language from anything in the south.</p>
+    </div>
+
+    <div class="pp-sub-block">
+      <span class="pp-sub-h">Clothing & Textiles</span>
+      <p class="pp-sub-p">The carpets here carry the same logic as the trucks — every pattern a record, every colour a region, every piece made by hands that learned from hands that learned from hands.</p>
+      <p class="pp-sub-p">The shalwar kameez has its own regional grammar — cut, colour, and embroidery shifting valley to valley. It is distinctly its own thing, rooted in Pakistani identity in ways that set it apart from anything across the border. In Hunza the Pakol hats and the colours worn by the Ismaili communities are entirely their own visual language. You'll notice the clothing before you notice you're noticing it.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- IS IT SAFE                                  -->
+<!-- ─────────────────────────────────────────── -->
+<section class="pp-safe-sec">
+  <div class="pp-safe-inner">
+    <div>
+      <h2 class="pp-safe-h serif">Is it<br><em style="color:var(--amber);font-style:italic">safe?</em></h2>
+    </div>
+    <div class="pp-safe-body">
+      <p class="pp-safe-p">The most dangerous things on the Karakoram are the traffic and the terrain. Landslides happen. Roads narrow. Trucks don't slow down. That's real and we prepare for it.</p>
+      <p class="pp-safe-p">Everything else people worry about before they go dissolves within 48 hours of arrival.</p>
+      <p class="pp-safe-p">What I'll say honestly: this is not a beginner travel destination. Infrastructure isn't built for foreign visitors the way Europe or Southeast Asia is. People are curious — genuinely, warmly — but not used to foreigners moving through their spaces. This isn't Bali. It isn't Thailand. Nothing here has been packaged for your comfort.</p>
+      <div class="pp-safe-close serif">
+        It is entirely, completely itself.<br><br>
+        That's not a warning. That's why you're going.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- QUOTES                                      -->
+<!-- ─────────────────────────────────────────── -->
+<section class="pp-quotes-sec">
+  <div class="pp-quotes-inner">
+    <span class="sec-label" style="justify-content:center;display:block;text-align:center">From the Road</span>
+    <p class="pp-quotes-placeholder">Testimonials from Karakoram Ignition riders<br>coming September 2026.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- END NAV                                     -->
+<!-- ─────────────────────────────────────────── -->
+<div class="jn-end-nav">
+  <span class="jn-tick">↑</span>
+  <a href="#top" class="jn-back-top">Back to Top</a>
+  <a href="index.html" class="btn-secondary" style="margin-top:8px">← Back to Main</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <img class="foot-logo" src="images/junoon-logo-white.png" alt="Junoon Journeys">
+    <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
+    <div class="foot-links">
+      <a href="expedition.html">Expedition</a>
+      <a href="pakistan.html">Pakistan</a>
+      <a href="junoon.html">Junoon</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="https://instagram.com/junoonjourneys" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:saad@junoonjourneys.com">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-copy mono">© 2026 Junoon LLC · All rights reserved</span>
+    <span class="foot-copy mono">saad@junoonjourneys.com · junoonjourneys.com</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+(function () {
+  var btns = document.querySelectorAll('.pp-tab-btn');
+  var panels = document.querySelectorAll('.pp-panel');
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      panels.forEach(function (p) { p.classList.remove('active'); });
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+}());
+</script>
+</body>
+</html>

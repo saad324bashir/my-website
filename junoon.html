@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junoon — The Word Behind the Journey</title>
+<meta name="description" content="جنون. The first entry in the Nomad Dictionary. The divine madness of longing — a Sufi word for the compulsion that moves through mystics, wanderers, and anyone called toward something they can't rationally explain.">
+<link rel="canonical" href="https://www.junoonjourneys.com/junoon.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Junoon — The Word Behind the Journey">
+<meta property="og:description" content="جنون. The first entry in the Nomad Dictionary. The divine madness of longing.">
+<meta property="og:url" content="https://www.junoonjourneys.com/junoon.html">
+<meta property="og:image" content="https://www.junoonjourneys.com/images/route-hunza-lake.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Junoon — The Word Behind the Journey">
+<meta name="twitter:description" content="جنون. The first entry in the Nomad Dictionary. The divine madness of longing.">
+<meta name="twitter:image" content="https://www.junoonjourneys.com/images/route-hunza-lake.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── junoon.html page-specific styles ── */
+
+/* HERO */
+.jn-hero {
+  min-height: 100vh;
+  background: var(--char);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 120px 56px 80px;
+}
+.jn-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.04) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.jn-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(196,88,10,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.jn-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jn-hero-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 56px;
+  border: 1px solid rgba(196,88,10,.2);
+  padding: 7px 20px;
+}
+.jn-hero-arabic {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: clamp(130px, 22vw, 280px);
+  color: var(--heat);
+  direction: rtl;
+  line-height: 1.2;
+  padding-bottom: 20px;
+  display: block;
+  text-shadow: 0 0 120px rgba(232,147,10,.32), 0 0 280px rgba(196,88,10,.16);
+  animation: flicker 9s ease-in-out infinite;
+}
+.jn-hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.6vw, 34px);
+  color: var(--ash);
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 8px;
+  letter-spacing: .04em;
+}
+.jn-hero-scroll {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.2);
+  z-index: 2;
+}
+
+/* INTRO */
+.jn-intro-sec {
+  background: var(--char-warm);
+  padding: 120px 56px;
+  border-top: 1px solid rgba(196,88,10,.07);
+  overflow: hidden;
+  position: relative;
+}
+.jn-intro-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.035) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.jn-read-col {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.jn-read-p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.jn-intro-arabic {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: clamp(48px, 7vw, 80px);
+  color: var(--amber);
+  direction: rtl;
+  display: block;
+  line-height: 1.3;
+  padding-bottom: 8px;
+  margin: 8px 0 0;
+}
+.jn-intro-is {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--ash);
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 0;
+  display: block;
+}
+
+/* PHILOSOPHY prose reading column within .junoon-sec */
+.jn-phil-read {
+  max-width: 680px;
+  margin: 0 auto 80px;
+}
+
+/* OUTRO */
+.jn-outro-sec {
+  background: var(--char);
+  padding: 130px 56px;
+  border-top: 1px solid rgba(196,88,10,.06);
+  overflow: hidden;
+  position: relative;
+}
+.jn-outro-sec::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.025) 1px, transparent 1px);
+  background-size: 14px 14px;
+  pointer-events: none;
+}
+.jn-outro-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.jn-outro-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--smoke);
+  display: block;
+  margin-bottom: 52px;
+}
+.jn-outro-p {
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+.jn-outro-p:last-of-type {
+  margin-bottom: 0;
+}
+.jn-outro-arabic {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  font-size: clamp(36px, 5vw, 58px);
+  color: var(--amber);
+  direction: rtl;
+  display: block;
+  line-height: 1.3;
+  padding-bottom: 8px;
+  margin: 32px 0 8px;
+}
+.jn-outro-brought {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 26px);
+  color: var(--ash);
+  font-weight: 300;
+  font-style: italic;
+  display: block;
+  margin-bottom: 40px;
+}
+.jn-outro-pull {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.2vw, 30px);
+  color: var(--parchment);
+  font-weight: 300;
+  line-height: 1.55;
+  border-left: 2px solid var(--ember-deep);
+  padding-left: 24px;
+  margin-top: 48px;
+}
+
+/* END NAV */
+.jn-end-nav {
+  background: var(--char);
+  padding: 80px 56px;
+  border-top: 1px solid rgba(212,201,184,.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.jn-back-top {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.25);
+  text-decoration: none;
+  transition: color .2s;
+  display: block;
+}
+.jn-back-top:hover { color: var(--amber); }
+.jn-tick {
+  font-size: 13px;
+  color: rgba(212,201,184,.15);
+  display: block;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+@media(max-width:960px) {
+  .jn-hero { padding: 88px 24px 72px; }
+  .jn-intro-sec { padding: 88px 24px; }
+  .jn-outro-sec { padding: 88px 24px; }
+  .jn-end-nav { padding: 60px 24px; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <ul class="nav-links">
+    <li><a href="expedition.html">Expedition</a></li>
+    <li><a href="pakistan.html">Pakistan</a></li>
+    <li><a href="junoon.html">Junoon</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="https://tally.so/r/xXNDY9" class="nav-apply" target="_blank" rel="noopener">Apply</a>
+</nav>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- HERO                                        -->
+<!-- ─────────────────────────────────────────── -->
+<section class="jn-hero">
+  <div class="embers" aria-hidden="true">
+    <div class="e" style="width:3px;height:3px;left:18%;bottom:14%;background:#E8930A;--d:5.2s;--dl:0s;--x:-28px"></div>
+    <div class="e" style="width:2px;height:2px;left:35%;bottom:10%;background:#F0B445;--d:4.7s;--dl:1.1s;--x:34px"></div>
+    <div class="e" style="width:4px;height:4px;left:52%;bottom:18%;background:#C4580A;--d:6.1s;--dl:.5s;--x:-20px"></div>
+    <div class="e" style="width:2px;height:2px;left:70%;bottom:12%;background:#E8930A;--d:4.9s;--dl:2.0s;--x:24px"></div>
+    <div class="e" style="width:3px;height:3px;left:84%;bottom:20%;background:#F0B445;--d:5.5s;--dl:.9s;--x:-32px"></div>
+    <div class="e" style="width:2px;height:2px;left:10%;bottom:28%;background:#FDF0DC;--d:3.8s;--dl:1.7s;--x:18px"></div>
+    <div class="e" style="width:3px;height:3px;left:62%;bottom:8%;background:#E8930A;--d:6.4s;--dl:3.1s;--x:-14px"></div>
+  </div>
+
+  <div class="jn-hero-inner">
+    <span class="jn-hero-label">The Nomad Dictionary</span>
+    <span class="jn-hero-arabic" aria-label="Junoon">جنون</span>
+    <div class="jn-hero-sub">The first entry.</div>
+  </div>
+
+  <span class="jn-hero-scroll">↓ Scroll</span>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- INTRO — The Nomad Dictionary                -->
+<!-- ─────────────────────────────────────────── -->
+<section class="jn-intro-sec">
+  <div class="jn-read-col">
+    <span class="sec-label">The Nomad Dictionary</span>
+
+    <p class="jn-read-p">Every culture has words that don't translate. Concepts so specific to a place and a people that no other language bothered to make room for them. Things that exist — that humans have felt and lived and built entire philosophies around — that your mother tongue simply never named.</p>
+
+    <div class="ember-rule" style="margin:28px 0"></div>
+
+    <p class="jn-read-p">Junoon Journeys collects these words. The Nomad Dictionary. And then builds expeditions around them — because some things can't be taught. They just have to be truly lived.</p>
+
+    <div class="ember-rule" style="margin:28px 0"></div>
+
+    <span class="jn-intro-arabic" aria-label="Junoon">جنون</span>
+    <span class="jn-intro-is">is the first entry.</span>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- PHILOSOPHY — Full Junoon                    -->
+<!-- ─────────────────────────────────────────── -->
+<section class="junoon-sec">
+  <div class="sec-inner">
+
+    <!-- 1–4: Opening paragraphs -->
+    <div class="jn-phil-read">
+      <p class="junoon-p">Not madness. Not chaos. Something more specific than that.</p>
+      <div class="ember-rule"></div>
+      <p class="junoon-p">The Sufi poets named it centuries ago — the compulsion that arrives before thought does, that moves through mystics and wanderers and anyone who has ever felt called toward something they couldn't rationally explain. They didn't treat it as a flaw to be corrected. They treated it as the closest thing a human being has to a compass.</p>
+      <div class="ember-rule"></div>
+      <p class="junoon-p">It's the feeling in your chest before your mind gets involved. Heat. A pull toward something you can't fully name. Your fingertips itching to move before reason has had a chance to object. An unconscious purpose — the kind that doesn't ask for permission and doesn't wait for the right moment.</p>
+      <div class="ember-rule"></div>
+      <p class="junoon-p junoon-p-em">Everyone has it. Most people don't tend it.</p>
+    </div>
+
+    <!-- 5: Fire fates -->
+    <div class="junoon-fire-fates">
+      <span class="fire-fate serif">It rages — and burns everything you love.</span>
+      <span class="fire-fate serif">It smothers — under weight, under years, under days that look the same.</span>
+      <span class="fire-fate serif fire-fate-hero">Or it finds fuel. And it burns <em>clean.</em></span>
+    </div>
+
+    <!-- 6–7: Campfire and smoke -->
+    <div class="junoon-campfire-grid">
+      <div class="junoon-campfire-text">
+        <p class="junoon-p">In Pakistan, a campfire means two things simultaneously: survival and hospitality. You build one to stay warm. You build one to welcome strangers. The fire that keeps you alive is the same fire you share with everyone who arrives.</p>
+        <div class="ember-rule"></div>
+        <p class="junoon-p">That's not a coincidence. That's a philosophy.</p>
+      </div>
+      <div class="junoon-smoke-text">
+        <p class="junoon-p">The smoke that rises is the byproduct — of burning, of purifying, of becoming. White and clean or dark and heavy. Either way it dissipates. It always does.</p>
+      </div>
+    </div>
+
+    <!-- 8: Ash / Roman concrete -->
+    <div class="junoon-ash-block">
+      <p class="junoon-ash serif">And even when everything turns to ash — that's not the end. The Romans knew it. Mix ash with lime and you get concrete that outlasts empires. Your ruins are not a conclusion. They're material. Something harder and more permanent gets built from what burned.</p>
+    </div>
+
+    <!-- 9–12: Ignition -->
+    <div class="junoon-ignition">
+      <p class="junoon-p">What remains is the quality of what you burned and how well you tended it.</p>
+      <p class="junoon-ignition-spark serif">And some fires don't need more fuel...<br>they need a <em>spark.</em></p>
+      <p class="junoon-p">That moment of ignition when you remember what it felt like to be fully alive — what actually drives you underneath everything you've built on top of it.</p>
+      <p class="junoon-p">That's what the Karakoram does. It doesn't hand you anything. It just removes every comfortable reason not to feel it.</p>
+      <p class="junoon-expedition serif">Junoon: The Karakoram Ignition.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- OUTRO — The Nomad Dictionary continues      -->
+<!-- ─────────────────────────────────────────── -->
+<section class="jn-outro-sec">
+  <div class="jn-outro-inner">
+    <span class="jn-outro-label">The Nomad Dictionary</span>
+
+    <p class="jn-outro-p">Every word in the Nomad Dictionary is a doorway.</p>
+    <p class="jn-outro-p">Some doorways open onto fire and mountain passes and roads that cost a thousand lives to build. Some will open onto ice. Onto silence. Onto languages that name things you've felt your whole life without ever having the word for it.</p>
+
+    <span class="jn-outro-arabic" aria-label="Junoon">جنون</span>
+    <span class="jn-outro-brought">brought you here.</span>
+
+    <p class="jn-outro-p">The next word is already out there — in a place you haven't been yet, in a language you don't speak, waiting to be felt before it can be explained.</p>
+    <p class="jn-outro-p">The Nomad Dictionary is just getting started.</p>
+
+    <div class="jn-outro-pull serif">
+      The expedition that carries this word departs September 19, 2026.<br>
+      <a href="https://tally.so/r/xXNDY9" style="color:var(--amber);text-decoration:none" target="_blank" rel="noopener">Apply for a spot →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- END NAV                                     -->
+<!-- ─────────────────────────────────────────── -->
+<div class="jn-end-nav">
+  <span class="jn-tick">↑</span>
+  <a href="#top" class="jn-back-top">Back to Top</a>
+  <a href="index.html" class="btn-secondary" style="margin-top:8px">← Back to Main</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <img class="foot-logo" src="images/junoon-logo-white.png" alt="Junoon Journeys">
+    <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
+    <div class="foot-links">
+      <a href="expedition.html">Expedition</a>
+      <a href="pakistan.html">Pakistan</a>
+      <a href="junoon.html">Junoon</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="https://instagram.com/junoonjourneys" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:saad@junoonjourneys.com">Contact</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-copy mono">© 2026 Junoon LLC · All rights reserved</span>
+    <span class="foot-copy mono">saad@junoonjourneys.com · junoonjourneys.com</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
