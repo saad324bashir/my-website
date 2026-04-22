@@ -200,14 +200,14 @@
 .pp-sub-p:last-child { margin-bottom: 0; }
 
 /* IS IT SAFE */
-.pp-safe-sec {
+.pak-safe-sec {
   background: var(--char);
   padding: 130px 56px;
   border-top: 1px solid rgba(196,88,10,.06);
   overflow: hidden;
   position: relative;
 }
-.pp-safe-sec::before {
+.pak-safe-sec::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -215,45 +215,23 @@
   background-size: 13px 13px;
   pointer-events: none;
 }
-.pp-safe-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 96px;
-  align-items: start;
-  position: relative;
-  z-index: 1;
-}
-.pp-safe-h {
+.pak-safe-h {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(48px, 5.5vw, 84px);
+  font-size: clamp(38px, 4.5vw, 68px);
   color: var(--heat);
   font-weight: 300;
-  line-height: .97;
-  position: sticky;
-  top: 120px;
+  line-height: 1.0;
+  margin-bottom: 40px;
 }
-.pp-safe-body { display: flex; flex-direction: column; gap: 0; }
-.pp-safe-p {
+.pak-safe-body { max-width: 680px; }
+.pak-safe-body p {
   font-size: 15px;
   color: var(--smoke);
   line-height: 1.9;
   font-weight: 300;
   margin-bottom: 22px;
 }
-.pp-safe-p:last-child { margin-bottom: 0; }
-.pp-safe-close {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 2.2vw, 30px);
-  color: var(--parchment);
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.45;
-  margin-top: 12px;
-  border-left: 2px solid var(--ember-deep);
-  padding-left: 22px;
-}
+.pak-safe-body p:last-child { margin-bottom: 0; }
 
 /* QUOTES */
 .pp-quotes-sec {
@@ -325,9 +303,7 @@
   .pp-tab-btn { border: 1px solid rgba(196,88,10,.2); margin-bottom: 0; padding: 10px 18px; }
   .pp-tab-btn.active { background: rgba(196,88,10,.1); }
   .pp-tabs-sec { padding: 56px 24px 88px; }
-  .pp-safe-sec { padding: 88px 24px; }
-  .pp-safe-inner { grid-template-columns: 1fr; gap: 40px; }
-  .pp-safe-h { position: static; }
+  .pak-safe-sec { padding: 88px 24px; }
   .pp-quotes-sec { padding: 72px 24px; }
   .jn-end-nav { padding: 60px 24px; }
 }
@@ -448,19 +424,16 @@
 <!-- ─────────────────────────────────────────── -->
 <!-- IS IT SAFE                                  -->
 <!-- ─────────────────────────────────────────── -->
-<section class="pp-safe-sec">
-  <div class="pp-safe-inner">
-    <div>
-      <h2 class="pp-safe-h serif">Is it<br><em style="color:var(--amber);font-style:italic">safe?</em></h2>
-    </div>
-    <div class="pp-safe-body">
-      <p class="pp-safe-p">The most dangerous things on the Karakoram are the traffic and the terrain. Landslides happen. Roads narrow. Trucks don't slow down. That's real and we prepare for it.</p>
-      <p class="pp-safe-p">Everything else people worry about before they go dissolves within 48 hours of arrival.</p>
-      <p class="pp-safe-p">What I'll say honestly: this is not a beginner travel destination. Infrastructure isn't built for foreign visitors the way Europe or Southeast Asia is. People are curious — genuinely, warmly — but not used to foreigners moving through their spaces. This isn't Bali. It isn't Thailand. Nothing here has been packaged for your comfort.</p>
-      <div class="pp-safe-close serif">
-        It is entirely, completely itself.<br><br>
-        That's not a warning. That's why you're going.
-      </div>
+<section class="pak-safe-sec">
+  <div class="sec-inner">
+    <span class="sec-label">The Honest Answer</span>
+    <h2 class="pak-safe-h serif">Is It Safe?</h2>
+    <div class="pak-safe-body">
+      <p>The most dangerous things on the Karakoram are the traffic and the terrain. Landslides happen. Roads narrow. Trucks don't slow down. That's real and we prepare for it.</p>
+      <p>Everything else people worry about before they go dissolves within 48 hours of arrival.</p>
+      <p>What I'll say honestly: this is not a beginner travel destination. Infrastructure isn't built for foreign visitors the way Europe or Southeast Asia is. People are curious — genuinely, warmly — but not used to foreigners moving through their spaces. This isn't Bali. It isn't Thailand. Nothing here has been packaged for your comfort.</p>
+      <p>It is entirely, completely itself.</p>
+      <p>That's not a warning. That's why you're going.</p>
     </div>
   </div>
 </section>
@@ -487,7 +460,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="foot-top">
-    <img class="foot-logo" src="images/junoon-logo-white.png" alt="Junoon Journeys">
+    <img class="foot-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
     <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
     <div class="foot-links">
       <a href="expedition.html">Expedition</a>

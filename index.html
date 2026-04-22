@@ -20,12 +20,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.page-end-nav{background:var(--char);padding:80px 56px;border-top:1px solid rgba(212,201,184,.04);display:flex;flex-direction:column;align-items:center;gap:20px}
+.page-back-top{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(212,201,184,.25);text-decoration:none;transition:color .2s;display:block}
+.page-back-top:hover{color:var(--amber)}
+.page-tick{font-size:13px;color:rgba(212,201,184,.15);display:block;text-align:center;margin-bottom:4px}
+@media(max-width:960px){.page-end-nav{padding:60px 24px}}
+</style>
 </head>
-<body>
+<body id="top">
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <a href="index.html" class="nav-home"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
   <ul class="nav-links">
     <li><a href="expedition.html">Expedition</a></li>
     <li><a href="pakistan.html">Pakistan</a></li>
@@ -248,10 +255,15 @@
   </div>
 </section>
 
+<div class="page-end-nav">
+  <span class="page-tick">↑</span>
+  <a href="#top" class="page-back-top">Back to Top</a>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="foot-top">
-    <img class="foot-logo" src="images/junoon-logo-white.png" alt="Junoon Journeys">
+    <img class="foot-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
     <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
     <div class="foot-links">
       <a href="expedition.html">Expedition</a>
