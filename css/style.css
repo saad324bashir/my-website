@@ -27,6 +27,7 @@ nav.scrolled{background:rgba(15,13,11,.93);backdrop-filter:blur(20px);padding:13
 .nav-links{display:flex;gap:36px;list-style:none}
 .nav-links a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,201,184,.45);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--amber)}
+.nav-links a.nav-active{color:var(--amber)}
 .nav-apply{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);text-decoration:none;border:1px solid rgba(240,180,69,.28);padding:8px 22px;transition:all .25s}
 .nav-apply:hover{background:var(--flame);color:var(--char);border-color:var(--flame)}
 
