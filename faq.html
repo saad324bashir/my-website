@@ -23,7 +23,8 @@
 /* ── faq.html page-specific styles ── */
 
 .page-hero {
-  min-height: 52vh;
+  min-height: 60vh;
+  max-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -109,7 +110,10 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <a href="index.html" class="nav-brand">
+    <img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
+    <span class="nav-brand-text mono">Junoon Journeys</span>
+  </a>
   <ul class="nav-links">
     <li><a href="expedition.html">Expedition</a></li>
     <li><a href="pakistan.html">Pakistan</a></li>
@@ -137,6 +141,16 @@
 <section class="faq-sec" id="faq">
   <div class="sec-inner">
     <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q serif">Is this expedition open to women?</div>
+        <div class="faq-a">Absolutely. The road doesn't care and neither do we — the only criteria are the ones listed above.
+          <br><br>
+          On Pakistan specifically: the north is safer than most people assume. Gilgit-Baltistan has a long history of welcoming foreign visitors of all backgrounds. Communities along the Karakoram are hospitable and respectful. Standard precautions apply — dressing modestly, being aware of local customs — but these are the same precautions any sensible traveler applies anywhere.
+          <br><br>
+          You won't be alone. The group travels together, the support vehicle is always close, and our local guides know every community on the route.
+          <br><br>
+          If you've been on the fence because of concerns about Pakistan as a woman — talk to us. The reality is very different from what you've probably read.</div>
+      </div>
       <div class="faq-item">
         <div class="faq-q serif">Is Pakistan safe?</div>
         <div class="faq-a">Pakistan has a reputation that doesn't match the reality of where we're going. Gilgit-Baltistan — the northern region this expedition rides through — is among the most visited and welcoming parts of the country. Tourist arrivals have increased significantly in recent years. We monitor conditions continuously and work with local partners who know this terrain intimately. If you're reading this and part of you is hoping it's a little dangerous — you're wrong. But we like you. You're probably the right person for this trip.</div>
@@ -202,7 +216,6 @@
 <footer>
   <div class="foot-top">
     <img class="foot-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
-    <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
     <div class="foot-links">
       <a href="expedition.html">Expedition</a>
       <a href="pakistan.html">Pakistan</a>
@@ -214,8 +227,8 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span class="foot-copy mono">© 2026 Junoon LLC · All rights reserved</span>
-    <span class="foot-copy mono">saad@junoonjourneys.com · junoonjourneys.com</span>
+    <span class="foot-copy mono">Junoon Journeys · The Karakoram Ignition · Sep 2026</span>
+    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com</span>
   </div>
 </footer>
 

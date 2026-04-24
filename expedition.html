@@ -23,7 +23,8 @@
 /* ── expedition.html page-specific styles ── */
 
 .page-hero {
-  min-height: 70vh;
+  min-height: 60vh;
+  max-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -106,7 +107,10 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <a href="index.html" class="nav-brand">
+    <img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
+    <span class="nav-brand-text mono">Junoon Journeys</span>
+  </a>
   <ul class="nav-links">
     <li><a href="expedition.html" class="nav-active">Expedition</a></li>
     <li><a href="pakistan.html">Pakistan</a></li>
@@ -124,7 +128,7 @@
   <img class="page-hero-bg" src="images/route-karakoram.jpg" alt="Karakoram Highway">
   <div class="page-hero-overlay"></div>
   <div class="page-hero-inner">
-    <span class="sec-label">Junoon: The Karakoram Ignition · Sep 19 – Oct 4, 2026</span>
+    <span class="sec-label">The Karakoram Ignition</span>
     <h1 class="page-hero-h1">The<br>Expedition</h1>
     <p class="page-hero-sub">Islamabad to Skardu. 15 days. September 2026.</p>
   </div>
@@ -300,7 +304,6 @@
 <footer>
   <div class="foot-top">
     <img class="foot-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
-    <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
     <div class="foot-links">
       <a href="expedition.html">Expedition</a>
       <a href="pakistan.html">Pakistan</a>
@@ -312,8 +315,8 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span class="foot-copy mono">© 2026 Junoon LLC · All rights reserved</span>
-    <span class="foot-copy mono">saad@junoonjourneys.com · junoonjourneys.com</span>
+    <span class="foot-copy mono">Junoon Journeys · The Karakoram Ignition · Sep 2026</span>
+    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com</span>
   </div>
 </footer>
 

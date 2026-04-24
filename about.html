@@ -23,7 +23,8 @@
 /* ── about.html page-specific styles ── */
 
 .page-hero {
-  min-height: 52vh;
+  min-height: 60vh;
+  max-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -189,7 +190,10 @@
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="index.html"><img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys"></a>
+  <a href="index.html" class="nav-brand">
+    <img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
+    <span class="nav-brand-text mono">Junoon Journeys</span>
+  </a>
   <ul class="nav-links">
     <li><a href="expedition.html">Expedition</a></li>
     <li><a href="pakistan.html">Pakistan</a></li>
@@ -206,8 +210,8 @@
 <section class="page-hero">
   <div class="page-hero-inner">
     <span class="sec-label">Who Leads This</span>
-    <h1 class="page-hero-h1">Who<br>Leads This</h1>
-    <p class="page-hero-sub">Saad Bashir. The road he's taken to get here.</p>
+    <h1 class="page-hero-h1">Saad<br>Bashir</h1>
+    <p class="page-hero-sub">The road he's taken to get here.</p>
   </div>
 </section>
 
@@ -217,8 +221,7 @@
 <section class="about-sec" id="about">
   <div class="sec-inner about-grid">
     <div class="about-text">
-      <span class="sec-label">Who Leads This</span>
-
+      <span class="about-name mono">Saad Bashir</span>
       <h2 class="about-h2 serif">How Did We<br>Get Here?</h2>
 
       <div class="about-body">
@@ -235,19 +238,7 @@
         <p class="about-junoon urdu" aria-label="Junoon">جنون</p>
       </div>
 
-      <h3 class="about-sub-h serif">The Word</h3>
-
-      <div class="about-body">
-        <p>The Sufi poets had a name for it. The divine madness of longing. The thing that drives you toward something before reason has a chance to talk you out of it. I realized that everything I'd done had been an expression of Junoon — unrefined, compulsive, pointed in every direction at once. The question became: what does it look like when you refine it? When you point it somewhere intentional?</p>
-
-        <p>Pakistan kept pulling me back. Not just because of my roots — because of what the place actually is. A land that has been connecting people across this corridor for over a thousand years. Three mountain ranges meeting in one country. Dozens of languages, cultures, and ways of living within a single day's ride of each other. A people who turned hospitality into something closer to sacred law. And a road — the Karakoram Highway — that the world built at enormous cost because the connection it created was worth it.</p>
-
-        <p>Junoon Journeys came out of that. Not as a travel company — as an expression of what I believe connection actually means. To the land, to the culture, to the people you encounter, to the people riding beside you, and eventually — if the road does what I believe it does — to yourself.</p>
-
-        <p>Creating communities in places people didn't know could hold them. That's the mission.</p>
-
-        <p><em>The Karakoram Ignition is the first one.</em></p>
-      </div>
+      <p class="about-enter-link"><a href="junoon.html" class="btn-secondary">Enter Junoon →</a></p>
     </div>
 
     <div class="about-photo-col">
@@ -295,7 +286,6 @@
 <footer>
   <div class="foot-top">
     <img class="foot-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
-    <span class="foot-urdu urdu" aria-label="Junoon">جنون</span>
     <div class="foot-links">
       <a href="expedition.html">Expedition</a>
       <a href="pakistan.html">Pakistan</a>
@@ -307,8 +297,8 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span class="foot-copy mono">© 2026 Junoon LLC · All rights reserved</span>
-    <span class="foot-copy mono">saad@junoonjourneys.com · junoonjourneys.com</span>
+    <span class="foot-copy mono">Junoon Journeys · The Karakoram Ignition · Sep 2026</span>
+    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com</span>
   </div>
 </footer>
 
