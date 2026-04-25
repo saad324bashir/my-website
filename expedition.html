@@ -3,6 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/junoon-logo-icon.png">
+<link rel="apple-touch-icon" href="images/junoon-logo-icon.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1ZBRK213S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L1ZBRK213S');
+</script>
 <title>The Expedition — Junoon Journeys</title>
 <meta name="description" content="15 days. Islamabad to Skardu through the Karakoram Highway. The route, the structure, what's included, and the optional extension. Everything you need to know about the ride.">
 <link rel="canonical" href="https://www.junoonjourneys.com/expedition.html">
@@ -119,6 +130,23 @@
     <li><a href="about.html">About</a></li>
   </ul>
   <a href="https://tally.so/r/xXNDY9" class="nav-apply" target="_blank" rel="noopener">Apply</a>
+
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="nav-mobile" id="navMobile">
+    <ul class="nav-mobile-links">
+      <li><a href="expedition.html" class="nav-active">Expedition</a></li>
+      <li><a href="pakistan.html">Pakistan</a></li>
+      <li><a href="junoon.html">Junoon</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <a href="https://tally.so/r/xXNDY9" class="nav-mobile-apply" target="_blank" rel="noopener">Apply →</a>
+  </div>
 </nav>
 
 <!-- ─────────────────────────────────────────── -->
@@ -141,7 +169,7 @@
   <div class="sec-inner">
     <div class="route-top">
       <div>
-        <span class="sec-label" style="color:var(--ember-deep)">Junoon: The Karakoram Ignition · Sep 19 – Oct 4, 2026</span>
+        <span class="sec-label" style="color:var(--ember-deep)">Junoon: The Karakoram Ignition · Sep 19 – Oct 3, 2026</span>
         <h2 class="route-h2 serif">The Road</h2>
       </div>
       <div class="route-stats">
@@ -321,5 +349,30 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script>
+  const hamburger = document.getElementById('navHamburger');
+  const mobileMenu = document.getElementById('navMobile');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.contains('open');
+    mobileMenu.style.display = 'flex';
+    requestAnimationFrame(() => {
+      mobileMenu.classList.toggle('open', !isOpen);
+      hamburger.classList.toggle('open', !isOpen);
+      hamburger.setAttribute('aria-expanded', String(!isOpen));
+      document.body.style.overflow = isOpen ? '' : 'hidden';
+    });
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
+    });
+  });
+</script>
 </body>
 </html>
