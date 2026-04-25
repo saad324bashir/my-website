@@ -38,6 +38,18 @@
 .page-tick{font-size:13px;color:rgba(212,201,184,.15);display:block;text-align:center;margin-bottom:4px}
 @media(max-width:960px){.page-end-nav{padding:60px 24px}}
 </style>
+<!-- Brevo Form Styles -->
+<style>
+  #sib-container input:-ms-input-placeholder {
+    font-family: 'DM Mono', monospace;
+    color: rgba(212, 201, 184, 0.3);
+  }
+  #sib-container input::placeholder {
+    font-family: 'DM Mono', monospace;
+    color: rgba(212, 201, 184, 0.3);
+  }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
 <body id="top">
 
@@ -94,7 +106,11 @@
   </div>
   <div class="hero-bottom">
     <div>
-      <span class="hero-junoon urdu" aria-label="Junoon">جنون</span>
+      <img
+        src="images/Junoon-transparent-desert-gold.png"
+        alt="جنون"
+        class="hero-junoon-img"
+      >
     </div>
     <div class="hero-right">
       <h1 class="hero-h1">Some roads were made to be ridden.<br><em>Some fires were made to be lit.</em></h1>
@@ -113,45 +129,7 @@
   </div>
 </section>
 
-<!-- SECTION 2: JUNOON (condensed) -->
-<section class="junoon-sec" id="junoon">
-  <div class="sec-inner">
-
-    <div class="junoon-top-grid">
-      <div class="junoon-identity">
-        <span class="sec-label">The Word Behind the Journey</span>
-        <img src="images/Junoon-transparent-desert-gold.png" alt="جنون" class="junoon-calli-main" aria-hidden="true">
-        <span class="junoon-roman serif">Junoon</span>
-        <div class="junoon-sufi-pull serif">The divine madness of longing.</div>
-      </div>
-      <div class="junoon-intro">
-        <p class="junoon-p">Not madness. Not chaos. Something more specific than that.</p>
-        <div class="ember-rule"></div>
-        <p class="junoon-p">The Sufi poets named it centuries ago — the compulsion that arrives before thought does, that moves through mystics and wanderers and anyone who has ever felt called toward something they couldn't rationally explain. They didn't treat it as a flaw to be corrected. They treated it as the closest thing a human being has to a compass.</p>
-        <div class="ember-rule"></div>
-        <p class="junoon-p">It's the feeling in your chest before your mind gets involved. Heat. A pull toward something you can't fully name. Your fingertips itching to move before reason has had a chance to object. An unconscious purpose — the kind that doesn't ask for permission and doesn't wait for the right moment.</p>
-      </div>
-    </div>
-
-    <div class="junoon-fire-fates">
-      <span class="fire-fate serif">It rages — and burns everything you love.</span>
-      <span class="fire-fate serif">It smothers — under weight, under years, under days that look the same.</span>
-      <span class="fire-fate serif fire-fate-hero">Or it finds fuel. And it burns <em>clean.</em></span>
-    </div>
-
-    <div class="junoon-ignition">
-      <p class="junoon-p">What remains is the quality of what you burned and how well you tended it.</p>
-      <p class="junoon-ignition-spark serif">And some fires don't need more fuel...<br>they need a <em>spark.</em></p>
-      <p class="junoon-p">That moment of ignition when you remember what it felt like to be fully alive — what actually drives you underneath everything you've built on top of it.</p>
-      <p class="junoon-p">That's what the Karakoram does. It doesn't hand you anything. It just removes every comfortable reason not to feel it.</p>
-      <p class="junoon-expedition serif">Junoon: The Karakoram Ignition.</p>
-      <a href="junoon.html" class="btn-secondary">Enter Junoon →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION 3: THE ROAD -->
+<!-- SECTION 2: THE ROAD -->
 <section class="route-sec" id="route">
   <div class="sec-inner">
     <div class="route-top">
@@ -250,6 +228,44 @@
   </div>
 </section>
 
+<!-- SECTION 5: JUNOON (condensed) -->
+<section class="junoon-sec" id="junoon">
+  <div class="sec-inner">
+
+    <div class="junoon-top-grid">
+      <div class="junoon-identity">
+        <span class="sec-label">The Word Behind the Journey</span>
+        <img src="images/Junoon-transparent-desert-gold.png" alt="جنون" class="junoon-calli-main" aria-hidden="true">
+        <span class="junoon-roman serif">Junoon</span>
+        <div class="junoon-sufi-pull serif">The divine madness of longing.</div>
+      </div>
+      <div class="junoon-intro">
+        <p class="junoon-p">Not madness. Not chaos. Something more specific than that.</p>
+        <div class="ember-rule"></div>
+        <p class="junoon-p">The Sufi poets named it centuries ago — the compulsion that arrives before thought does, that moves through mystics and wanderers and anyone who has ever felt called toward something they couldn't rationally explain. They didn't treat it as a flaw to be corrected. They treated it as the closest thing a human being has to a compass.</p>
+        <div class="ember-rule"></div>
+        <p class="junoon-p">It's the feeling in your chest before your mind gets involved. Heat. A pull toward something you can't fully name. Your fingertips itching to move before reason has had a chance to object. An unconscious purpose — the kind that doesn't ask for permission and doesn't wait for the right moment.</p>
+      </div>
+    </div>
+
+    <div class="junoon-fire-fates">
+      <span class="fire-fate serif">It rages — and burns everything you love.</span>
+      <span class="fire-fate serif">It smothers — under weight, under years, under days that look the same.</span>
+      <span class="fire-fate serif fire-fate-hero">Or it finds fuel. And it burns <em>clean.</em></span>
+    </div>
+
+    <div class="junoon-ignition">
+      <p class="junoon-p">What remains is the quality of what you burned and how well you tended it.</p>
+      <p class="junoon-ignition-spark serif">And some fires don't need more fuel...<br>they need a <em>spark.</em></p>
+      <p class="junoon-p">That moment of ignition when you remember what it felt like to be fully alive — what actually drives you underneath everything you've built on top of it.</p>
+      <p class="junoon-p">That's what the Karakoram does. It doesn't hand you anything. It just removes every comfortable reason not to feel it.</p>
+      <p class="junoon-expedition serif">Junoon: The Karakoram Ignition.</p>
+      <a href="junoon.html" class="btn-secondary">Enter Junoon →</a>
+    </div>
+
+  </div>
+</section>
+
 <!-- SECTION 6: ABOUT SAAD (condensed) -->
 <section class="about-sec" id="about">
   <div class="sec-inner about-grid">
@@ -290,6 +306,76 @@
   <span class="page-tick">↑</span>
   <a href="#top" class="page-back-top">Back to Top</a>
 </div>
+
+<!-- EMAIL CAPTURE -->
+<section class="email-sec">
+  <div class="email-sec-inner">
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+        <div id="error-message" class="sib-form-message-panel" style="font-size:13px; text-align:center; font-family:'DM Mono',monospace; color:#661d1d; background-color:#ffeded; border-radius:0; border-color:#ff4949; max-width:100%;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Something went wrong. Try again or email saad@junoonjourneys.com</span>
+          </div>
+        </div>
+        <div id="success-message" class="sib-form-message-panel" style="font-size:13px; text-align:center; font-family:'DM Mono',monospace; color:#085229; background-color:#e7faf0; border-radius:0; border-color:#13ce66; max-width:100%;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">The fire's lit. We'll see you on the road.</span>
+          </div>
+        </div>
+        <div id="sib-container" class="sib-container--medium sib-container--vertical">
+          <form id="sib-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
+            <div style="padding: 8px 0;">
+              <div class="sib-form-block">
+                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:#fdf0dc; background:transparent; text-align:center; margin:0;">Feed Your Fire</p>
+              </div>
+            </div>
+            <div style="padding: 4px 0 24px;">
+              <div class="sib-form-block">
+                <p style="font-size:11px; font-family:'DM Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; color:#7a6e62; background:transparent; text-align:center; margin:0;">Join us on the road</p>
+              </div>
+            </div>
+            <div style="padding: 8px 0;">
+              <div class="sib-input sib-form-block">
+                <div class="form__entry entry_block">
+                  <div class="form__label-row">
+                    <div class="entry__field">
+                      <input class="input" maxlength="200" type="text" id="FIRSTNAME" name="FIRSTNAME" autocomplete="off" placeholder="Name" data-required="true" required />
+                    </div>
+                  </div>
+                  <label class="entry__error entry__error--primary" style="font-size:12px; font-family:'DM Mono',monospace; color:#661d1d; background-color:#ffeded; border-radius:0; border-color:#ff4949;"></label>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 8px 0;">
+              <div class="sib-input sib-form-block">
+                <div class="form__entry entry_block">
+                  <div class="form__label-row">
+                    <div class="entry__field">
+                      <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Email" data-required="true" required />
+                    </div>
+                  </div>
+                  <label class="entry__error entry__error--primary" style="font-size:12px; font-family:'DM Mono',monospace; color:#661d1d; background-color:#ffeded; border-radius:0; border-color:#ff4949;"></label>
+                </div>
+              </div>
+            </div>
+            <div style="padding: 16px 0 8px;">
+              <div class="sib-form-block" style="text-align:center;">
+                <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                  <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                    <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                  </svg>
+                  I'M IN
+                </button>
+              </div>
+            </div>
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="en">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -337,5 +423,23 @@
     });
   });
 </script>
+<!-- Brevo Form Script -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = "That doesn't look like a valid email. Try again.";
+  window.REQUIRED_ERROR_MESSAGE = "Drop your info in first.";
+  window.GENERIC_INVALID_MESSAGE = "That doesn't look right. Try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
