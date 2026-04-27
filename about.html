@@ -99,12 +99,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   pointer-events: none;
 }
 .about-contact-inner {
-  max-width: 1100px;
+  max-width: 680px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
   position: relative;
   z-index: 1;
 }
@@ -126,15 +127,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .about-contact-links {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 28px;
-  padding-top: 8px;
+  width: 100%;
+  padding-top: 0;
 }
 .about-contact-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4px;
   border-bottom: 1px solid rgba(212,201,184,.05);
   padding-bottom: 28px;
+  width: 100%;
 }
 .about-contact-item:last-child {
   border-bottom: none;
@@ -252,8 +257,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <section class="page-hero">
   <div class="page-hero-inner">
-    <span class="sec-label">Who Leads This</span>
-    <span class="nav-label" style="display:block; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); opacity:0.7; margin-bottom:16px;">Looks like Madness. Feels like Purpose.</span>
+    <span class="sec-label" style="margin-bottom:20px;">Who Leads This</span>
     <h1 class="page-hero-h1">Saad<br>Bashir</h1>
     <p class="page-hero-sub">The road he's taken to get here.</p>
   </div>
@@ -296,10 +300,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <section class="about-contact-sec">
   <div class="about-contact-inner">
-    <div>
-      <p style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); opacity:0.55; text-align:center; padding: 40px 0 0;">Built on Junoon.</p>
-      <h2 class="about-contact-h serif">Get in<br>touch</h2>
-      <p class="about-contact-sub">Questions about the expedition, the application, or anything else — reach out directly. Every message gets a personal reply.</p>
+    <div style="text-align:center;">
+      <h2 class="about-contact-h serif" style="text-align:center;">Get in Touch</h2>
+      <p class="about-contact-sub" style="text-align:center;">Questions about the expedition, the application, or anything else — reach out directly. Every message gets a personal reply.</p>
     </div>
     <div class="about-contact-links">
       <div class="about-contact-item">
@@ -312,7 +315,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="about-contact-item">
         <span class="about-contact-label">Applications</span>
-        <a href="https://tally.so/r/xXNDY9" class="about-contact-val" target="_blank" rel="noopener">Apply via Tally →</a>
+        <a href="mailto:saad@junoonjourneys.com" class="about-contact-val">Apply for a spot →</a>
       </div>
     </div>
   </div>
@@ -346,7 +349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <form id="sib-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block">
-                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:#fdf0dc; background:transparent; text-align:center; margin:0;">Feed Your Fire</p>
+                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--flame); background:transparent; text-align:center; margin:0; text-shadow:0 0 60px rgba(232,147,10,.3);">Feed Your Fire</p>
               </div>
             </div>
             <div style="padding: 4px 0 24px;">
@@ -417,6 +420,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<!-- EMAIL MODAL -->
+<div id="emailModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <p class="modal-heading">Feed Your Fire</p>
+    <span class="modal-sub">Join us on the road</span>
+    <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
+      <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
+      <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
+      <button class="modal-submit" type="submit">I'm In →</button>
+      <input type="text" name="email_address_check" value="" style="display:none">
+      <input type="hidden" name="locale" value="en">
+    </form>
+    <p class="modal-success" id="modalSuccess">The fire's lit. We'll see you on the road.</p>
+  </div>
+</div>
+
 <script src="js/script.js"></script>
 <script>
   const hamburger = document.getElementById('navHamburger');
@@ -461,5 +481,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var AUTOHIDE = Boolean(0);
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+(function () {
+  var modal = document.getElementById('emailModal');
+  var closeBtn = document.getElementById('modalClose');
+  var form = document.getElementById('modal-form');
+  var successMsg = document.getElementById('modalSuccess');
+  function openModal(e) { if (e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  document.querySelectorAll('[data-modal="email"]').forEach(function(el){ el.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'}).finally(function(){ form.style.display='none'; successMsg.style.display='block'; setTimeout(closeModal,2800); }); }); }
+}());
+</script>
 </body>
 </html>

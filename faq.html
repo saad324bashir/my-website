@@ -114,6 +114,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .page-hero { padding: 0 24px 72px; min-height: 44vh; }
   .page-end-nav { padding: 60px 24px; }
 }
+
+/* ── FAQ Accordion ── */
+.faq-accordion { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+.faq-item { border-bottom: 1px solid rgba(212,201,184,.07); }
+.faq-item:first-child { border-top: 1px solid rgba(212,201,184,.07); }
+.faq-q {
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 1.8vw, 22px);
+  color: var(--parchment);
+  font-weight: 400;
+  line-height: 1.28;
+  padding: 26px 44px 26px 0;
+  position: relative;
+  transition: color .2s;
+  display: block;
+}
+.faq-q:hover { color: var(--amber); }
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'DM Mono', monospace;
+  font-size: 16px;
+  color: var(--ember);
+  transition: transform .25s, content .1s;
+  line-height: 1;
+}
+.faq-q[aria-expanded="true"] { color: var(--amber); }
+.faq-q[aria-expanded="true"]::after {
+  content: '−';
+  transform: translateY(-50%);
+}
+.faq-a {
+  font-size: 14px;
+  color: var(--smoke);
+  line-height: 1.82;
+  padding: 0 44px 26px 0;
+  max-width: 640px;
+}
 </style>
 <!-- Brevo Form Styles -->
 <style>
@@ -183,65 +229,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <section class="faq-sec" id="faq">
   <div class="sec-inner">
-    <div class="faq-grid">
+    <div class="faq-accordion">
+
       <div class="faq-item">
-        <div class="faq-q serif">Is this expedition open to women?</div>
-        <div class="faq-a">Absolutely. The road doesn't care and neither do we — the only criteria are the ones listed above.
-          <br><br>
-          On Pakistan specifically: the north is safer than most people assume. Gilgit-Baltistan has a long history of welcoming foreign visitors of all backgrounds. Communities along the Karakoram are hospitable and respectful. Standard precautions apply — dressing modestly, being aware of local customs — but these are the same precautions any sensible traveler applies anywhere.
-          <br><br>
-          You won't be alone. The group travels together, the support vehicle is always close, and our local guides know every community on the route.
-          <br><br>
-          If you've been on the fence because of concerns about Pakistan as a woman — talk to us. The reality is very different from what you've probably read.</div>
+        <button class="faq-q serif" aria-expanded="false">Is Pakistan safe?</button>
+        <div class="faq-a" hidden>Pakistan has a reputation that doesn't match the reality of where we're going. Gilgit-Baltistan — the northern region this expedition rides through — is among the most visited and welcoming parts of the country. Tourist arrivals have increased significantly in recent years, and the communities along this route have been hosting travellers for centuries.<br><br>The actual risks on the Karakoram are terrain and traffic — landslides happen, roads narrow, trucks don't slow down. That's real, and we prepare for it. We monitor conditions continuously, work with local partners who know this terrain intimately, and carry contingency plans for route changes if needed.<br><br>Everything else people worry about dissolves within 48 hours of arrival. If you're reading this hoping it's a little dangerous — it's not that kind of dangerous. But you're probably the right person for this trip.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">Is Pakistan safe?</div>
-        <div class="faq-a">Pakistan has a reputation that doesn't match the reality of where we're going. Gilgit-Baltistan — the northern region this expedition rides through — is among the most visited and welcoming parts of the country. Tourist arrivals have increased significantly in recent years. We monitor conditions continuously and work with local partners who know this terrain intimately. If you're reading this and part of you is hoping it's a little dangerous — you're wrong. But we like you. You're probably the right person for this trip.</div>
+        <button class="faq-q serif" aria-expanded="false">Is this expedition open to women?</button>
+        <div class="faq-a" hidden>Absolutely. The road doesn't care and neither do we — the only criteria are the ones listed on the main page.<br><br>On Pakistan specifically: Gilgit-Baltistan has a long history of welcoming foreign visitors of all backgrounds. Communities along the Karakoram are hospitable and respectful. Standard precautions apply — dressing modestly, being aware of local customs — but these are the same precautions any sensible traveller applies anywhere.<br><br>You won't be alone. The group travels together, the support vehicle is always close, and our local guides know every community on the route. If you've been on the fence because of concerns about Pakistan as a woman — reach out directly. The reality is very different from what you've probably read.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">What riding experience do I need?</div>
-        <div class="faq-a">A valid motorcycle license is required — no exceptions. Beyond that, we're looking for honest self-assessment over impressive credentials. You should be comfortable on roads that aren't smooth, in conditions that aren't predictable, for long days at altitude. When in doubt, tell us the truth on the application. We'd rather help you prepare than have the wrong person on the road.</div>
+        <button class="faq-q serif" aria-expanded="false">What riding experience do I need?</button>
+        <div class="faq-a" hidden>A valid motorcycle license is required — no exceptions. Beyond that, we're looking for honest self-assessment over impressive credentials. You should be comfortable on roads that aren't smooth, in conditions that aren't predictable, for long days at altitude.<br><br>You don't need to be an expert. You need to be someone who has real experience and won't panic when the road gets difficult. When in doubt, tell us the truth on the application. We'd rather help you prepare than have the wrong person on the road.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">What bike will I be on?</div>
-        <div class="faq-a">All riders are on 150cc bikes provided through Adventure Planners Pakistan, who have over ten years of experience on this specific route. These bikes are purpose-selected for the Karakoram — nimble, reliable, and well-suited to the road conditions. A mechanic rides along in the support vehicle for the full 15 days.</div>
+        <button class="faq-q serif" aria-expanded="false">What bike will I be riding?</button>
+        <div class="faq-a" hidden>All riders are on 150cc bikes provided through Adventure Planners Pakistan, who have over ten years of experience on this specific route. These bikes are purpose-selected for the Karakoram — nimble, reliable, and well-suited to the road conditions. They are not large touring bikes. That's intentional. The terrain demands something you can actually manoeuvre.<br><br>A mechanic with over a decade on these roads rides in the support vehicle for the full 15 days.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">What fitness level is required?</div>
-        <div class="faq-a">You don't need to be an athlete. You need to be someone who doesn't quit when things get uncomfortable. Beyond the riding, the expedition includes optional hikes ranging from moderate to tough — some of the most jaw-dropping views on the entire trip are only accessible on foot. A basic cardio base helps at altitude.</div>
+        <button class="faq-q serif" aria-expanded="false">What if something goes wrong mechanically?</button>
+        <div class="faq-a" hidden>A 4x4 support vehicle with an experienced mechanic follows the group throughout the entire route. Adventure Planners Pakistan has been running these roads for over a decade — mechanical issues are anticipated, not emergencies. You will not be left on the side of a mountain pass alone.<br><br>Your main bag travels in the support vehicle throughout the trip. If you need to come off the bike for any reason, you're covered.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">Do I need my own gear?</div>
-        <div class="faq-a">Helmet and jacket are mandatory on the road. Riding boots and protective pants are strongly recommended. You can bring your own or we can advise on rental options. Custom Junoon Journeys riding jackets are in development — available to rent or purchase. Gear is not included in the expedition price.</div>
+        <button class="faq-q serif" aria-expanded="false">Do I need my own gear?</button>
+        <div class="faq-a" hidden>A helmet is mandatory — bring your own or we can advise on rental. Riding boots and protective pants are strongly recommended.<br><br>Every rider receives a custom Junoon Journeys leather jacket — included in the expedition price. Yours to keep.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">What's the weather like?</div>
-        <div class="faq-a">September and October are the best months to ride this route. Days are warm and clear, nights cool at altitude. Hunza in full autumn colour is one of the most visually striking things you will see in your life. At Khunjerab Pass at 4,693m it will be cold regardless — bring layers, seriously. A full packing guide is included in the information packet.</div>
+        <button class="faq-q serif" aria-expanded="false">What's the weather like?</button>
+        <div class="faq-a" hidden>September and early October are the best months to ride this route. Days are warm and clear, nights cool at altitude. Hunza in full autumn colour is one of the most visually striking things you'll see in your life.<br><br>At Khunjerab Pass at 4,693m it will be cold regardless of the season — bring serious layers. A full packing guide is included in the information packet sent to accepted riders.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">Do I need a visa?</div>
-        <div class="faq-a">Most nationalities require a visa to enter Pakistan. Many countries are eligible for visa on arrival or e-visa. We offer visa processing assistance at additional cost — note your nationality on the application and we'll advise. Start early. Pakistani visa processing times vary and we don't want it to be the thing that stops you.</div>
+        <button class="faq-q serif" aria-expanded="false">What fitness level is required?</button>
+        <div class="faq-a" hidden>You don't need to be an athlete. You need to be someone who doesn't quit when things get uncomfortable. Long days on a motorcycle at altitude are physically demanding even if you're fit — the altitude itself takes adjustment.<br><br>Beyond the riding, the expedition includes optional hikes ranging from moderate to tough. Some of the best views on the entire trip are only accessible on foot. None are mandatory, but a basic cardio base makes everything more enjoyable.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">What if something goes wrong mechanically?</div>
-        <div class="faq-a">A 4x4 support vehicle with an experienced mechanic follows the group throughout the entire route. Adventure Planners Pakistan has been running these roads for over a decade — mechanical issues are anticipated, not emergencies. You will not be left on the side of a mountain pass alone.</div>
+        <button class="faq-q serif" aria-expanded="false">Do I need a visa?</button>
+        <div class="faq-a" hidden>Most nationalities require a visa to enter Pakistan. Many countries are eligible for visa on arrival or e-visa. We offer visa processing assistance at additional cost — note your nationality on the application and we'll advise on the right process for you.<br><br>Start early. Pakistani visa processing times vary and we don't want it to be the thing that stops you.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">Can I join solo?</div>
-        <div class="faq-a">Yes. Most riders join solo. The group dynamic is part of the experience — you will not feel alone for long.</div>
+        <button class="faq-q serif" aria-expanded="false">Can I join solo?</button>
+        <div class="faq-a" hidden>Yes. Most riders join solo. The group dynamic is a core part of the experience — you will not feel alone for long. By day three, the people around you will feel less like strangers and more like the only ones who understand what you're in the middle of.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">What is the group like?</div>
-        <div class="faq-a">Up to 10 riders per expedition. We select based on fit, experience, and group balance — not first come first served. You won't all be the same type of person. That's intentional.</div>
+        <button class="faq-q serif" aria-expanded="false">What is the group like?</button>
+        <div class="faq-a" hidden>Up to 10 riders per expedition. We select based on fit, experience, and group balance — not first come first served. You won't all be the same type of person. That's intentional. The conversations that happen when genuinely different people are stuck in the same extraordinary place together are usually the most valuable part of the trip.</div>
       </div>
+
       <div class="faq-item">
-        <div class="faq-q serif">When will I hear back?</div>
-        <div class="faq-a">Within 5 business days. Every application is reviewed personally. Contact: <a href="mailto:saad@junoonjourneys.com" style="color:var(--amber);text-decoration:none">saad@junoonjourneys.com</a></div>
+        <button class="faq-q serif" aria-expanded="false">When will I hear back after applying?</button>
+        <div class="faq-a" hidden>Within 5 business days. Every application is reviewed personally — no automated decisions. If you have questions before applying, reach out directly: <a href="mailto:saad@junoonjourneys.com" style="color:var(--amber);text-decoration:none">saad@junoonjourneys.com</a></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-q serif">I've never traveled to Pakistan — what do I need to know?</div>
-        <div class="faq-a">More than we can fit here. Accepted riders receive a detailed information packet covering Pakistani culture, history, the north specifically, food, language basics, how to dress respectfully, and everything practical you need before arrival. The short version: be curious, be humble, say yes to the chai.</div>
-      </div>
+
     </div>
   </div>
 </section>
@@ -274,7 +323,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <form id="sib-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block">
-                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:#fdf0dc; background:transparent; text-align:center; margin:0;">Feed Your Fire</p>
+                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--flame); background:transparent; text-align:center; margin:0; text-shadow:0 0 60px rgba(232,147,10,.3);">Feed Your Fire</p>
               </div>
             </div>
             <div style="padding: 4px 0 24px;">
@@ -345,6 +394,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<!-- EMAIL MODAL -->
+<div id="emailModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <p class="modal-heading">Feed Your Fire</p>
+    <span class="modal-sub">Join us on the road</span>
+    <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
+      <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
+      <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
+      <button class="modal-submit" type="submit">I'm In →</button>
+      <input type="text" name="email_address_check" value="" style="display:none">
+      <input type="hidden" name="locale" value="en">
+    </form>
+    <p class="modal-success" id="modalSuccess">The fire's lit. We'll see you on the road.</p>
+  </div>
+</div>
+
 <script src="js/script.js"></script>
 <script>
   const hamburger = document.getElementById('navHamburger');
@@ -389,5 +455,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var AUTOHIDE = Boolean(0);
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+(function () {
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.getAttribute('aria-expanded') === 'true';
+      // Close all
+      document.querySelectorAll('.faq-q').forEach(function(b) {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.hidden = true;
+      });
+      // Open this one if it was closed
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.hidden = false;
+      }
+    });
+  });
+}());
+
+(function () {
+  var modal = document.getElementById('emailModal');
+  var closeBtn = document.getElementById('modalClose');
+  var form = document.getElementById('modal-form');
+  var successMsg = document.getElementById('modalSuccess');
+  function openModal(e) { if (e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  document.querySelectorAll('[data-modal="email"]').forEach(function(el){ el.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'}).finally(function(){ form.style.display='none'; successMsg.style.display='block'; setTimeout(closeModal,2800); }); }); }
+}());
+</script>
 </body>
 </html>

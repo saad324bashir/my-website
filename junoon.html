@@ -34,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 /* HERO */
 .jn-hero {
-  min-height: 100vh;
+  min-height: 72vh;
   background: var(--char);
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 120px 56px 80px;
+  padding: 100px 56px 72px;
 }
 .jn-hero::before {
   content: '';
@@ -427,8 +427,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <section class="jn-outro-sec">
   <div class="jn-outro-inner">
-    <span class="jn-outro-label">The Nomad Dictionary</span>
-
     <p class="jn-outro-p">Every word in the Nomad Dictionary is a doorway.</p>
     <p class="jn-outro-p">Some doorways open onto fire and mountain passes and roads that cost a thousand lives to build. Some will open onto ice. Onto silence. Onto languages that name things you've felt your whole life without ever having the word for it.</p>
 
@@ -474,7 +472,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <form id="sib-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
             <div style="padding: 8px 0;">
               <div class="sib-form-block">
-                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:#fdf0dc; background:transparent; text-align:center; margin:0;">Feed Your Fire</p>
+                <p style="font-size:clamp(28px,3.5vw,46px); font-family:'Cormorant Garamond',serif; font-weight:300; color:var(--flame); background:transparent; text-align:center; margin:0; text-shadow:0 0 60px rgba(232,147,10,.3);">Feed Your Fire</p>
               </div>
             </div>
             <div style="padding: 4px 0 24px;">
@@ -545,6 +543,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<!-- EMAIL MODAL -->
+<div id="emailModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <p class="modal-heading">Feed Your Fire</p>
+    <span class="modal-sub">Join us on the road</span>
+    <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
+      <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
+      <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
+      <button class="modal-submit" type="submit">I'm In →</button>
+      <input type="text" name="email_address_check" value="" style="display:none">
+      <input type="hidden" name="locale" value="en">
+    </form>
+    <p class="modal-success" id="modalSuccess">The fire's lit. We'll see you on the road.</p>
+  </div>
+</div>
+
 <script src="js/script.js"></script>
 <script>
   const hamburger = document.getElementById('navHamburger');
@@ -589,5 +604,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var AUTOHIDE = Boolean(0);
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+(function () {
+  var modal = document.getElementById('emailModal');
+  var closeBtn = document.getElementById('modalClose');
+  var form = document.getElementById('modal-form');
+  var successMsg = document.getElementById('modalSuccess');
+  function openModal(e) { if (e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  document.querySelectorAll('[data-modal="email"]').forEach(function(el){ el.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'}).finally(function(){ form.style.display='none'; successMsg.style.display='block'; setTimeout(closeModal,2800); }); }); }
+}());
+</script>
 </body>
 </html>
