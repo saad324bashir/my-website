@@ -28,23 +28,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     background: #0f0d0b;
   }
 
-  nav,
-  header,
-  footer,
-  .navbar,
-  .site-header,
-  .hamburger-menu {
-    display: none !important;
-  }
-
   .confirmation-page {
     position: relative;
     min-height: 100vh;
-    background:
-      linear-gradient(to bottom, rgba(15,13,11,.28), rgba(15,13,11,.82)),
-      url("images/aerial-passu-road.jpg");
-    background-size: cover;
-    background-position: center bottom;
+    background: #0f0d0b;
     color: #f7f1e6;
     display: flex;
     align-items: center;
@@ -53,25 +40,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     overflow: hidden;
   }
 
-  .confirmation-page::after {
-    content: "";
+  .confirmation-img {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(0,0,0,.05), rgba(0,0,0,.52));
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    opacity: 0.62;
     z-index: 0;
   }
 
-  .junoon-bg {
+  .confirmation-shade {
     position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: "Noto Nastaliq Urdu", serif;
-    font-size: clamp(6rem, 17vw, 14rem);
-    color: rgba(255,255,255,.09);
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(15,13,11,.28), rgba(15,13,11,.88)),
+      radial-gradient(circle at center, rgba(0,0,0,.08), rgba(0,0,0,.62));
     z-index: 1;
-    pointer-events: none;
-    white-space: nowrap;
   }
 
   .confirmation-content {
@@ -79,7 +65,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     z-index: 2;
     max-width: 620px;
     text-align: center;
-    text-shadow: 0 3px 24px rgba(0,0,0,.75);
+    text-shadow: 0 3px 24px rgba(0,0,0,.8);
   }
 
   .eyebrow {
@@ -100,10 +86,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #fffaf0;
   }
 
-  .gold-line {
-    display: none;
-  }
-
   .confirmation-content p {
     font-family: "DM Sans", sans-serif;
     font-size: clamp(1rem, 2vw, 1.12rem);
@@ -112,18 +94,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     max-width: 600px;
   }
 
-  .confirmation-content p:first-of-type + h1 + .gold-line + p {
+  .confirmation-content .lead {
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(1.45rem, 3vw, 2rem);
     line-height: 1.28;
   }
 
-  .confirmation-content span,
   .confirmation-content a {
     color: #e8a93a;
-  }
-
-  .confirmation-content a {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
@@ -137,15 +115,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
 
   @media (max-width: 700px) {
-    .confirmation-page {
-      align-items: flex-start;
-      padding-top: 115px;
-      background-position: center bottom;
+    .confirmation-img {
+      object-fit: cover;
+      object-position: center bottom;
+      opacity: .45;
     }
 
-    .junoon-bg {
-      top: 5%;
-      opacity: .75;
+    .confirmation-page {
+      align-items: flex-start;
+      padding-top: 105px;
     }
   }
 </style>
@@ -175,33 +153,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <section class="confirmation-page">
-  <div class="junoon-bg">جنون</div>
+  <img
+    class="confirmation-img"
+    src="images/aerial-passu-road.jpg"
+    alt="Aerial road through Northern Pakistan"
+  />
+
+  <div class="confirmation-shade"></div>
 
   <main class="confirmation-content">
     <p class="eyebrow">Deposit Confirmed · Karakoram Ignition</p>
 
     <h1>You're in.</h1>
 
-    <div class="gold-line"></div>
-
-    <p>
-      Your deposit for <span>Karakoram Ignition</span> has been received — a
-      Junoon Journeys motorcycle expedition through Northern Pakistan.
+    <p class="lead">
+      Your deposit has been received. Your spot on Karakoram Ignition is secured.
     </p>
 
     <p>
-      You'll receive a confirmation email shortly with next steps, preparation
-      details, and what to expect moving forward.
+      You'll receive a confirmation email shortly with next steps, preparation details,
+      and what to expect moving forward.
     </p>
 
     <p>
-      Due to remote travel, direct responses may take a few days — but everything
-      is in motion and <span>your spot is secured.</span>
+      Due to remote travel, direct responses may take a few days — but everything is in motion.
     </p>
 
     <p class="contact">
-      If you don't see an email, reach out at
-      <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>.
+      Questions? <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>
     </p>
 
     <p class="final-line">The road opens from here.</p>
