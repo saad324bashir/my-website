@@ -263,6 +263,8 @@ nav.scrolled{background:rgba(15,13,11,.93);backdrop-filter:blur(20px);padding:13
 /* FOOTER */
 footer{background:var(--char);padding:48px 56px 32px;border-top:1px solid rgba(212,201,184,.04)}
 .foot-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px;flex-wrap:wrap;gap:20px}
+.foot-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.foot-brand-text{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(240,180,69,.45)}
 .foot-logo{height:30px;width:auto;object-fit:contain}
 .foot-urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:26px;color:var(--ember);opacity:.38;direction:rtl}
 .foot-links{display:flex;gap:28px;flex-wrap:wrap}
