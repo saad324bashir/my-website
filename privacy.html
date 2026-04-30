@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M2ZVZX8X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/junoon-logo-icon.png">
+<link rel="apple-touch-icon" href="images/junoon-logo-icon.png">
+<title>Privacy Policy — Junoon Journeys</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* ── PRIVACY PAGE ── */
+
+.priv-wrap {
+  min-height: 100vh;
+  background: var(--char);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dot grain overlay */
+.priv-wrap::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.03) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── HERO ── */
+.priv-hero {
+  position: relative;
+  z-index: 2;
+  padding: 120px 56px 80px;
+  border-bottom: 1px solid rgba(212,201,184,.05);
+}
+.priv-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 28px;
+}
+.priv-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 8vw, 110px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: .92;
+  margin-bottom: 28px;
+  letter-spacing: -.01em;
+}
+.priv-updated {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .15em;
+  color: rgba(212,201,184,.28);
+  text-transform: uppercase;
+}
+
+/* ── BODY ── */
+.priv-body {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 56px 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.priv-section {
+  margin-bottom: 56px;
+}
+.priv-section:last-child {
+  margin-bottom: 0;
+}
+
+.priv-section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.priv-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: var(--parchment);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.priv-p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+.priv-p:last-child {
+  margin-bottom: 0;
+}
+
+.priv-p a {
+  color: var(--amber);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240,180,69,.28);
+  transition: color .2s, border-color .2s;
+}
+.priv-p a:hover {
+  color: var(--flame);
+  border-bottom-color: var(--flame);
+}
+
+/* Inline list — no bullets, just spaced items */
+.priv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+}
+.priv-list li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  padding: 5px 0 5px 18px;
+  position: relative;
+  border-bottom: 1px solid rgba(212,201,184,.04);
+}
+.priv-list li:last-child { border-bottom: none; }
+.priv-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(196,88,10,.45);
+  font-size: 12px;
+  top: 7px;
+}
+
+/* Rule divider */
+.priv-rule {
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to right, var(--ember-deep), var(--flame));
+  margin: 0 0 56px 0;
+}
+
+/* ── FOOTER ── */
+.priv-footer {
+  position: relative;
+  z-index: 2;
+  padding: 28px 56px;
+  border-top: 1px solid rgba(212,201,184,.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.priv-foot-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.priv-foot-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+.priv-foot-name {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(240,180,69,.45);
+}
+.priv-foot-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(212,201,184,.2);
+  letter-spacing: .07em;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 960px) {
+  .priv-hero {
+    padding: 100px 24px 64px;
+  }
+  .priv-body {
+    padding: 60px 24px 80px;
+  }
+  .priv-footer {
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2ZVZX8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="priv-wrap">
+
+  <!-- ── HERO ── -->
+  <header class="priv-hero">
+    <span class="priv-label">Legal · Junoon LLC</span>
+    <h1 class="priv-h1">Privacy Policy</h1>
+    <span class="priv-updated">Last updated: April 2026</span>
+  </header>
+
+  <!-- ── BODY ── -->
+  <main class="priv-body">
+
+    <div class="priv-rule"></div>
+
+    <p class="priv-p">Junoon Journeys (operated by Junoon LLC, a Wyoming limited liability company) is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights regarding that information.</p>
+
+    <!-- 1 -->
+    <div class="priv-section">
+      <span class="priv-section-num">01</span>
+      <h2 class="priv-h2">Who We Are</h2>
+      <p class="priv-p">Junoon LLC operates under the name Junoon Journeys. Our website is <a href="https://junoonjourneys.com">junoonjourneys.com</a>. You can reach us at <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="priv-section">
+      <span class="priv-section-num">02</span>
+      <h2 class="priv-h2">Information We Collect</h2>
+      <p class="priv-p">We collect information in the following ways:</p>
+      <ul class="priv-list">
+        <li><strong>Application form:</strong> Name, email address, nationality, riding experience, medical history relevant to the expedition, emergency contact details, and motorcycle license.</li>
+        <li><strong>Payment information:</strong> Processed via Stripe and Wise. We do not store card details — these are handled directly by those processors.</li>
+        <li><strong>Communications:</strong> Emails or messages you send us.</li>
+        <li><strong>Cookies and usage data:</strong> When you visit our site, we use cookies and similar technologies to understand how visitors use the site. See Section 5 for details.</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div class="priv-section">
+      <span class="priv-section-num">03</span>
+      <h2 class="priv-h2">How We Use Your Information</h2>
+      <ul class="priv-list">
+        <li>To process your expedition application and communicate with you about it</li>
+        <li>To process payments and issue refunds where applicable</li>
+        <li>To send expedition logistics, preparation materials, and updates</li>
+        <li>To comply with legal obligations</li>
+        <li>To improve our website and marketing (analytics and retargeting, with your consent)</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="priv-section">
+      <span class="priv-section-num">04</span>
+      <h2 class="priv-h2">Legal Basis for Processing (EU/UK Visitors — GDPR)</h2>
+      <p class="priv-p">If you are located in the European Union or United Kingdom, we process your personal data under the following legal bases:</p>
+      <ul class="priv-list">
+        <li><strong>Contract:</strong> Processing necessary to fulfill your expedition booking</li>
+        <li><strong>Legitimate interests:</strong> Responding to enquiries, improving our services</li>
+        <li><strong>Consent:</strong> For marketing cookies and analytics — which you may withdraw at any time</li>
+      </ul>
+    </div>
+
+    <!-- 5 -->
+    <div class="priv-section">
+      <span class="priv-section-num">05</span>
+      <h2 class="priv-h2">Cookies</h2>
+      <p class="priv-p">We use the following cookies on our site:</p>
+      <ul class="priv-list">
+        <li><strong>Google Analytics (GA4):</strong> Helps us understand how visitors use the site. Data is anonymized where possible. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><strong>Meta Pixel (Facebook):</strong> Used for retargeting and measuring the effectiveness of our advertising. <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Meta Privacy Policy</a></li>
+      </ul>
+      <p class="priv-p">You may accept or decline non-essential cookies when you first visit the site. You can also change your preferences at any time by clearing your browser cookies and revisiting the site.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="priv-section">
+      <span class="priv-section-num">06</span>
+      <h2 class="priv-h2">Third Parties We Share Data With</h2>
+      <ul class="priv-list">
+        <li><a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe</a> — payment processing</li>
+        <li><a href="https://wise.com/gb/legal/privacy-policy" target="_blank" rel="noopener">Wise</a> — payment processing</li>
+        <li>Google (Analytics) — website analytics</li>
+        <li>Meta (Facebook Pixel) — advertising and retargeting</li>
+        <li>Tally.so — application form hosting</li>
+        <li>Adventure Planners Pakistan — our on-ground operator, who receives necessary participant information for expedition logistics and safety</li>
+      </ul>
+      <p class="priv-p">We do not sell your personal data to any third party.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="priv-section">
+      <span class="priv-section-num">07</span>
+      <h2 class="priv-h2">Data Retention</h2>
+      <p class="priv-p">We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, or as required by law. Application data for participants who do not join an expedition is deleted within 12 months. Participant data for confirmed riders is retained for up to 3 years for legal and insurance purposes.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="priv-section">
+      <span class="priv-section-num">08</span>
+      <h2 class="priv-h2">Your Rights</h2>
+      <p class="priv-p">Depending on your location, you may have the following rights:</p>
+      <ul class="priv-list">
+        <li>Access the personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your data</li>
+        <li>Object to or restrict processing</li>
+        <li>Data portability (EU/UK)</li>
+        <li>Opt out of the sale of personal information (California/CCPA)</li>
+      </ul>
+      <p class="priv-p">To exercise any of these rights, email us at <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>. We will respond within 30 days.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="priv-section">
+      <span class="priv-section-num">09</span>
+      <h2 class="priv-h2">Do Not Sell My Personal Information (California)</h2>
+      <p class="priv-p">We do not sell your personal information. California residents may contact us at <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a> to request information about the data we hold or to request deletion.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="priv-section">
+      <span class="priv-section-num">10</span>
+      <h2 class="priv-h2">Data Security</h2>
+      <p class="priv-p">We take reasonable technical and organizational measures to protect your personal data from unauthorized access, loss, or misuse. Payment data is handled exclusively by PCI-compliant processors (Stripe and Wise) and is never stored on our servers.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="priv-section">
+      <span class="priv-section-num">11</span>
+      <h2 class="priv-h2">International Transfers</h2>
+      <p class="priv-p">Junoon Journeys is based in the United States. If you are accessing our site from outside the US, your data may be transferred to and processed in the US and other countries where our service providers operate (including Pakistan, for expedition logistics). By using our site and submitting an application, you acknowledge this transfer.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="priv-section">
+      <span class="priv-section-num">12</span>
+      <h2 class="priv-h2">Changes to This Policy</h2>
+      <p class="priv-p">We may update this policy from time to time. The date at the top of the page reflects the most recent revision. Continued use of our site after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="priv-section">
+      <span class="priv-section-num">13</span>
+      <h2 class="priv-h2">Contact</h2>
+      <p class="priv-p">For any privacy-related questions or requests:</p>
+      <ul class="priv-list">
+        <li>Junoon LLC</li>
+        <li><a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a></li>
+        <li><a href="https://junoonjourneys.com">junoonjourneys.com</a></li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="priv-footer">
+    <a href="index.html" class="priv-foot-brand">
+      <img class="priv-foot-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
+      <span class="priv-foot-name">Junoon Journeys</span>
+    </a>
+    <span class="priv-foot-copy">© 2026 Junoon LLC · saad@junoonjourneys.com</span>
+  </footer>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
