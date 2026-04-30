@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M2ZVZX8X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/junoon-logo-icon.png">
+<link rel="apple-touch-icon" href="images/junoon-logo-icon.png">
+<title>Terms &amp; Conditions — Junoon Journeys</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+/* ── TERMS PAGE — matches privacy.html structure exactly ── */
+
+.priv-wrap {
+  min-height: 100vh;
+  background: var(--char);
+  display: flex;
+  flex-direction: column;
+}
+
+.priv-wrap::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(196,88,10,.03) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.priv-hero {
+  position: relative;
+  z-index: 2;
+  padding: 120px 56px 80px;
+  border-bottom: 1px solid rgba(212,201,184,.05);
+}
+.priv-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 28px;
+}
+.priv-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 8vw, 110px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: .92;
+  margin-bottom: 28px;
+  letter-spacing: -.01em;
+}
+.priv-updated {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .15em;
+  color: rgba(212,201,184,.28);
+  text-transform: uppercase;
+}
+
+.priv-body {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 56px 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.priv-section {
+  margin-bottom: 56px;
+}
+.priv-section:last-child {
+  margin-bottom: 0;
+}
+
+.priv-section-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ember);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.priv-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 2.4vw, 30px);
+  color: var(--parchment);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.priv-p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 14px;
+}
+.priv-p:last-child {
+  margin-bottom: 0;
+}
+
+.priv-p a, .priv-list a {
+  color: var(--amber);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(240,180,69,.28);
+  transition: color .2s, border-color .2s;
+}
+.priv-p a:hover, .priv-list a:hover {
+  color: var(--flame);
+  border-bottom-color: var(--flame);
+}
+
+.priv-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+}
+.priv-list li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--smoke);
+  line-height: 1.9;
+  font-weight: 300;
+  padding: 5px 0 5px 18px;
+  position: relative;
+  border-bottom: 1px solid rgba(212,201,184,.04);
+}
+.priv-list li:last-child { border-bottom: none; }
+.priv-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(196,88,10,.45);
+  font-size: 12px;
+  top: 7px;
+}
+
+.priv-rule {
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to right, var(--ember-deep), var(--flame));
+  margin: 0 0 56px 0;
+}
+
+/* Review flag — visible in browser for internal use, remove before publishing final */
+.review-flag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(196,88,10,.7);
+  background: rgba(196,88,10,.06);
+  border: 1px solid rgba(196,88,10,.18);
+  border-radius: 2px;
+  padding: 3px 8px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.priv-footer {
+  position: relative;
+  z-index: 2;
+  padding: 28px 56px;
+  border-top: 1px solid rgba(212,201,184,.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.priv-foot-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.priv-foot-logo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
+.priv-foot-name {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(240,180,69,.45);
+}
+.priv-foot-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(212,201,184,.2);
+  letter-spacing: .07em;
+}
+
+@media (max-width: 960px) {
+  .priv-hero { padding: 100px 24px 64px; }
+  .priv-body { padding: 60px 24px 80px; }
+  .priv-footer { padding: 24px; flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2ZVZX8X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="priv-wrap">
+
+  <!-- ── HERO ── -->
+  <header class="priv-hero">
+    <span class="priv-label">Legal · Junoon LLC</span>
+    <h1 class="priv-h1">Terms &amp; Conditions</h1>
+    <span class="priv-updated">Last updated: April 2026</span>
+  </header>
+
+  <!-- ── BODY ── -->
+  <main class="priv-body">
+
+    <div class="priv-rule"></div>
+
+    <!--
+    ════════════════════════════════════════════════════════════
+    INTERNAL REVIEW FLAGS — remove .review-flag spans before
+    final attorney sign-off and public launch
+    ════════════════════════════════════════════════════════════
+    -->
+
+    <p class="priv-p">These Terms &amp; Conditions govern participation in expeditions operated by Junoon LLC
+    <!-- [PLACEHOLDER: once Clarke County DBA filed, add: "(doing business as Junoon Journeys)"] -->
+    , a Wyoming limited liability company registered to do business in Georgia. By submitting an application, paying a deposit, or accessing our website, you agree to these terms in full.</p>
+
+    <!-- 1 -->
+    <div class="priv-section">
+      <span class="priv-section-num">01</span>
+      <h2 class="priv-h2">Who We Are</h2>
+      <p class="priv-p">Junoon LLC operates under the name Junoon Journeys. We are a Wyoming limited liability company, registered to do business in Georgia.
+      <!-- [PLACEHOLDER: Update to "doing business as Junoon Journeys" once Clarke County DBA is filed and confirmed] -->
+      Our primary contact is <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="priv-section">
+      <span class="priv-section-num">02</span>
+      <h2 class="priv-h2">The Expedition</h2>
+      <p class="priv-p">Junoon Journeys offers a guided 15-day motorcycle expedition through Pakistan — Islamabad to Skardu via the Karakoram Highway — departing September 19, 2026. The expedition is operated in partnership with Adventure Planners Pakistan, our on-ground operator.</p>
+      <p class="priv-p">This is not a conventional tour. Participants ride in remote, high-altitude terrain with limited infrastructure. Discomfort, delays, and itinerary changes are inherent to the experience. By applying, you acknowledge this.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="priv-section">
+      <span class="priv-section-num">03</span>
+      <h2 class="priv-h2">Application &amp; Acceptance</h2>
+      <p class="priv-p">Submitting an application does not guarantee a place on the expedition. All applications are reviewed individually. Acceptance is communicated by email and is conditional on receipt of the non-refundable deposit within 7 days.</p>
+      <p class="priv-p">Junoon Journeys reserves the right to decline any application at its sole discretion, including on grounds of riding experience, health, or group compatibility. No reason is required.</p>
+      <p class="priv-p">Upon acceptance, participants are required to sign a separate <strong>Participant Agreement</strong> covering liability waiver, risk acknowledgment, media release, and insurance requirements before any deposit is processed. These Terms &amp; Conditions operate alongside that agreement. In the event of conflict, the Participant Agreement governs.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="priv-section">
+      <span class="priv-section-num">04</span>
+      <h2 class="priv-h2">Payment</h2>
+      <p class="priv-p">All prices are in USD.</p>
+      <ul class="priv-list">
+        <li><strong>Deposit:</strong> USD $1,050 — due within 7 days of acceptance. Non-refundable under all circumstances.</li>
+        <li><strong>Balance:</strong> USD $2,450 — due on or before August 15, 2026. Late bookings made within 30 days of departure require full payment immediately.</li>
+        <li><strong>Total expedition cost:</strong> USD $3,500 per person (excluding optional gear rental, take-home gear, and visa assistance).</li>
+      </ul>
+      <p class="priv-p"><strong>Payment methods:</strong></p>
+      <ul class="priv-list">
+        <li><strong>Stripe (credit/debit card):</strong> A 3.5% processing fee applies to all card payments. This fee is non-refundable.</li>
+        <li><strong>Wise (bank transfer):</strong> No fee charged by Junoon Journeys. Standard Wise transfer fees apply on your end. Payment must clear in full — net of any transfer fees — to be considered received.</li>
+      </ul>
+      <p class="priv-p">Payments are processed by Stripe, Inc. and Wise Payments Limited respectively. Junoon LLC does not store card details. By making a payment, you agree to the terms of the relevant payment processor.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="priv-section">
+      <span class="priv-section-num">05</span>
+      <h2 class="priv-h2">Cancellation by Participant</h2>
+      <p class="priv-p">All cancellations must be submitted in writing to <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>. The date of receipt of written notice determines the applicable refund tier.</p>
+      <ul class="priv-list">
+        <li><strong>Deposit:</strong> Non-refundable under all circumstances.</li>
+        <li><strong>9–7 weeks before departure (July 13 – August 1, 2026):</strong> 30% of total expedition cost forfeited.</li>
+        <li><strong>7–5 weeks before departure (August 1 – August 15, 2026):</strong> 50% of total expedition cost forfeited.</li>
+        <li><strong>Under 5 weeks before departure (after August 15, 2026):</strong> No refund.</li>
+      </ul>
+      <p class="priv-p">Travel insurance with cancellation coverage is strongly recommended. Junoon Journeys is not responsible for external costs including flights, visas, gear, or other travel expenses in the event of cancellation by either party.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="priv-section">
+      <span class="priv-section-num">06</span>
+      <h2 class="priv-h2">Cancellation or Changes by Junoon Journeys</h2>
+      <p class="priv-p">Junoon Journeys reserves the right to cancel or materially modify an expedition due to safety concerns, political instability, natural events, insufficient participants, or circumstances beyond our reasonable control (including but not limited to: war, terrorism, civil unrest, government restrictions, natural disasters, pandemics, road closures, or landslides).</p>
+      <p class="priv-p">In the event of cancellation by Junoon Journeys, participants will receive either a full refund of amounts paid to Junoon Journeys, or credit toward a future expedition, at our election.</p>
+      <p class="priv-p">Junoon Journeys is not liable for any indirect costs (flights, accommodation, gear, lost wages) incurred by participants in connection with a cancelled or modified expedition.</p>
+      <p class="priv-p">Itineraries are subject to change without notice due to weather, road conditions, safety concerns, or local authority restrictions. No refunds are issued for itinerary modifications made for operational or safety reasons.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="priv-section">
+      <span class="priv-section-num">07</span>
+      <h2 class="priv-h2">Insurance Requirements</h2>
+      <p class="priv-p">Travel and medical insurance is mandatory for all participants. Each rider must independently obtain and maintain, for the full duration of the expedition, coverage meeting the following minimums:</p>
+      <ul class="priv-list">
+        <li>Emergency medical coverage — minimum USD $100,000</li>
+        <li>Emergency evacuation coverage — minimum USD $250,000</li>
+        <li>Motorcycle/adventure sports riding — must be explicitly included, or written confirmation from your insurer provided</li>
+      </ul>
+      <p class="priv-p">Proof of insurance must be submitted to Junoon Journeys no later than July 20, 2026. Failure to provide proof by this date may result in removal from the expedition without refund. Junoon Journeys does not provide insurance on behalf of participants.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="priv-section">
+      <span class="priv-section-num">08</span>
+      <h2 class="priv-h2">Travel &amp; Entry Requirements</h2>
+      <p class="priv-p">Each participant is solely responsible for obtaining, at their own cost:</p>
+      <ul class="priv-list">
+        <li>A valid passport with a minimum of 6 months validity beyond the expedition end date (October 3, 2026)</li>
+        <li>A valid Pakistan visa — Junoon Journeys offers visa assistance at additional cost upon request</li>
+        <li>Any required vaccinations or health certificates</li>
+        <li>A valid motorcycle license in their country of residence</li>
+      </ul>
+      <p class="priv-p">Failure to hold valid entry documents will result in denied participation without refund.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="priv-section">
+      <span class="priv-section-num">09</span>
+      <h2 class="priv-h2">U.S. State Department Travel Advisory</h2>
+      <p class="priv-p">The U.S. Department of State has issued a Level 2: Exercise Increased Caution advisory for Pakistan. By proceeding with an application and payment, participants confirm they have reviewed this advisory at <a href="https://travel.state.gov" target="_blank" rel="noopener">travel.state.gov</a> and voluntarily choose to participate notwithstanding that advisory.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="priv-section">
+      <span class="priv-section-num">10</span>
+      <h2 class="priv-h2">Health &amp; Fitness</h2>
+      <p class="priv-p">Participants confirm they are physically and mentally capable of completing a 15-day motorcycle expedition at altitude. The expedition includes sustained riding at elevations up to approximately 4,700 metres (15,400 feet), with remote terrain and limited access to medical facilities.</p>
+      <p class="priv-p">All participants are required to complete a Medical Declaration form prior to departure. Junoon Journeys reserves the right to remove any participant who poses a safety risk to themselves or the group. No refund will be issued in such cases.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="priv-section">
+      <span class="priv-section-num">11</span>
+      <h2 class="priv-h2">Third-Party Operators</h2>
+      <p class="priv-p">Junoon Journeys works with Adventure Planners Pakistan as its on-ground operator for logistics, motorcycles, guides, and accommodation. Junoon Journeys does not directly control all third-party services and is not liable for acts, errors, or omissions of third-party operators, accommodation providers, or local services.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="priv-section">
+      <span class="priv-section-num">12</span>
+      <h2 class="priv-h2">Limitation of Liability</h2>
+      <span class="review-flag">Attorney review required before publishing</span>
+      <p class="priv-p">To the fullest extent permitted by applicable law, Junoon LLC, its owners, employees, contractors, guides, and partner operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to: personal injury, death, loss of property, loss of income, or emotional distress arising from participation in any expedition.</p>
+      <p class="priv-p">Our total liability to any participant for any claim arising out of or in connection with these Terms or any expedition shall not exceed the total amount paid by that participant to Junoon Journeys for that expedition.</p>
+      <p class="priv-p">Nothing in these Terms limits liability for gross negligence or willful misconduct.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="priv-section">
+      <span class="priv-section-num">13</span>
+      <h2 class="priv-h2">Seller of Travel</h2>
+      <span class="review-flag">Placeholder — check compliance before accepting riders from these states</span>
+      <p class="priv-p"><!-- [PLACEHOLDER — SELLER OF TRAVEL]
+
+      If participants from California, Florida, Hawaii, or Washington confirm a booking,
+      state-specific registration and disclosure language is required here.
+
+      California: Check registration requirement with California Attorney General's Office.
+      Florida: Verify Seller of Travel registration (DBPR).
+      Hawaii: Verify registration with Hawaii Department of Commerce.
+      Washington: Verify registration with Washington Attorney General's Office.
+
+      Cost: $100–500 per applicable state. Confirm before accepting deposits from residents
+      of these states. This section must be updated accordingly.
+
+      Until confirmed: Do not accept deposits from CA/FL/HI/WA residents without verifying.
+      --></p>
+      <p class="priv-p">Junoon LLC is a Wyoming limited liability company. Depending on your state of residence, additional seller of travel disclosures or registrations may apply. Contact us at <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a> for state-specific information.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="priv-section">
+      <span class="priv-section-num">14</span>
+      <h2 class="priv-h2">Intellectual Property &amp; Media</h2>
+      <p class="priv-p">All content on junoonjourneys.com — including text, photography, video, and design — is the property of Junoon LLC and may not be reproduced without written permission.</p>
+      <p class="priv-p">Participants who consent to media capture during the expedition (as set out in the separate Media Release) grant Junoon Journeys a non-exclusive, royalty-free license to use expedition photography and video for marketing and promotional purposes. Participation in the expedition is not conditional on media consent.</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="priv-section">
+      <span class="priv-section-num">15</span>
+      <h2 class="priv-h2">Privacy</h2>
+      <p class="priv-p">Your personal data is handled in accordance with our <a href="privacy.html">Privacy Policy</a>. By submitting an application or making a payment, you consent to the collection and use of your data as described there.</p>
+    </div>
+
+    <!-- 16 -->
+    <div class="priv-section">
+      <span class="priv-section-num">16</span>
+      <h2 class="priv-h2">Governing Law &amp; Dispute Resolution</h2>
+      <span class="review-flag">Confirm governing law with attorney once Georgia registration confirmed</span>
+      <p class="priv-p"><!-- [PLACEHOLDER — GOVERNING LAW: Currently Wyoming. Attorney to confirm whether
+      to update to Georgia once foreign registration is active. Update this section accordingly.] --></p>
+      <p class="priv-p">These Terms are governed by the laws of the State of Wyoming, USA, without regard to conflict of law principles. Any dispute arising out of or in connection with these Terms shall be resolved first through good-faith negotiation. If unresolved within 30 days, disputes shall be submitted to binding arbitration in accordance with the rules of the American Arbitration Association, in Athens, Georgia.</p>
+      <p class="priv-p">Nothing in this clause prevents either party from seeking emergency injunctive relief in a court of competent jurisdiction.</p>
+    </div>
+
+    <!-- 17 -->
+    <div class="priv-section">
+      <span class="priv-section-num">17</span>
+      <h2 class="priv-h2">Changes to These Terms</h2>
+      <p class="priv-p">Junoon Journeys may update these Terms from time to time. The date at the top of this page reflects the most recent revision. For participants who have paid a deposit, any material change to these Terms will be communicated by email. Continued participation constitutes acceptance.</p>
+    </div>
+
+    <!-- 18 -->
+    <div class="priv-section">
+      <span class="priv-section-num">18</span>
+      <h2 class="priv-h2">Contact</h2>
+      <p class="priv-p">For any questions regarding these Terms:</p>
+      <ul class="priv-list">
+        <li>Junoon LLC</li>
+        <li><a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a></li>
+        <li><a href="https://junoonjourneys.com">junoonjourneys.com</a></li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="priv-footer">
+    <a href="index.html" class="priv-foot-brand">
+      <img class="priv-foot-logo" src="images/junoon-logo-icon.png" alt="Junoon Journeys">
+      <span class="priv-foot-name">Junoon Journeys</span>
+    </a>
+    <span class="priv-foot-copy">&copy; 2026 Junoon LLC · <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.6;">Privacy</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
