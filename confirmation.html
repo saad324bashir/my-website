@@ -23,120 +23,129 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
+  body {
+    margin: 0;
+    background: #0f0d0b;
+  }
+
+  nav,
+  header,
+  footer,
+  .navbar,
+  .site-header,
+  .hamburger-menu {
+    display: none !important;
+  }
+
   .confirmation-page {
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image:
-      linear-gradient(
-        to bottom,
-        rgba(15, 13, 11, 0.38) 0%,
-        rgba(15, 13, 11, 0.62) 48%,
-        rgba(15, 13, 11, 0.82) 100%
-      ),
+    background:
+      linear-gradient(to bottom, rgba(15,13,11,.28), rgba(15,13,11,.82)),
       url("images/aerial-passu-road.jpg");
     background-size: cover;
     background-position: center bottom;
-    background-repeat: no-repeat;
     color: #f7f1e6;
-    padding: 72px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 22px;
+    overflow: hidden;
+  }
+
+  .confirmation-page::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,.05), rgba(0,0,0,.52));
+    z-index: 0;
   }
 
   .junoon-bg {
     position: absolute;
-    top: 6%;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
     font-family: "Noto Nastaliq Urdu", serif;
-    font-size: clamp(7rem, 20vw, 18rem);
-    line-height: 1;
-    color: rgba(247, 241, 230, 0.12);
-    z-index: 0;
+    font-size: clamp(6rem, 17vw, 14rem);
+    color: rgba(255,255,255,.09);
+    z-index: 1;
     pointer-events: none;
     white-space: nowrap;
   }
 
   .confirmation-content {
     position: relative;
-    z-index: 1;
-    max-width: 720px;
+    z-index: 2;
+    max-width: 620px;
     text-align: center;
-    text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
+    text-shadow: 0 3px 24px rgba(0,0,0,.75);
   }
 
   .eyebrow {
-    margin-bottom: 18px;
     font-family: "DM Sans", sans-serif;
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+    font-size: .72rem;
+    letter-spacing: .18em;
     text-transform: uppercase;
     color: #e8a93a;
+    margin: 0 0 18px;
   }
 
   .confirmation-content h1 {
-    margin: 0;
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(4.5rem, 11vw, 8.5rem);
-    line-height: 0.88;
-    font-weight: 600;
+    font-size: clamp(4rem, 10vw, 7rem);
+    line-height: .9;
+    font-weight: 500;
+    margin: 0 0 30px;
     color: #fffaf0;
   }
 
   .gold-line {
-    width: 78px;
-    height: 1px;
-    margin: 28px auto 34px;
-    background: #e8a93a;
+    display: none;
   }
 
   .confirmation-content p {
-    margin: 0 auto 24px;
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.12rem);
+    line-height: 1.65;
+    margin: 0 auto 18px;
+    max-width: 600px;
+  }
+
+  .confirmation-content p:first-of-type + h1 + .gold-line + p {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.45rem, 3vw, 2rem);
     line-height: 1.28;
-    max-width: 650px;
   }
 
-  .confirmation-content span {
+  .confirmation-content span,
+  .confirmation-content a {
     color: #e8a93a;
   }
 
-  .contact {
-    margin-top: 32px;
-  }
-
-  .contact a {
-    color: #e8a93a;
+  .confirmation-content a {
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 4px;
   }
 
   .final-line {
-    margin-top: 42px !important;
-    font-family: "DM Sans", sans-serif !important;
-    font-size: 0.82rem !important;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
+    margin-top: 34px !important;
     color: #e8a93a;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-size: .75rem !important;
   }
 
   @media (max-width: 700px) {
     .confirmation-page {
       align-items: flex-start;
-      padding-top: 110px;
+      padding-top: 115px;
       background-position: center bottom;
     }
 
-    .confirmation-content p {
-      font-size: 1.25rem;
-    }
-
-    .eyebrow {
-      font-size: 0.68rem;
-      line-height: 1.5;
+    .junoon-bg {
+      top: 5%;
+      opacity: .75;
     }
   }
 </style>
@@ -164,38 +173,6 @@ src="https://www.facebook.com/tr?id=1973775053241480&ev=PageView&noscript=1"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="index.html" class="nav-brand">
-    <img class="nav-logo" src="images/junoon-logo-transparent-gold.png" alt="Junoon Journeys">
-    <span class="nav-brand-text mono">Junoon Journeys</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="expedition.html">Expedition</a></li>
-    <li><a href="pakistan.html">Pakistan</a></li>
-    <li><a href="junoon.html">Junoon</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-  <a href="https://tally.so/r/xXNDY9" class="nav-apply" target="_blank" rel="noopener">Apply</a>
-
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="nav-mobile" id="navMobile">
-    <ul class="nav-mobile-links">
-      <li><a href="expedition.html">Expedition</a></li>
-      <li><a href="pakistan.html">Pakistan</a></li>
-      <li><a href="junoon.html">Junoon</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-    <a href="https://tally.so/r/xXNDY9" class="nav-mobile-apply" target="_blank" rel="noopener">Apply →</a>
-  </div>
-</nav>
 
 <section class="confirmation-page">
   <div class="junoon-bg">جنون</div>
@@ -232,30 +209,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <script src="js/script.js"></script>
-<script>
-  const hamburger = document.getElementById('navHamburger');
-  const mobileMenu = document.getElementById('navMobile');
-
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    mobileMenu.style.display = 'flex';
-    requestAnimationFrame(() => {
-      mobileMenu.classList.toggle('open', !isOpen);
-      hamburger.classList.toggle('open', !isOpen);
-      hamburger.setAttribute('aria-expanded', String(!isOpen));
-      document.body.style.overflow = isOpen ? '' : 'hidden';
-    });
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
-    });
-  });
-</script>
 </body>
 </html>
