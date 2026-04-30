@@ -22,111 +22,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<style>
-  body {
-    margin: 0;
-    background: #0f0d0b;
-  }
-
-  .confirmation-page {
-    position: relative;
-    min-height: 100vh;
-    background: #0f0d0b;
-    color: #f7f1e6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 90px 22px;
-    overflow: hidden;
-  }
-
-  .confirmation-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center bottom;
-    opacity: 0.62;
-    z-index: 0;
-  }
-
-  .confirmation-shade {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(to bottom, rgba(15,13,11,.28), rgba(15,13,11,.88)),
-      radial-gradient(circle at center, rgba(0,0,0,.08), rgba(0,0,0,.62));
-    z-index: 1;
-  }
-
-  .confirmation-content {
-    position: relative;
-    z-index: 2;
-    max-width: 620px;
-    text-align: center;
-    text-shadow: 0 3px 24px rgba(0,0,0,.8);
-  }
-
-  .eyebrow {
-    font-family: "DM Sans", sans-serif;
-    font-size: .72rem;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    color: #e8a93a;
-    margin: 0 0 18px;
-  }
-
-  .confirmation-content h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(4rem, 10vw, 7rem);
-    line-height: .9;
-    font-weight: 500;
-    margin: 0 0 30px;
-    color: #fffaf0;
-  }
-
-  .confirmation-content p {
-    font-family: "DM Sans", sans-serif;
-    font-size: clamp(1rem, 2vw, 1.12rem);
-    line-height: 1.65;
-    margin: 0 auto 18px;
-    max-width: 600px;
-  }
-
-  .confirmation-content .lead {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1.45rem, 3vw, 2rem);
-    line-height: 1.28;
-  }
-
-  .confirmation-content a {
-    color: #e8a93a;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
-  .final-line {
-    margin-top: 34px !important;
-    color: #e8a93a;
-    letter-spacing: .18em;
-    text-transform: uppercase;
-    font-size: .75rem !important;
-  }
-
-  @media (max-width: 700px) {
-    .confirmation-img {
-      object-fit: cover;
-      object-position: center bottom;
-      opacity: .45;
-    }
-
-    .confirmation-page {
-      align-items: flex-start;
-      padding-top: 105px;
-    }
-  }
-</style>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -145,7 +40,7 @@ src="https://www.facebook.com/tr?id=1973775053241480&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
-<body>
+<body class="confirmation-body">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2ZVZX8X"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -153,20 +48,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <section class="confirmation-page">
-  <img
-    class="confirmation-img"
-    src="images/aerial-passu-road.jpg"
-    alt="Aerial road through Northern Pakistan"
-  />
-
-  <div class="confirmation-shade"></div>
-
-  <main class="confirmation-content">
-    <p class="eyebrow">Deposit Confirmed · Karakoram Ignition</p>
+  <div class="confirmation-text">
+    <span class="confirmation-label">Deposit Confirmed · Karakoram Ignition</span>
 
     <h1>You're in.</h1>
 
-    <p class="lead">
+    <p class="confirmation-lead">
       Your deposit has been received. Your spot on Karakoram Ignition is secured.
     </p>
 
@@ -179,13 +66,151 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       Due to remote travel, direct responses may take a few days — but everything is in motion.
     </p>
 
-    <p class="contact">
-      Questions? <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>
+    <p class="confirmation-contact">
+      Questions?
+      <a href="mailto:saad@junoonjourneys.com">saad@junoonjourneys.com</a>
     </p>
 
-    <p class="final-line">The road opens from here.</p>
-  </main>
+    <span class="confirmation-final">The road opens from here.</span>
+  </div>
+
+  <div class="confirmation-visual">
+    <img src="images/jingle-truck.jpg" alt="Truck driving through the Karakoram mountains">
+  </div>
 </section>
+
+<style>
+  body.confirmation-body {
+    background: var(--char);
+  }
+
+  body.confirmation-body nav,
+  body.confirmation-body footer,
+  body.confirmation-body .nav-mobile,
+  body.confirmation-body .nav-hamburger {
+    display: none !important;
+  }
+
+  .confirmation-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(420px, 46%) 1fr;
+    background: var(--char);
+    color: var(--parchment);
+  }
+
+  .confirmation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(48px, 7vw, 96px);
+    max-width: 640px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .confirmation-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--flame);
+    margin-bottom: 24px;
+  }
+
+  .confirmation-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(58px, 8vw, 112px);
+    font-weight: 300;
+    line-height: .92;
+    color: var(--heat);
+    margin-bottom: 32px;
+  }
+
+  .confirmation-lead {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(24px, 2.5vw, 36px) !important;
+    line-height: 1.22 !important;
+    color: var(--parchment) !important;
+    margin-bottom: 28px !important;
+  }
+
+  .confirmation-text p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--smoke);
+    margin-bottom: 18px;
+    max-width: 520px;
+    font-weight: 300;
+  }
+
+  .confirmation-contact {
+    margin-top: 14px;
+  }
+
+  .confirmation-contact a {
+    color: var(--amber);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .confirmation-final {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-top: 34px;
+  }
+
+  .confirmation-visual {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .confirmation-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, var(--char) 0%, rgba(15,13,11,.45) 30%, rgba(15,13,11,.06) 70%),
+      linear-gradient(to bottom, rgba(15,13,11,.05), rgba(15,13,11,.32));
+    pointer-events: none;
+  }
+
+  .confirmation-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: saturate(.9) brightness(.88);
+  }
+
+  @media (max-width: 900px) {
+    .confirmation-page {
+      grid-template-columns: 1fr;
+      position: relative;
+    }
+
+    .confirmation-visual {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .confirmation-visual::after {
+      background: rgba(15,13,11,.76);
+    }
+
+    .confirmation-text {
+      min-height: 100vh;
+      padding: 110px 24px 72px;
+    }
+  }
+</style>
 
 <script src="js/script.js"></script>
 </body>
