@@ -36,6 +36,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .page-back-top:hover{color:var(--amber)}
 .page-tick{font-size:13px;color:rgba(212,201,184,.15);display:block;text-align:center;margin-bottom:4px}
 @media(max-width:960px){.page-end-nav{padding:60px 24px}}
+
+/* Reality Anchor */
+.anchor-sec{background:var(--char);padding:80px 56px;border-top:1px solid rgba(212,201,184,.06)}
+.anchor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-top:40px}
+.anchor-item-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:12px}
+.anchor-item-body{font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.7);line-height:1.65;margin:0}
+@media(max-width:768px){.anchor-sec{padding:60px 24px}}
+
+/* Mid-page email capture */
+.email-mid-sec{background:var(--char);padding:72px 56px;border-top:1px solid rgba(212,201,184,.06);text-align:center}
+@media(max-width:768px){.email-mid-sec{padding:56px 24px}}
 </style>
 <!-- Brevo Form Styles -->
 <style>
@@ -138,7 +149,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="hero-sub">15 days by motorcycle. Islamabad to Skardu through the Karakoram Highway, Pakistan. The world's highest paved road. The question it forces — that one's yours.</p>
       <div class="hero-stats">
         <div><span class="stat-lbl mono">Duration</span><span class="stat-val serif">15 Days</span></div>
-        <div><span class="stat-lbl mono">On</span><span class="stat-val serif">Motorcycles</span></div>
         <div><span class="stat-lbl mono">Summit</span><span class="stat-val serif">4,693 m</span></div>
         <div><span class="stat-lbl mono">Departure</span><span class="stat-val serif">Sep 19, 2026</span></div>
       </div>
@@ -150,7 +160,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SECTION 2: THE ROAD -->
+<!-- SECTION 2: JUNOON (condensed) -->
+<section class="junoon-sec" id="junoon">
+  <div class="sec-inner">
+
+    <div class="junoon-top-grid">
+      <div class="junoon-identity">
+        <span class="sec-label">The Word Behind the Journey</span>
+        <img src="images/Junoon-transparent-desert-gold.png" alt="جنون" class="junoon-calli-main" aria-hidden="true">
+        <span class="junoon-roman serif">Junoon</span>
+        <div class="junoon-sufi-pull serif">The divine madness of longing.</div>
+      </div>
+      <div class="junoon-intro">
+        <p class="junoon-p">Not madness. Not chaos. Something more specific than that.</p>
+        <div class="ember-rule"></div>
+        <p class="junoon-p">The Sufi poets named it centuries ago — the compulsion that arrives before thought does. They didn't treat it as a flaw to be corrected. They treated it as the closest thing a human being has to a compass.</p>
+        <div class="ember-rule"></div>
+        <p class="junoon-p">The feeling in your chest before your mind gets involved. Heat. A pull toward something you can't fully name. The kind that doesn't ask for permission and doesn't wait for the right moment.</p>
+      </div>
+    </div>
+
+    <div class="junoon-ignition">
+      <p class="junoon-ignition-spark serif">And some fires don't need more fuel...<br>they need a <em>spark.</em></p>
+      <p class="junoon-p">That moment of ignition when you remember what it felt like to be fully alive — what actually drives you underneath everything you've built on top of it.</p>
+      <p class="junoon-p">That's what the Karakoram does. It doesn't hand you anything. It just removes every comfortable reason not to feel it.</p>
+      <p class="junoon-expedition serif">Junoon: The Karakoram Ignition.</p>
+      <a href="junoon.html" class="btn-secondary">Enter Junoon →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 3: THE ROAD -->
 <section class="route-sec" id="route">
   <div class="sec-inner">
     <div class="route-top">
@@ -168,20 +209,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="route-body">
       <p>Islamabad to Skardu. Fifteen days.</p>
-      <p>The Karakoram Highway runs 1,300 kilometers from Punjab through the valleys of Kashmir, over Babusar Top at 4,173 meters, north through Hunza to Khunjerab Pass at the Chinese border — the highest paved international crossing on earth — then south and east to Skardu at the base of K2. The road took twenty years to build and cost nearly a thousand lives in construction alone. From ancient fortresses guarding the pass for centuries to some of Pakistan's 7,000 glaciers — more than any country outside the polar regions — the sheer scale of a land layered in history will shock you all from your seat.</p>
-      <p>With 360 views of some of the world's tallest mountains, you'll cross a corridor that has been moving people for over a thousand years. Traders, pilgrims, wanderers. It has always drawn those who cannot stay still.</p>
+      <p>The Karakoram Highway runs 1,300 kilometers from Punjab through the valleys of Kashmir, over Babusar Top at 4,173 meters, north through Hunza to Khunjerab Pass at the Chinese border — the highest paved international crossing on earth — then south and east to Skardu at the base of K2. The road took twenty years to build. From ancient fortresses to 7,000 glaciers — more than any country outside the polar regions — the scale of this landscape will force you off autopilot.</p>
     </div>
-    <div class="route-map">
-      <img src="images/route-map.png" alt="Karakoram Highway route map — Islamabad to Skardu" class="route-map-img">
-    </div>
-    <div class="route-photos">
-      <img class="rph tall" src="images/route-hunza-lake.jpg" alt="Husseini suspension bridge — Passu Cones behind">
-      <img class="rph tall" src="images/route-karakoram.jpg" alt="Attabad Lake — turquoise water, Hunza">
-    </div>
-    <div class="route-photos-bottom">
-      <img class="rph sm" src="images/route-valley.jpg" alt="Karakoram Highway at km 1422 — golden hour">
-      <img class="rph sm" src="images/route-pass.jpg" alt="KKH at dusk">
-      <img class="rph sm" src="images/route-rider.jpg" alt="Skardu river valley from above">
+    <div class="route-photo-full">
+      <img src="images/route-eagle-nest.jpg" alt="Hunza Valley at sunset — Karakoram Highway" class="route-photo-img">
     </div>
     <div class="highlights">
       <div class="hl"><div class="hl-name serif">Islamabad</div><div class="hl-sub mono">Departure point</div></div>
@@ -194,7 +225,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SECTION 4: IS THIS FOR YOU -->
+<!-- SECTION 4: MID-PAGE EMAIL CAPTURE -->
+<section class="email-mid-sec">
+  <p class="serif" style="font-size:clamp(24px,3vw,38px); color:var(--flame); margin:0 0 10px; font-weight:300;">Not ready to apply? Stay in the loop.</p>
+  <p class="mono" style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(212,201,184,.4); margin:0 0 28px;">Expedition updates, stories, first access.</p>
+  <a href="#" class="btn-primary" data-modal="email">Feed Your Fire →</a>
+</section>
+
+<!-- SECTION 5: IS THIS FOR YOU -->
 <section class="who-sec" id="who">
   <div class="sec-inner">
     <span class="sec-label" style="color:var(--ember-deep)">Before You Apply</span>
@@ -225,7 +263,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- SECTION 5: INVESTMENT -->
+<!-- SECTION 6: ABOUT SAAD (condensed) -->
+<section class="about-sec" id="about">
+  <div class="sec-inner about-grid">
+    <div class="about-text">
+      <span class="sec-label">Who Leads This</span>
+
+      <h2 class="about-h2 serif">How Did We<br>Get Here?</h2>
+
+      <div class="about-body">
+        <p>I grew up Pakistani-American in the deep south post-9/11 — which meant feeling like I belonged fully to neither world, before realizing that was exactly the point.</p>
+
+        <p>For about five years I went looking — hard. Hiked the Darién Gap solo. Fished commercially in Alaska. Hitchhiked through the Sudanese revolution. Went to the places most people don't go, for reasons I couldn't fully explain at the time.</p>
+
+        <p>Then I cooled down. Focused on other things. Started asking why I'd done any of it.</p>
+      </div>
+
+      <a href="about.html" class="btn-secondary">Full Story →</a>
+    </div>
+
+    <div class="about-photo-col">
+      <img src="images/saad-photo-2.jpg" alt="Saad Bashir — Junoon Journeys" class="about-photo">
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: INVESTMENT -->
 <section class="inv-sec" id="investment">
   <div class="sec-inner inv-grid">
     <div>
@@ -239,76 +302,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="https://tally.so/r/xXNDY9" class="btn-primary" style="display:inline-block;margin-top:8px" target="_blank" rel="noopener">Apply for a Spot →</a>
     </div>
     <div>
-      <p class="inv-body">This is not a budget tour. It is also not an inflated one. Every dollar goes toward the operators, the support, and the infrastructure that makes a safe expedition possible in one of the world's most demanding terrains.</p>
+      <p class="inv-body">This is not a budget tour or an inflated one. Every dollar goes toward the operators, the support, and the infrastructure that makes a safe expedition possible in one of the world's most demanding terrains.</p>
       <p class="inv-body">We run with Adventure Planners Pakistan — over ten years of experience on these specific roads, with these specific bikes, in these specific conditions. Their knowledge is built into the price.</p>
       <p class="inv-body">We review every application personally. Every applicant hears back within 5 business days. Selection is based on fit, experience, and group balance — not first come first served.</p>
       <div class="inv-box">
         <p class="inv-box-text">Cancellation policy applies — full details provided upon acceptance and in the participant agreement. Travel insurance with cancellation coverage is required and strongly recommended.</p>
       </div>
-      <p class="inv-body">Applications are open now. The expedition departs September 19, 2026.</p>
     </div>
   </div>
 </section>
 
-<!-- SECTION 5: JUNOON (condensed) -->
-<section class="junoon-sec" id="junoon">
+<!-- SECTION 8: REALITY ANCHOR -->
+<section class="anchor-sec" id="support">
   <div class="sec-inner">
-
-    <div class="junoon-top-grid">
-      <div class="junoon-identity">
-        <span class="sec-label">The Word Behind the Journey</span>
-        <img src="images/Junoon-transparent-desert-gold.png" alt="جنون" class="junoon-calli-main" aria-hidden="true">
-        <span class="junoon-roman serif">Junoon</span>
-        <div class="junoon-sufi-pull serif">The divine madness of longing.</div>
+    <span class="sec-label" style="color:var(--ember-deep)">Before You Commit</span>
+    <h2 class="serif" style="font-size:clamp(28px,3.5vw,44px); color:var(--parchment); margin:12px 0 0; font-weight:300;">What's behind you on the road.</h2>
+    <div class="anchor-grid">
+      <div>
+        <span class="anchor-item-label">Support Vehicle</span>
+        <p class="anchor-item-body">A dedicated support vehicle follows the group throughout. Gear, supplies, and a fallback if you or your bike need it.</p>
       </div>
-      <div class="junoon-intro">
-        <p style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--amber); opacity:0.6; margin-bottom:24px;">Madness with direction.</p>
-        <p class="junoon-p">Not madness. Not chaos. Something more specific than that.</p>
-        <div class="ember-rule"></div>
-        <p class="junoon-p">The Sufi poets named it centuries ago — the compulsion that arrives before thought does, that moves through mystics and wanderers and anyone who has ever felt called toward something they couldn't rationally explain. They didn't treat it as a flaw to be corrected. They treated it as the closest thing a human being has to a compass.</p>
-        <div class="ember-rule"></div>
-        <p class="junoon-p">It's the feeling in your chest before your mind gets involved. Heat. A pull toward something you can't fully name. Your fingertips itching to move before reason has had a chance to object. An unconscious purpose — the kind that doesn't ask for permission and doesn't wait for the right moment.</p>
+      <div>
+        <span class="anchor-item-label">Mechanic On Route</span>
+        <p class="anchor-item-body">A licensed mechanic from Adventure Planners Pakistan travels with us. These roads demand it. You won't be solving problems alone.</p>
       </div>
-    </div>
-
-    <div class="junoon-ignition">
-      <p class="junoon-p">What remains is the quality of what you burned and how well you tended it.</p>
-      <p class="junoon-ignition-spark serif">And some fires don't need more fuel...<br>they need a <em>spark.</em></p>
-      <p class="junoon-p">That moment of ignition when you remember what it felt like to be fully alive — what actually drives you underneath everything you've built on top of it.</p>
-      <p class="junoon-p">That's what the Karakoram does. It doesn't hand you anything. It just removes every comfortable reason not to feel it.</p>
-      <p class="junoon-expedition serif">Junoon: The Karakoram Ignition.</p>
-      <a href="junoon.html" class="btn-secondary">Enter Junoon →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION 6: ABOUT SAAD (condensed) -->
-<section class="about-sec" id="about">
-  <div class="sec-inner about-grid">
-    <div class="about-text">
-      <span class="sec-label">Who Leads This</span>
-
-      <h2 class="about-h2 serif">How Did We<br>Get Here?</h2>
-
-      <div class="about-body">
-        <p>I grew up Pakistani-American in the deep south post-9/11 — which meant spending a long time feeling like I belonged fully to neither world, before realizing that was exactly the point. Being a bridge between identities teaches you things about connection that belonging to only one side never could.</p>
-
-        <p>For about five years I went looking — hard. Hiked the Darién Gap solo. Fished commercially in Alaska. Hitchhiked through the Sudanese revolution. Went to the places most people don't go, for reasons I couldn't fully explain at the time.</p>
-
-        <p>Then I cooled down. Focused on other things. Started asking why I'd done any of it.</p>
+      <div>
+        <span class="anchor-item-label">Group Size</span>
+        <p class="anchor-item-body">Maximum 10 riders. Small enough that you're never anonymous. Large enough to manage the unexpected.</p>
       </div>
-
-      <a href="about.html" class="btn-secondary">Full Story →</a>
-    </div>
-
-    <div class="about-photo-col">
-      <img src="images/Saad-photo.jpg" alt="Saad Bashir — Junoon Journeys" class="about-photo">
     </div>
   </div>
 </section>
 
-<!-- SECTION 7: APPLY CTA -->
+<!-- SECTION 9: APPLY CTA -->
 <section class="apply-sec" id="apply">
   <div class="apply-inner">
     <img src="images/junoon-logo-transparent-gold.png" alt="" class="apply-bg-urdu" aria-hidden="true">
@@ -323,7 +349,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="#top" class="page-back-top">↑ Back to Top</a>
 </div>
 
-<!-- EMAIL CAPTURE -->
+<!-- SECTION 10: FINAL EMAIL CAPTURE -->
 <section class="email-sec">
   <div class="email-sec-inner">
     <div class="sib-form">
@@ -380,7 +406,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  I'M IN
+                  Feed Your Fire →
                 </button>
               </div>
             </div>
@@ -412,7 +438,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="foot-bottom">
     <span class="foot-copy mono">Looks like Madness. Feels like Purpose. &nbsp;·&nbsp; Built on Junoon.</span>
-    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7;">Privacy Policy</a></span>
+    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7;">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:inherit;text-decoration:none;opacity:.7;">Terms</a></span>
   </div>
 </footer>
 
@@ -425,7 +451,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
       <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
       <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
-      <button class="modal-submit" type="submit">I'm In →</button>
+      <button class="modal-submit" type="submit">Feed Your Fire →</button>
       <input type="text" name="email_address_check" value="" style="display:none">
       <input type="hidden" name="locale" value="en">
     </form>
@@ -503,28 +529,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   modal.addEventListener('click', function(e) {
     if (e.target === modal) closeModal();
   });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
-
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var data = new FormData(form);
-      fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' })
-        .then(function() {
-          form.style.display = 'none';
-          successMsg.style.display = 'block';
-          setTimeout(closeModal, 2800);
-        })
-        .catch(function() {
-          form.style.display = 'none';
-          successMsg.style.display = 'block';
-          setTimeout(closeModal, 2800);
-        });
-    });
-  }
-}());
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form)}).then(function(){ form.style.display='none'; successMsg.style.display='block'; }).catch(function(){ }); }); }
+})();
 </script>
 </body>
 </html>
