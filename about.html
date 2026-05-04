@@ -204,11 +204,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <style>
   #sib-container input:-ms-input-placeholder {
     font-family: 'DM Mono', monospace;
-    color: rgba(212, 201, 184, 0.3);
+    color: rgba(212, 201, 184, 0.62);
   }
   #sib-container input::placeholder {
     font-family: 'DM Mono', monospace;
-    color: rgba(212, 201, 184, 0.3);
+    color: rgba(212, 201, 184, 0.62);
   }
 </style>
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
@@ -332,6 +332,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="about-contact-item">
         <span class="about-contact-label">Applications</span>
+        <a href="https://tally.so/r/xXNDY9" class="about-contact-val" target="_blank" rel="noopener">Apply for a Spot →</a>
+      </div>
+      <div class="about-contact-item">
+        <span class="about-contact-label">Stay in Touch</span>
         <a href="#" class="about-contact-val" data-modal="email">Feed Your Fire →</a>
       </div>
     </div>
@@ -341,11 +345,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <!-- END NAV                                     -->
 <!-- ─────────────────────────────────────────── -->
-<div class="page-end-nav">
-  <span class="page-tick">↑</span>
-  <a href="#top" class="page-back-top">Back to Top</a>
-  <a href="index.html" class="btn-secondary" style="margin-top:8px">← Back to Main</a>
+<div class="page-nav-strip">
+  <a href="expedition.html" class="page-nav-link">The Expedition →</a>
+  <span class="page-nav-sep">·</span>
+  <a href="junoon.html" class="page-nav-link">Junoon →</a>
 </div>
+<a href="#top" class="page-back-inline">↑ Back to top</a>
+
 
 <!-- EMAIL CAPTURE -->
 <section class="email-sec">
@@ -404,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  I'M IN
+                  Feed Your Fire →
                 </button>
               </div>
             </div>
@@ -436,7 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="foot-bottom">
     <span class="foot-copy mono">Looks like Madness. Feels like Purpose. &nbsp;·&nbsp; Built on Junoon.</span>
-    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7;">Privacy Policy</a></span>
+    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7;">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:inherit;text-decoration:none;opacity:.7;">Terms</a></span>
   </div>
 </footer>
 
@@ -449,7 +455,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
       <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
       <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
-      <button class="modal-submit" type="submit">I'm In →</button>
+      <button class="modal-submit" type="submit">Feed Your Fire →</button>
       <input type="text" name="email_address_check" value="" style="display:none">
       <input type="hidden" name="locale" value="en">
     </form>
@@ -513,8 +519,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
-  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'}).finally(function(){ form.style.display='none'; successMsg.style.display='block'; setTimeout(closeModal,2800); }); }); }
-}());
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form)}).then(function(){ form.style.display='none'; successMsg.style.display='block'; }).catch(function(){ }); }); }
+})();
 </script>
 </body>
 </html>

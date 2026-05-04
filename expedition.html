@@ -33,8 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* ── expedition.html page-specific styles ── */
 
 .page-hero {
-  min-height: 72vh;
-  max-height: 72vh;
+  min-height: 82vh;
+  max-height: 82vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -108,19 +108,220 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media(max-width:960px) {
-  .page-hero { padding: 0 24px 72px; min-height: 60vh; }
+  .page-hero { padding: 0 24px 72px; min-height: 72vh; }
   .page-end-nav { padding: 60px 24px; }
 }
 </style>
+
+<style>
+/* ── Photo grid ── */
+.route-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin: 44px 0 4px;
+}
+.route-photos-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 44px;
+}
+
+/* ── Route map ── */
+.route-map { width: 100%; margin: 44px 0; }
+.route-map-img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+}
+.rph-figure { margin: 0; padding: 0; }
+.rph { width: 100%; display: block; object-fit: cover; }
+.rph.tall { height: 440px; object-position: center 40%; }
+.rph.sm   { height: 240px; object-position: center 50%; }
+.rph-caption {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(26,22,18,.42);
+  margin-top: 7px;
+  display: block;
+  line-height: 1.5;
+}
+
+/* ── Pull quote ── */
+.pull-quote-sec {
+  background: var(--char);
+  padding: 120px 56px;
+  text-align: center;
+  border-top: 1px solid rgba(212,201,184,.04);
+  border-bottom: 1px solid rgba(212,201,184,.04);
+}
+.pull-quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 3.6vw, 50px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ash);
+  line-height: 1.38;
+  max-width: 860px;
+  margin: 0 auto;
+  border: none;
+  padding: 0;
+}
+.pull-quote-anchor {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--ember);
+  margin-top: 36px;
+  display: block;
+}
+
+/* ── Inaugural strip ── */
+.inaugural-strip {
+  background: var(--char-warm);
+  border-top: 1px solid rgba(196,88,10,.32);
+  border-bottom: 1px solid rgba(196,88,10,.12);
+  padding: 72px 56px;
+}
+.inaugural-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  text-align: center;
+  margin-bottom: 52px;
+}
+.inaugural-item-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 300;
+  color: var(--flame);
+  margin-bottom: 14px;
+  line-height: 1.1;
+}
+.inaugural-item-body {
+  font-size: 14px;
+  color: rgba(212,201,184,.52);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+
+/* ── Inaugural flip cards ── */
+.inaugural-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.inaugural-card {
+  perspective: 1200px;
+  cursor: pointer;
+  min-height: 320px;
+}
+.inaugural-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  transition: transform 0.65s cubic-bezier(.4,0,.2,1);
+  transform-style: preserve-3d;
+}
+.inaugural-card.flipped .inaugural-card-inner {
+  transform: rotateY(180deg);
+}
+.inaugural-card-front,
+.inaugural-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border: 1px solid rgba(196,88,10,.18);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.inaugural-card-front { background: var(--char); }
+.inaugural-card-back {
+  background: var(--char-warm);
+  transform: rotateY(180deg);
+  padding: 0;
+  overflow: hidden;
+}
+.inaugural-photo-placeholder {
+  flex: 1;
+  background: rgba(212,201,184,.03);
+  border: 1px dashed rgba(212,201,184,.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px;
+}
+.inaugural-photo-placeholder-icon {
+  font-size: 22px;
+  opacity: .18;
+}
+.inaugural-photo-placeholder-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.22);
+}
+.inaugural-card-hint {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(196,88,10,.4);
+  margin-top: auto;
+  padding-top: 20px;
+  display: block;
+}
+.inaugural-card-back-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(196,88,10,.4);
+  text-align: center;
+  padding: 12px 16px 0;
+}
+@media(max-width:960px) {
+  .route-photos { grid-template-columns: 1fr; }
+  .route-photos-bottom { grid-template-columns: 1fr 1fr; }
+  .rph.tall { height: 300px; }
+  .rph.sm   { height: 200px; }
+  .pull-quote-sec { padding: 80px 24px; }
+  .inaugural-strip { padding: 56px 24px; }
+  .inaugural-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media(max-width:540px) {
+  .route-photos-bottom { grid-template-columns: 1fr; }
+  .rph.sm { height: 220px; }
+}
+</style>
+
 <!-- Brevo Form Styles -->
 <style>
   #sib-container input:-ms-input-placeholder {
     font-family: 'DM Mono', monospace;
-    color: rgba(212, 201, 184, 0.3);
+    color: rgba(212, 201, 184, 0.62);
   }
   #sib-container input::placeholder {
     font-family: 'DM Mono', monospace;
-    color: rgba(212, 201, 184, 0.3);
+    color: rgba(212, 201, 184, 0.62);
   }
 </style>
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
@@ -185,7 +386,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- HERO                                        -->
 <!-- ─────────────────────────────────────────── -->
 <section class="page-hero">
-  <img class="page-hero-bg" src="images/route-karakoram.jpg" alt="Karakoram Highway">
+  <img class="page-hero-bg" src="images/route-moto-1.jpg" alt="Motorcycle on the Karakoram Highway">
   <div class="page-hero-overlay"></div>
   <div class="page-hero-inner">
     <span class="sec-label" style="white-space:nowrap; margin-bottom:20px;">Junoon: The Karakoram Ignition</span>
@@ -214,20 +415,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="route-body">
       <p>Islamabad to Skardu. Fifteen days.</p>
-      <p>The Karakoram Highway runs 1,300 kilometers from Punjab through the valleys of Kashmir, over Babusar Top at 4,173 meters, north through Hunza to Khunjerab Pass at the Chinese border — the highest paved international crossing on earth — then south and east to Skardu at the base of K2. The road took twenty years to build and cost nearly a thousand lives in construction alone. From ancient fortresses guarding the pass for centuries to some of Pakistan's 7,000 glaciers — more than any country outside the polar regions — the sheer scale of a land layered in history will shock you all from your seat.</p>
-      <p>With 360 views of some of the world's tallest mountains, you'll cross a corridor that has been moving people for over a thousand years. Traders, pilgrims, wanderers. It has always drawn those who cannot stay still.</p>
+      <p>The road took twenty years to build. It runs 1,300 kilometers from Islamabad through the valleys of Kashmir, over Babusar Top at 4,173 meters, north through Hunza to Khunjerab Pass at the Chinese border — the highest paved international crossing on earth — then east to Skardu at the base of K2. More than 7,000 glaciers. More than any country outside the polar regions. The scale doesn't gradually reveal itself. It lands all at once.</p>
     </div>
     <div class="route-map">
       <img src="images/route-map.png" alt="Karakoram Highway route map — Islamabad to Skardu" class="route-map-img">
     </div>
     <div class="route-photos">
-      <img class="rph tall" src="images/route-hunza-lake.jpg" alt="Husseini suspension bridge — Passu Cones behind">
-      <img class="rph tall" src="images/route-karakoram.jpg" alt="Attabad Lake — turquoise water, Hunza">
+      <figure class="rph-figure">
+        <img class="rph tall" src="images/route-passu.jpg" alt="Husseini suspension bridge — Passu Cones behind">
+        <figcaption class="rph-caption">The bridge moves when you cross. That's normal.</figcaption>
+      </figure>
+      <figure class="rph-figure">
+        <img class="rph tall" src="images/route-attabad.jpg" alt="Attabad Lake — turquoise water, Hunza">
+        <figcaption class="rph-caption">Attabad Lake. A landslide made it. The Karakoram does what it wants.</figcaption>
+      </figure>
     </div>
     <div class="route-photos-bottom">
-      <img class="rph sm" src="images/route-valley.jpg" alt="Karakoram Highway at km 1422 — golden hour">
-      <img class="rph sm" src="images/route-pass.jpg" alt="KKH at dusk">
-      <img class="rph sm" src="images/route-rider.jpg" alt="Skardu river valley from above">
+      <figure class="rph-figure">
+        <img class="rph sm" src="images/route-village.jpg" alt="Village chai stop on the KKH">
+        <figcaption class="rph-caption">Every village has one. Most rides end here first.</figcaption>
+      </figure>
+      <figure class="rph-figure">
+        <img class="rph sm" src="images/route-hunza-colors.jpg" alt="Hunza Valley in autumn — trees turning">
+        <figcaption class="rph-caption">September in Hunza. The trees know the season before you do.</figcaption>
+      </figure>
+      <figure class="rph-figure">
+        <img class="rph sm" src="images/route-pass.jpg" alt="Karakoram Highway — the road ahead">
+        <figcaption class="rph-caption">The road ahead. Fifteen days of it.</figcaption>
+      </figure>
     </div>
     <div class="highlights">
       <div class="hl"><div class="hl-name serif">Islamabad</div><div class="hl-sub mono">Departure point</div></div>
@@ -256,7 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="day-card">
         <span class="day-time mono">On the Road</span>
         <div class="day-title serif">Riding & Tea Stops</div>
-        <div class="day-desc">~150km average on 150cc bikes. Your main bag travels in the support vehicle. Planned stops at viewpoints and village chai shops. The road dictates pace.</div>
+        <div class="day-desc">~150km average on 150cc bikes. Your main bag travels in the support vehicle. Chai stops at villages you won't find in any guide. The road dictates pace.</div>
       </div>
       <div class="day-card">
         <span class="day-time mono">Supported</span>
@@ -266,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="day-card">
         <span class="day-time mono">Destination</span>
         <div class="day-title serif">Activities & Hikes</div>
-        <div class="day-desc">Fort visits, glacier approaches, optional hikes from moderate to tough. Some of the most jaw-dropping views on the entire trip are only accessible on foot. None are mandatory.</div>
+        <div class="day-desc">Fort visits, glacier approaches, optional hikes from moderate to tough. The views that stop you completely are only accessible on foot. None are mandatory.</div>
       </div>
       <div class="day-card">
         <span class="day-time mono">Evening</span>
@@ -283,39 +498,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ─────────────────────────────────────────── -->
-<!-- 3. EXTENSION                                -->
+<!-- PULL QUOTE                                   -->
 <!-- ─────────────────────────────────────────── -->
-<section class="ext-sec" id="extension" style="border-top: 1px solid rgba(196,88,10,.18);">
-  <div class="ext-header">
-    <span class="sec-label">The Junoon Extension</span>
-    <div class="ext-header-grid">
-      <h2 class="ext-h2 serif">Go Further.<br><em style="color:var(--amber);font-style:italic;">Stay Longer.</em></h2>
-      <div class="ext-intro">
-        <p>For those who aren't ready to stop. An optional extension beyond Skardu into two of the most extraordinary places in the subcontinent.</p>
-        <p>Available based on confirmed interest. Note it on your application.</p>
-      </div>
-    </div>
-  </div>
-  <div class="ext-two">
-    <div class="ext-card">
-      <img class="ext-card-img" src="images/route-valley.jpg" alt="Deosai Plains — second highest plateau on earth">
-      <div class="ext-card-overlay">
-        <span class="ext-card-label mono">Extension · Part One</span>
-        <div class="ext-card-title serif">Deosai</div>
-        <div class="ext-card-desc">The second highest plateau on earth. Brown bears roaming open grassland. Camping under skies with no light pollution for hundreds of kilometers. A place so vast and so still it resets something in you.</div>
-      </div>
-    </div>
-    <div class="ext-card">
-      <img class="ext-card-img" src="images/route-mountains.jpg" alt="Fairy Meadows — Nanga Parbat at golden hour">
-      <div class="ext-card-overlay">
-        <span class="ext-card-label mono">Extension · Part Two</span>
-        <div class="ext-card-title serif">Fairy Meadows</div>
-        <div class="ext-card-desc">At the foot of Nanga Parbat — the Killer Mountain. Accessed by what many call the most dangerous road in the world. A jeep track so narrow and exposed it makes the KKH feel tame. Worth every meter of it.</div>
-      </div>
-    </div>
-  </div>
-  <p class="ext-note mono">Note interest on your application — final itinerary shared with confirmed participants.</p>
+<section class="pull-quote-sec">
+  <blockquote class="pull-quote-text">
+    "Riding through Pakistan, there is no glass<br>between you and the giants —<br>just pure environment."
+  </blockquote>
+  <span class="pull-quote-anchor">Sep 19 – Oct 3, 2026 &nbsp;·&nbsp; The Karakoram</span>
 </section>
+
 
 <!-- ─────────────────────────────────────────── -->
 <!-- 4. WHAT'S INCLUDED                          -->
@@ -334,38 +525,120 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="inc-row"><span class="inc-mark">✦</span><span>All accommodation — guesthouses chosen for character and location, not stars</span></div>
       <div class="inc-row"><span class="inc-mark">✦</span><span>All permits, national park entry fees, and road tolls</span></div>
       <div class="inc-row"><span class="inc-mark">✦</span><span>Daily route briefings and nightly group sessions</span></div>
-      <div class="inc-row"><span class="inc-mark">✦</span><span>Domestic flight Skardu → Islamabad at end of expedition</span></div>
     </div>
     <div>
       <span class="sec-label">What's Not</span>
       <h2 class="inc-h2 serif">Not included</h2>
       <div class="inc-row"><span class="inc-not">—</span><span>International flights to and from Islamabad</span></div>
-      <div class="inc-row"><span class="inc-not">—</span><span>Pakistan visa fees — processing assistance available at additional cost</span></div>
+      <div class="inc-row"><span class="inc-not">—</span><span>Pakistan visa fees — processing assistance available, ask on your application</span></div>
       <div class="inc-row"><span class="inc-not">—</span><span>Travel and medical insurance — required, proof must be provided before departure</span></div>
       <div class="inc-row"><span class="inc-not">—</span><span>Personal riding gear — helmet and jacket mandatory, boots and riding pants strongly recommended</span></div>
       <div class="inc-row"><span class="inc-not">—</span><span>Lunches and personal expenses on the road</span></div>
-      <span class="inc-sub mono">Custom Gear</span>
-      <div class="inc-row"><span class="inc-mark">✦</span><span>Custom Junoon Journeys leather jacket — included for every rider. Yours to keep.</span></div>
       <span class="inc-sub mono">Pillion Passengers</span>
       <div class="inc-row"><span class="inc-mark">✦</span><span>Available on request at additional cost. Note your interest on the application.</span></div>
     </div>
   </div>
 </section>
 
+
+<!-- ─────────────────────────────────────────── -->
+<!-- INAUGURAL INCLUSIONS                         -->
+<!-- ─────────────────────────────────────────── -->
+<div class="inaugural-strip">
+  <span class="inaugural-label">First Expedition Only</span>
+  <div class="inaugural-grid">
+    <div class="inaugural-card" onclick="this.classList.toggle('flipped')">
+      <div class="inaugural-card-inner">
+        <div class="inaugural-card-front">
+          <div class="inaugural-item-title">The Leather Jacket</div>
+          <p class="inaugural-item-body">A custom Junoon Journeys leather jacket, made for this road. Every rider on the inaugural expedition receives one. Not a souvenir — something you earned on the way there.</p>
+          <span class="inaugural-card-hint">↻ Flip</span>
+        </div>
+        <div class="inaugural-card-back">
+          <span class="inaugural-card-back-label">Photo Coming</span>
+          <div class="inaugural-photo-placeholder">
+            <span class="inaugural-photo-placeholder-icon">◻</span>
+            <span class="inaugural-photo-placeholder-text">Jacket · Campaign Photo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="inaugural-card" onclick="this.classList.toggle('flipped')">
+      <div class="inaugural-card-inner">
+        <div class="inaugural-card-front">
+          <div class="inaugural-item-title">Skardu → Islamabad Flight</div>
+          <p class="inaugural-item-body">The return flight, included. For fifteen days you rode through these mountains at road level. The flight home goes above them — Nanga Parbat in one window, K2 in the other. The same peaks. A completely different relationship to them. That's how this expedition ends.</p>
+          <span class="inaugural-card-hint">↻ Flip</span>
+        </div>
+        <div class="inaugural-card-back">
+          <span class="inaugural-card-back-label">Photo Coming</span>
+          <div class="inaugural-photo-placeholder">
+            <span class="inaugural-photo-placeholder-icon">◻</span>
+            <span class="inaugural-photo-placeholder-text">Mountain Flight · Window View</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────── -->
+<!-- EXTENSION                                -->
+<!-- ─────────────────────────────────────────── -->
+<section class="ext-sec" id="extension" style="border-top: 1px solid rgba(196,88,10,.18);">
+  <div class="ext-header">
+    <span class="sec-label">The Junoon Extension</span>
+    <div class="ext-header-grid">
+      <h2 class="ext-h2 serif">Go Further.<br><em style="color:var(--amber);font-style:italic;">Stay Longer.</em></h2>
+      <div class="ext-intro">
+        <p>For those who aren't ready to stop. An optional extension beyond Skardu into two of the most extraordinary places in the subcontinent.</p>
+        <p>Available based on confirmed interest. Note it on your application.</p>
+      </div>
+    </div>
+  </div>
+  <div class="ext-two">
+    <div class="ext-card">
+      <img class="ext-card-img" src="images/route-deosai.jpg" alt="Deosai Plains — second highest plateau on earth">
+      <div class="ext-card-overlay">
+        <span class="ext-card-label mono">Extension · Part One</span>
+        <div class="ext-card-title serif">Deosai</div>
+        <div class="ext-card-desc">The second highest plateau on earth. Brown bears roaming open grassland. Camping under skies with no light pollution for hundreds of kilometers. A place so vast and so still it resets something in you.</div>
+      </div>
+    </div>
+    <div class="ext-card">
+      <img class="ext-card-img" src="images/route-fairy.jpg" alt="Fairy Meadows — Nanga Parbat at golden hour">
+      <div class="ext-card-overlay">
+        <span class="ext-card-label mono">Extension · Part Two</span>
+        <div class="ext-card-title serif">Fairy Meadows</div>
+        <div class="ext-card-desc">At the foot of Nanga Parbat — the Killer Mountain. Accessed by what many call the most dangerous road in the world. A jeep track so narrow and exposed it makes the KKH feel tame. Worth every meter of it.</div>
+      </div>
+    </div>
+  </div>
+  <p class="ext-note mono">Note interest on your application — final itinerary shared with confirmed participants.</p>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- CTA                                         -->
+<!-- ─────────────────────────────────────────── -->
+<div style="background:var(--char);padding:72px 56px;text-align:center;border-top:1px solid rgba(196,88,10,.08);">
+  <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);font-weight:300;color:var(--ash);margin:0 0 8px;">Fifteen days. Islamabad to Skardu. September 2026.</p>
+  <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,201,184,.4);margin:0 0 32px;">Applications reviewed personally · Response within 5 business days</p>
+  <a href="https://tally.so/r/xXNDY9" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block;">Apply for a Spot →</a>
+</div>
+
 <!-- ─────────────────────────────────────────── -->
 <!-- END NAV                                     -->
 <!-- ─────────────────────────────────────────── -->
-<div class="page-end-nav">
-  <span class="page-tick">↑</span>
-  <a href="#top" class="page-back-top">Back to Top</a>
-  <a href="index.html" class="btn-secondary" style="margin-top:8px">← Back to Main</a>
+<div class="page-nav-strip">
+  <a href="pakistan.html" class="page-nav-link">Pakistan →</a>
+  <span class="page-nav-sep">·</span>
+  <a href="faq.html" class="page-nav-link">FAQ →</a>
+  <span class="page-nav-sep">·</span>
+  <a href="about.html" class="page-nav-link">About →</a>
 </div>
+<a href="#top" class="page-back-inline">↑ Back to top</a>
 
-<!-- APPLY CTA -->
-<div style="background:var(--char);padding:64px 56px 0;text-align:center;border-top:1px solid rgba(196,88,10,.08);">
-  <a href="https://tally.so/r/xXNDY9" class="btn-primary" target="_blank" rel="noopener" style="display:inline-block;">Apply for a Spot →</a>
-  <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(212,201,184,.32);margin-top:14px;">Applications reviewed personally · Response within 5 business days</p>
-</div>
 
 <!-- EMAIL CAPTURE -->
 <section class="email-sec">
@@ -424,7 +697,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  I'M IN
+                  Feed Your Fire →
                 </button>
               </div>
             </div>
@@ -456,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="foot-bottom">
     <span class="foot-copy mono">Looks like Madness. Feels like Purpose. &nbsp;·&nbsp; Built on Junoon.</span>
-    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7;">Privacy Policy</a></span>
+    <span class="foot-copy mono">© 2026 Junoon LLC · saad@junoonjourneys.com &nbsp;·&nbsp; <a href="privacy.html" style="color:inherit;text-decoration:none;opacity:.7;">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" style="color:inherit;text-decoration:none;opacity:.7;">Terms</a></span>
   </div>
 </footer>
 
@@ -469,7 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
       <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
       <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
-      <button class="modal-submit" type="submit">I'm In →</button>
+      <button class="modal-submit" type="submit">Feed Your Fire →</button>
       <input type="text" name="email_address_check" value="" style="display:none">
       <input type="hidden" name="locale" value="en">
     </form>
@@ -533,8 +806,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
-  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form),mode:'no-cors'}).finally(function(){ form.style.display='none'; successMsg.style.display='block'; setTimeout(closeModal,2800); }); }); }
-}());
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form)}).then(function(){ form.style.display='none'; successMsg.style.display='block'; }).catch(function(){ }); }); }
+})();
 </script>
 </body>
 </html>

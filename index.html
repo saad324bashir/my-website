@@ -47,16 +47,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* Mid-page email capture */
 .email-mid-sec{background:var(--char);padding:72px 56px;border-top:1px solid rgba(212,201,184,.06);text-align:center}
 @media(max-width:768px){.email-mid-sec{padding:56px 24px}}
+/* ── Hero right column overrides ── */
+.hero-right {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  justify-content: flex-end !important;
+  align-self: stretch !important;
+  padding-left: 0 !important;
+  border-left: none !important;
+}
+.hero-sub {
+  text-align: center !important;
+}
+.hero-stats {
+  width: 100% !important;
+  row-gap: 4px !important;
+  column-gap: 16px !important;
+}
+
+/* Hero headline — diagonal flow treatment */
+.hero-h1 { display:flex; flex-direction:column; }
+.hero-l1 {
+  font-style: italic;
+  font-size: 0.82em;
+  color: rgba(212,201,184,.72);
+  line-height: 1.12;
+}
+.hero-l2 {
+  font-style: italic;
+  font-size: 1.06em;
+  color: var(--amber);
+  margin-left: 2.8ch;
+  margin-top: 0.82em;
+  line-height: 1.12;
+}
+.hero-madness {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ember);
+  opacity: 0.72;
+  margin-bottom: 28px;
+}
 </style>
 <!-- Brevo Form Styles -->
 <style>
   #sib-container input:-ms-input-placeholder {
     font-family: 'DM Mono', monospace;
-    color: rgba(212, 201, 184, 0.3);
+    color: rgba(212, 201, 184, 0.62);
   }
   #sib-container input::placeholder {
     font-family: 'DM Mono', monospace;
-    color: rgba(212, 201, 184, 0.3);
+    color: rgba(212, 201, 184, 0.62);
   }
 </style>
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
@@ -136,26 +182,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="hero-trip mono">Junoon: The Karakoram Ignition</span>
   </div>
   <div class="hero-bottom">
-    <div>
-      <img
-        src="images/Junoon-transparent-desert-gold.png"
-        alt="جنون"
-        class="hero-junoon-img"
-      >
+    <div class="hero-left">
+      <h1 class="hero-h1">
+        <span class="hero-l1">Some roads were made to be ridden.</span>
+        <span class="hero-l2">Some fires were made to be lit.</span>
+      </h1>
     </div>
-    <div class="hero-right">
-      <span class="nav-label" style="display:block; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); opacity:0.7; margin-bottom:16px;">Looks like Madness. Feels like Purpose.</span>
-      <h1 class="hero-h1">Some roads were made to be ridden.<br><em>Some fires were made to be lit.</em></h1>
-      <p class="hero-sub">15 days by motorcycle. Islamabad to Skardu through the Karakoram Highway, Pakistan. The world's highest paved road. The question it forces — that one's yours.</p>
-      <div class="hero-stats">
+    <div class="hero-right" style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;align-self:stretch;padding-left:0;border-left:none;">
+      <span class="hero-madness">Looks like Madness. Feels like Purpose.</span>
+      <p class="hero-sub" style="opacity:.68;text-align:center;max-width:380px;">15 days by motorcycle. Islamabad to Skardu through the Karakoram Highway, Pakistan. The world's highest paved road. The question it forces — that one's yours.</p>
+      <div class="hero-stats" style="opacity:.58;width:100%;row-gap:4px;">
         <div><span class="stat-lbl mono">Duration</span><span class="stat-val serif">15 Days</span></div>
         <div><span class="stat-lbl mono">Summit</span><span class="stat-val serif">4,693 m</span></div>
+        <div><span class="stat-lbl mono">Riders</span><span class="stat-val serif">Max 10</span></div>
         <div><span class="stat-lbl mono">Departure</span><span class="stat-val serif">Sep 19, 2026</span></div>
       </div>
-      <div class="btns">
+      <div style="margin-top:40px;display:flex;flex-direction:column;align-items:center;width:100%;">
         <a href="#" class="btn-primary" data-modal="email">Feed Your Fire →</a>
+        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(212,201,184,.45);margin-top:12px;text-align:center;">Get the full journey + details.</p>
       </div>
-      <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;color:rgba(212,201,184,.38);margin-top:12px;">Get the full journey + details.</p>
     </div>
   </div>
 </section>
@@ -305,9 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="inv-body">This is not a budget tour or an inflated one. Every dollar goes toward the operators, the support, and the infrastructure that makes a safe expedition possible in one of the world's most demanding terrains.</p>
       <p class="inv-body">We run with Adventure Planners Pakistan — over ten years of experience on these specific roads, with these specific bikes, in these specific conditions. Their knowledge is built into the price.</p>
       <p class="inv-body">We review every application personally. Every applicant hears back within 5 business days. Selection is based on fit, experience, and group balance — not first come first served.</p>
-      <div class="inv-box">
-        <p class="inv-box-text">Cancellation policy applies — full details provided upon acceptance and in the participant agreement. Travel insurance with cancellation coverage is required and strongly recommended.</p>
-      </div>
+      <p class="inv-body" style="color:rgba(212,201,184,.42);font-size:13px;">Maximum 10 riders. Full cancellation terms and participant agreement provided upon acceptance. Travel insurance required.</p>
     </div>
   </div>
 </section>
@@ -345,7 +388,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<div class="page-end-nav" style="padding:36px 56px;">
+<div class="page-end-nav" style="padding:10px 56px;">
   <a href="#top" class="page-back-top">↑ Back to Top</a>
 </div>
 
