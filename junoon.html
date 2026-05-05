@@ -34,16 +34,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 /* HERO */
 .jn-hero {
-  min-height: 72vh;
+  min-height: 82vh;
+  max-height: 82vh;
   background: var(--char);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-end;
+  padding: 0 56px 96px;
   position: relative;
   overflow: hidden;
-  padding: 100px 56px 72px;
 }
 .jn-hero::before {
   content: '';
@@ -57,46 +56,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(196,88,10,.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(196,88,10,.08) 0%, transparent 65%);
   pointer-events: none;
 }
 .jn-hero-inner {
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  gap: 40px;
+}
+.jn-hero-left {
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  flex: 1;
 }
-.jn-hero-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  letter-spacing: .32em;
-  text-transform: uppercase;
-  color: var(--ember);
+.jn-hero-right {
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+.jn-hero-calli {
+  width: clamp(200px, 34vw, 480px);
+  height: auto;
   display: block;
-  margin-bottom: 56px;
-  border: 1px solid rgba(196,88,10,.2);
-  padding: 7px 20px;
+  filter: drop-shadow(0 0 60px rgba(232,147,10,.3)) drop-shadow(0 0 160px rgba(196,88,10,.15));
 }
-.jn-hero-arabic {
-  font-family: 'Noto Nastaliq Urdu', serif;
-  font-size: clamp(130px, 22vw, 280px);
+.jn-hero-roman {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(60px, 9vw, 130px);
   color: var(--heat);
-  direction: rtl;
-  line-height: 1.2;
-  padding-bottom: 20px;
-  display: block;
-  text-shadow: 0 0 120px rgba(232,147,10,.32), 0 0 280px rgba(196,88,10,.16);
-  animation: flicker 9s ease-in-out infinite;
+  font-weight: 300;
+  line-height: .9;
+  margin-bottom: 22px;
 }
 .jn-hero-sub {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(20px, 2.6vw, 34px);
+  font-size: clamp(17px, 1.9vw, 24px);
   color: var(--ash);
   font-weight: 300;
   font-style: italic;
-  margin-top: 8px;
-  letter-spacing: .04em;
 }
 .jn-hero-scroll {
   position: absolute;
@@ -267,10 +269,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 @media(max-width:960px) {
-  .jn-hero { padding: 88px 24px 72px; }
+  .jn-hero { padding: 0 24px 72px; min-height: 72vh; max-height: 72vh; }
+  .jn-hero-inner { flex-direction: column-reverse; gap: 24px; }
+  .jn-hero-calli { width: clamp(160px, 52vw, 260px); }
   .jn-intro-sec { padding: 88px 24px; }
   .jn-outro-sec { padding: 88px 24px; }
   .jn-end-nav { padding: 60px 24px; }
+  section[style*="padding:100px 56px"] { padding: 72px 24px !important; }
 }
 </style>
 <!-- Brevo Form Styles -->
@@ -357,106 +362,88 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="jn-hero-inner">
-    <span class="jn-hero-label">The Philosophy</span>
-    <span class="jn-hero-arabic" aria-label="Junoon">جنون</span>
-    <div class="jn-hero-sub">The first entry.</div>
+    <div class="jn-hero-left">
+      <span class="sec-label" style="margin-bottom:20px;">A Nomad's Dictionary: The First Entry</span>
+      <span class="jn-hero-roman">Junoon</span>
+      <p class="jn-hero-sub">The divine madness of longing.</p>
+    </div>
+    <div class="jn-hero-right">
+      <img src="images/Junoon-transparent-desert-gold.png" alt="جنون" class="jn-hero-calli">
+    </div>
   </div>
-
-  <span class="jn-hero-scroll">↓ Scroll</span>
 </section>
 
 <!-- ─────────────────────────────────────────── -->
-<!-- INTRO — The Nomad Dictionary                -->
+<!-- HOOK + EXPLANATION                          -->
 <!-- ─────────────────────────────────────────── -->
 <section class="jn-intro-sec">
   <div class="jn-read-col">
-    <span class="sec-label">The Nomad Dictionary</span>
+    <p class="jn-read-p" style="font-size:clamp(19px,2.2vw,26px);color:var(--parchment);font-weight:300;line-height:1.6;margin-bottom:32px;">Some words don't translate. Junoon is one of them.</p>
 
-    <p class="jn-read-p">Every culture has words that don't translate. Concepts so specific to a place and a people that no other language bothered to make room for them. Things that exist — that humans have felt and lived and built entire philosophies around — that your mother tongue simply never named.</p>
+    <div class="ember-rule" style="margin:0 0 32px"></div>
 
-    <div class="ember-rule" style="margin:28px 0"></div>
-
-    <p class="jn-read-p">Junoon Journeys collects these words. The Nomad Dictionary. And then builds expeditions around them — because some things can't be taught. They just have to be truly lived.</p>
-    <p style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); opacity:0.6; margin-top:24px;">Madness with direction.</p>
-
-    <div class="ember-rule" style="margin:28px 0"></div>
-
-    <span class="jn-intro-arabic" aria-label="Junoon">جنون</span>
-    <span class="jn-intro-is">is the first entry.</span>
+    <p class="jn-read-p">The Arabic is جنون. The translation is usually <em>madness</em>. Neither is quite right.</p>
+    <p class="jn-read-p" style="margin-top:20px;">It's the pull that arrives before the plan does. The thing that moved you toward something before you had a good reason — and wouldn't let you stop, even when you did.</p>
+    <p class="jn-read-p" style="margin-top:20px;">The Sufi poets named it. Not as a problem. As the most honest signal a person has.</p>
   </div>
 </section>
 
 <!-- ─────────────────────────────────────────── -->
-<!-- PHILOSOPHY — Full Junoon                    -->
+<!-- WHAT IT FEELS LIKE                          -->
 <!-- ─────────────────────────────────────────── -->
-<section class="junoon-sec">
-  <div class="sec-inner">
+<section style="background:var(--char);padding:100px 56px;border-top:1px solid rgba(196,88,10,.07);position:relative;overflow:hidden;">
+  <div style="max-width:680px;margin:0 auto;position:relative;z-index:1;">
+    <span class="sec-label">What it feels like</span>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--ash);font-weight:300;font-style:italic;margin:24px 0 52px;line-height:1.5;">You know it by the way it moves.</p>
 
-    <!-- 1–4: Opening paragraphs -->
-    <div class="jn-phil-read">
-      <p class="junoon-p">Not madness. Not chaos. Something more specific than that.</p>
-      <div class="ember-rule"></div>
-      <p class="junoon-p">The Sufi poets named it centuries ago — the compulsion that arrives before thought does, that moves through mystics and wanderers and anyone who has ever felt called toward something they couldn't rationally explain. They didn't treat it as a flaw to be corrected. They treated it as the closest thing a human being has to a compass.</p>
-      <div class="ember-rule"></div>
-      <p class="junoon-p">It's the feeling in your chest before your mind gets involved. Heat. A pull toward something you can't fully name. Your fingertips itching to move before reason has had a chance to object. An unconscious purpose — the kind that doesn't ask for permission and doesn't wait for the right moment.</p>
-      <div class="ember-rule"></div>
-      <p class="junoon-p junoon-p-em">Everyone has it. Most people don't tend it.</p>
-    </div>
-
-    <!-- 5: Fire fates -->
-    <div class="junoon-fire-fates">
-      <span class="fire-fate serif">It rages — and burns everything you love.</span>
-      <span class="fire-fate serif">It smothers — under weight, under years, under days that look the same.</span>
-      <span class="fire-fate serif fire-fate-hero">Or it finds fuel. And it burns <em>clean.</em></span>
-    </div>
-
-    <!-- 6–7: Campfire and smoke -->
-    <div class="junoon-campfire-grid">
-      <div class="junoon-campfire-text">
-        <p class="junoon-p">In Pakistan, a campfire means two things simultaneously: survival and hospitality. You build one to stay warm. You build one to welcome strangers. The fire that keeps you alive is the same fire you share with everyone who arrives.</p>
-        <div class="ember-rule"></div>
-        <p class="junoon-p">That's not a coincidence. That's a philosophy.</p>
+    <div style="display:flex;flex-direction:column;gap:40px;">
+      <div style="border-left:1px solid rgba(196,88,10,.3);padding-left:24px;">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:12px;">In exhaustion</span>
+        <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.75);line-height:1.8;margin:0;">When you're done and still going. Not from discipline. From something underneath discipline — something that didn't ask whether you were ready.</p>
       </div>
-      <div class="junoon-smoke-text">
-        <p class="junoon-p">The smoke that rises is the byproduct — of burning, of purifying, of becoming. White and clean or dark and heavy. Either way it dissipates. It always does.</p>
+      <div style="border-left:1px solid rgba(196,88,10,.3);padding-left:24px;">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:12px;">In momentum</span>
+        <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.75);line-height:1.8;margin:0;">When you stop asking whether you should and just move. The question answers itself. You realize you've already decided — you just haven't said it out loud yet.</p>
+      </div>
+      <div style="border-left:1px solid rgba(196,88,10,.3);padding-left:24px;">
+        <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:12px;">In uncertainty</span>
+        <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.75);line-height:1.8;margin:0;">When you don't know what's at the other end and go anyway. Not recklessly. Deliberately. The not-knowing is the point.</p>
       </div>
     </div>
 
-    <!-- 8: Ash / Roman concrete -->
-    <div class="junoon-ash-block">
-      <p class="junoon-ash serif">And even when everything turns to ash — that's not the end. The Romans knew it. Mix ash with lime and you get concrete that outlasts empires. Your ruins are not a conclusion. They're material. Something harder and more permanent gets built from what burned.</p>
-    </div>
+    <div class="ember-rule" style="margin:52px 0"></div>
 
-    <!-- 9–12: Ignition -->
-    <div class="junoon-ignition">
-      <p class="junoon-p">What remains is the quality of what you burned and how well you tended it.</p>
-      <p class="junoon-ignition-spark serif">And some fires don't need more fuel...<br>they need a <em>spark.</em></p>
-      <p class="junoon-p">That moment of ignition when you remember what it felt like to be fully alive — what actually drives you underneath everything you've built on top of it.</p>
-      <p class="junoon-p">That's what the Karakoram does. It doesn't hand you anything. It just removes every comfortable reason not to feel it.</p>
-      <p class="junoon-expedition serif">Junoon: The Karakoram Ignition.</p>
-    </div>
-
+    <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.5);line-height:1.8;margin:0;">Most people feel this once in a while and don't name it. Some build their lives around chasing it. You probably already know which one you are.</p>
   </div>
 </section>
 
 <!-- ─────────────────────────────────────────── -->
-<!-- OUTRO — The Nomad Dictionary continues      -->
+<!-- WHY PAKISTAN                                -->
+<!-- ─────────────────────────────────────────── -->
+<section class="jn-intro-sec" style="border-top:1px solid rgba(196,88,10,.07);">
+  <div class="jn-read-col">
+    <span class="sec-label">Why Pakistan</span>
+    <p class="jn-read-p" style="font-size:clamp(19px,2.2vw,26px);color:var(--parchment);font-weight:300;margin:24px 0 32px;line-height:1.6;">This place forces it out of you.</p>
+    <p class="jn-read-p">Not gently. The scale refuses to let you feel large. The road takes days to build trust. The people are immediate in a way most places aren't — hospitality so specific and unglamorous that it stops you mid-sentence.</p>
+    <p class="jn-read-p" style="margin-top:20px;">You can't coast here. The landscape won't let you stay on autopilot. Every hour on the Karakoram is a negotiation between what you planned and what's actually in front of you.</p>
+    <p class="jn-read-p" style="margin-top:20px;">Which is not a warning. It's the reason.</p>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- BRIDGE                                      -->
 <!-- ─────────────────────────────────────────── -->
 <section class="jn-outro-sec">
   <div class="jn-outro-inner">
-    <p class="jn-outro-p">Every word in the Nomad Dictionary is a doorway.</p>
-    <p class="jn-outro-p">Some doorways open onto fire and mountain passes and roads that cost a thousand lives to build. Some will open onto ice. Onto silence. Onto languages that name things you've felt your whole life without ever having the word for it.</p>
+    <p class="jn-outro-p">The Karakoram Highway was built over twenty years. Hundreds of workers didn't make it out. The road exists because the people who built it had something they couldn't rationally justify — a compulsion to connect two things that had no business being connected.</p>
+    <p class="jn-outro-p">That's junoon.</p>
 
     <span class="jn-outro-arabic" aria-label="Junoon">جنون</span>
     <span class="jn-outro-brought">brought you here.</span>
 
-    <p class="jn-outro-p">The next word is already out there — in a place you haven't been yet, in a language you don't speak, waiting to be felt before it can be explained.</p>
-    <p class="jn-outro-p">The Nomad Dictionary is just getting started.</p>
+    <p class="jn-outro-p" style="margin-top:32px;">This is why the first journey is here.</p>
 
-    <p style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--amber); opacity:0.55; margin-bottom:32px;">Built on Junoon.</p>
-    <div class="jn-outro-pull serif">
-      The expedition that carries this word departs September 19, 2026.<br>
-    </div>
+    <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(212,201,184,.28);margin-top:48px;">The first expedition departs September 19, 2026.</p>
   </div>
 </section>
 
@@ -464,11 +451,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CTA                                         -->
 <!-- ─────────────────────────────────────────── -->
 <div style="background:var(--char);padding:72px 56px;text-align:center;border-top:1px solid rgba(196,88,10,.08);">
-  <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);font-weight:300;color:var(--ash);margin:0 0 8px;">You've felt this. Now you know what it's called.</p>
-  <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,201,184,.55);margin:0 0 28px;">Expedition updates and the next word from the Nomad Dictionary.</p>
-  <a href="#" class="btn-primary" data-modal="email" style="display:inline-block;margin-bottom:20px;">Feed Your Fire →</a>
+  <a href="expedition.html" class="btn-primary" style="display:inline-block;margin-bottom:16px;">See the Expedition →</a>
   <br>
-  <a href="https://tally.so/r/xXNDY9" class="btn-secondary" target="_blank" rel="noopener" style="display:inline-block;">Apply for a Spot →</a>
+  <a href="#" class="btn-secondary" data-modal="email" style="display:inline-block;margin-top:4px;">Stay in the Loop →</a>
 </div>
 
 <!-- ─────────────────────────────────────────── -->
@@ -505,7 +490,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div style="padding: 4px 0 24px;">
               <div class="sib-form-block">
-                <p style="font-size:11px; font-family:'DM Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; color:#7a6e62; background:transparent; text-align:center; margin:0;">The Nomad Dictionary keeps growing. Get the next word before it's on the site.</p>
+                <p style="font-size:11px; font-family:'DM Mono',monospace; letter-spacing:0.16em; text-transform:uppercase; color:#7a6e62; background:transparent; text-align:center; margin:0;">The next word. Before it's on the site.</p>
               </div>
             </div>
             <div style="padding: 8px 0;">
@@ -538,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  Feed Your Fire →
+                  Send the Details →
                 </button>
               </div>
             </div>
@@ -583,7 +568,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
       <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
       <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
-      <button class="modal-submit" type="submit">Feed Your Fire →</button>
+      <button class="modal-submit" type="submit">Send the Details →</button>
       <input type="text" name="email_address_check" value="" style="display:none">
       <input type="hidden" name="locale" value="en">
     </form>

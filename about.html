@@ -33,8 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* ── about.html page-specific styles ── */
 
 .page-hero {
-  min-height: 60vh;
-  max-height: 60vh;
+  min-height: 82vh;
+  max-height: 82vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -193,11 +193,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   margin-bottom: 4px;
 }
 
+/* OPERATIONAL SECTION */
+.about-ops-sec {
+  background: var(--char);
+  padding: 100px 56px;
+  border-top: 1px solid rgba(196,88,10,.06);
+}
+.about-ops-inner {
+  max-width: 640px;
+}
+.about-ops-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.2vw, 44px);
+  color: var(--parchment);
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 12px 0 32px;
+}
+.about-ops-body p {
+  font-size: 15px;
+  color: rgba(212,201,184,.65);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* NOMAD DICTIONARY */
+.about-nomad-sec {
+  background: var(--char);
+  padding: 80px 56px;
+  border-top: 1px solid rgba(196,88,10,.06);
+}
+.about-nomad-inner {
+  max-width: 560px;
+}
+.about-nomad-h {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 2.5vw, 34px);
+  color: var(--heat);
+  font-weight: 300;
+  line-height: 1.15;
+  margin: 12px 0 20px;
+}
+.about-nomad-body {
+  font-size: 15px;
+  color: rgba(212,201,184,.6);
+  line-height: 1.85;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
 @media(max-width:960px) {
-  .page-hero { padding: 0 24px 72px; min-height: 44vh; }
+  .page-hero { padding: 0 24px 72px; min-height: 72vh; }
   .about-contact-sec { padding: 72px 24px; }
   .about-contact-inner { grid-template-columns: 1fr; gap: 48px; }
   .page-end-nav { padding: 60px 24px; }
+  .about-ops-sec { padding: 72px 24px; }
+  .about-nomad-sec { padding: 60px 24px; }
 }
 </style>
 <!-- Brevo Form Styles -->
@@ -274,8 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <section class="page-hero">
   <div class="page-hero-inner">
-    <span class="sec-label" style="margin-bottom:20px;">Who Leads This</span>
-    <h1 class="page-hero-h1">Saad<br>Bashir</h1>
+    <h1 class="page-hero-h1">Saad</h1>
     <p class="page-hero-sub">The road he's taken to get here.</p>
   </div>
 </section>
@@ -290,25 +341,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="about-h2 serif">How Did We<br>Get Here?</h2>
 
       <div class="about-body">
-        <p>I grew up Pakistani-American in the deep south post-9/11 — which meant spending a long time feeling like I belonged fully to neither world, before realizing that was exactly the point. Being a bridge between identities teaches you things about connection that belonging to only one side never could.</p>
+        <p>I've hitchhiked nearly every corner of Pakistan and spent years in the country across multiple trips. The north — Gilgit-Baltistan, the KKH corridor and beyond — I've been through several times, unhurried. I know the route well past where this expedition's itinerary ends. Junoon isn't a name I chose for a brand. It's a word I've carried since my first time through the north.</p>
 
-        <p>For about five years I went looking — hard. Hiked the Darién Gap solo. Fished commercially in Alaska. Hitchhiked through the Sudanese revolution. Went to the places most people don't go, for reasons I couldn't fully explain at the time.</p>
+        <p>I'm Pakistani-American. Urdu, Hindi, Punjabi. I move through Pakistan the way neither a Western tourist nor a local operator does — not translating from the outside, not missing what the outside sees. The languages matter. The cultural literacy matters more.</p>
 
-        <p>Then I cooled down. Focused on other things. Started asking why I'd done any of it.</p>
+        <p>The broader record: 93 countries over nine years. Hiked the Darién Gap. Hitchhiked through Sudan during the revolution. A month in Afghanistan. Rode the Pan-American Highway from the American South to Ecuador. Commercial fishing in Alaska every summer since 2020. Non-standard conditions are where I operate best — and where I've learned most of what I know.</p>
 
-        <p>I always felt that pull to just move, to experience and live. Sometimes regular life — with all its restrictions, the logic and reason we tell ourselves — isn't enough. The courage to live on my own terms, to learn, create and connect. That was it.</p>
-
-        <p>The answer kept coming back to the same word.</p>
+        <p>Junoon Journeys has been years in the making. Pakistan's north was always the obvious starting point: tourism just beginning to arrive, a route I know beyond any itinerary, terrain that hasn't been packaged. In early 2026, the timing finally aligned. September 19.</p>
 
         <p class="about-junoon urdu" aria-label="Junoon">جنون</p>
       </div>
 
-      <p class="about-enter-link"><a href="junoon.html" class="btn-secondary">Enter Junoon →</a></p>
     </div>
 
     <div class="about-photo-col">
-      <img src="images/Saad-photo.jpg" alt="Saad Bashir — Junoon Journeys" class="about-photo">
+      <img src="images/saad-photo-2.jpg" alt="Saad Bashir — Junoon Journeys" class="about-photo">
     </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- HOW IT RUNS                                 -->
+<!-- ─────────────────────────────────────────── -->
+<section class="about-ops-sec">
+  <div class="about-ops-inner">
+    <span class="sec-label">How It Runs</span>
+    <h2 class="about-ops-h">Built to run.<br>Not improvised.</h2>
+    <div class="about-ops-body">
+      <p>These expeditions are built with Pakistan Bikers — ten years operating on these specific roads with the bikes, permits, and support infrastructure this terrain demands. They handle the logistics. I design the journey and lead it on the ground.</p>
+      <p>A dedicated support vehicle follows the group for all 15 days. A licensed mechanic rides with us — because on the Karakoram, mechanical problems are a question of when, not if. Accommodations, route coordination, and daily planning are locked before we leave Islamabad.</p>
+      <p>The goal is a journey that feels raw and real — because it is — with the structure behind it that makes that possible safely.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────── -->
+<!-- NOMAD DICTIONARY                            -->
+<!-- ─────────────────────────────────────────── -->
+<section class="about-nomad-sec">
+  <div class="about-nomad-inner">
+    <span class="sec-label">The Nomad Dictionary</span>
+    <h2 class="about-nomad-h">Pakistan is Chapter 1.</h2>
+    <p class="about-nomad-body">Junoon Journeys is the first in a larger series — expeditions built around words that don't fully translate. Words you have to move through to understand. Pakistan is the first. The word is <span class="urdu" style="font-size:1.3em;">جنون</span>. Others will follow.</p>
+    <a href="junoon.html" class="btn-secondary">What is Junoon? →</a>
   </div>
 </section>
 
@@ -323,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="about-contact-links">
       <div class="about-contact-item">
-        <span class="about-contact-label">Email</span>
+        <span class="about-contact-label">Ask a Question</span>
         <a href="mailto:saad@junoonjourneys.com" class="about-contact-val">saad@junoonjourneys.com</a>
       </div>
       <div class="about-contact-item">
@@ -336,7 +411,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="about-contact-item">
         <span class="about-contact-label">Stay in Touch</span>
-        <a href="#" class="about-contact-val" data-modal="email">Feed Your Fire →</a>
+        <a href="#" class="about-contact-val" data-modal="email">Send the Details →</a>
       </div>
     </div>
   </div>
@@ -410,7 +485,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                     <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                   </svg>
-                  Feed Your Fire →
+                  Send the Details →
                 </button>
               </div>
             </div>
@@ -455,7 +530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <form id="modal-form" method="POST" action="https://1a97d748.sibforms.com/serve/MUIFAOFvBAGwnm9zSrw9iIhpsS66RPUzW4Pys_FegMDUi6o9i6HcFHynbLDx3xtX9bj23hMKUYH5QoFpV9NUJGQrM2CAoYek5FKUZIB-ytJ9LhNviRj-H6-6wkxBwczTVTyIdjKuGlzxgKVX8GXqLodK04us5cd-8BH7XNOiLWMF2EAl6mtj3ltMjUwO1m69PucVFfx0qJL1mOJwtw==" data-type="subscription">
       <input class="modal-input" type="text" name="FIRSTNAME" placeholder="Name" required autocomplete="off">
       <input class="modal-input" type="email" name="EMAIL" placeholder="Email" required autocomplete="off">
-      <button class="modal-submit" type="submit">Feed Your Fire →</button>
+      <button class="modal-submit" type="submit">Send the Details →</button>
       <input type="text" name="email_address_check" value="" style="display:none">
       <input type="hidden" name="locale" value="en">
     </form>
