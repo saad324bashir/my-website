@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /confirmation
+Disallow: /privacy
+Disallow: /terms
+Disallow: /feed-the-fire
+
+Sitemap: https://www.junoonjourneys.com/sitemap.xml
