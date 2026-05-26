@@ -378,11 +378,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ─────────────────────────────────────────── -->
 <section class="jn-intro-sec">
   <div class="jn-read-col">
-    <p class="jn-read-p" style="font-size:clamp(19px,2.2vw,26px);color:var(--parchment);font-weight:300;line-height:1.6;margin-bottom:32px;">Some words don't translate. Junoon is one of them.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--parchment);font-weight:300;font-style:italic;line-height:1.5;margin:0 0 32px;">Some words don't translate. Junoon is one of them.</p>
 
     <div class="ember-rule" style="margin:0 0 32px"></div>
 
-    <p class="jn-read-p">The Arabic is جنون. The translation is usually <em>madness</em>. Neither is quite right.</p>
+    <p class="jn-read-p">The Urdu is جنون. The translation is usually <em>madness</em>, or <em>obsession</em>. Neither is quite right.</p>
     <p class="jn-read-p" style="margin-top:20px;">It's the pull that arrives before the plan does. The thing that moved you toward something before you had a good reason — and wouldn't let you stop, even when you did.</p>
     <p class="jn-read-p" style="margin-top:20px;">The Sufi poets named it. Not as a problem. As the most honest signal a person has.</p>
   </div>
@@ -399,7 +399,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="display:flex;flex-direction:column;gap:40px;">
       <div style="border-left:1px solid rgba(196,88,10,.3);padding-left:24px;">
         <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:12px;">In exhaustion</span>
-        <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.75);line-height:1.8;margin:0;">When you're done and still going. Not from discipline. From something underneath discipline — something that didn't ask whether you were ready.</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:15px;color:rgba(212,201,184,.75);line-height:1.8;margin:0;">When you're done and still going. Not from discipline. From something deeper — a warmth that pushes you through anyway.</p>
       </div>
       <div style="border-left:1px solid rgba(196,88,10,.3);padding-left:24px;">
         <span style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember);display:block;margin-bottom:12px;">In momentum</span>
@@ -423,34 +423,203 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="jn-intro-sec" style="border-top:1px solid rgba(196,88,10,.07);">
   <div class="jn-read-col">
     <span class="sec-label">Why Pakistan</span>
-    <p class="jn-read-p" style="font-size:clamp(19px,2.2vw,26px);color:var(--parchment);font-weight:300;margin:24px 0 32px;line-height:1.6;">This place forces it out of you.</p>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,30px);color:var(--parchment);font-weight:300;line-height:1.5;margin:0 0 32px;">This place forces it out of you.</p>
     <p class="jn-read-p">Not gently. The scale refuses to let you feel large. The road takes days to build trust. The people are immediate in a way most places aren't — hospitality so specific and unglamorous that it stops you mid-sentence.</p>
     <p class="jn-read-p" style="margin-top:20px;">You can't coast here. The landscape won't let you stay on autopilot. Every hour on the Karakoram is a negotiation between what you planned and what's actually in front of you.</p>
-    <p class="jn-read-p" style="margin-top:20px;">Which is not a warning. It's the reason.</p>
+    <p class="jn-read-p" style="margin-top:20px;">This is not a warning. It's the reason you're going.</p>
   </div>
 </section>
 
 <!-- ─────────────────────────────────────────── -->
-<!-- BRIDGE                                      -->
+<!-- MEHFIL                                      -->
 <!-- ─────────────────────────────────────────── -->
-<section class="jn-outro-sec">
-  <div class="jn-outro-inner">
-    <p class="jn-outro-p">The Karakoram Highway was built over twenty years. Hundreds of workers didn't make it out. The road exists because the people who built it had something they couldn't rationally justify — a compulsion to connect two things that had no business being connected.</p>
-    <p class="jn-outro-p">That's junoon.</p>
+<style>
+  /* ── Mehfil fire — slow ember breathing ── */
+  @keyframes mf-fire-breathe {
+    0%,100% { filter:drop-shadow(0 0 100px rgba(196,88,10,.44)) drop-shadow(0 0 240px rgba(196,88,10,.18)) brightness(1.00); }
+    50%     { filter:drop-shadow(0 0 160px rgba(232,147,10,.64)) drop-shadow(0 0 340px rgba(196,88,10,.28)) brightness(1.09); }
+  }
+  /* ── Mehfil text — slow, deliberate fade ── */
+  @keyframes mf-text-breathe {
+    0%,100% { opacity:0.80; }
+    50%     { opacity:0.58; }
+  }
+  /* ── Scroll-triggered fade-in ── */
+  .mf-fade {
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity 1.2s ease, transform 1.2s ease;
+  }
+  .mf-fire-fade {
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity 1.6s ease, transform 1.6s ease;
+  }
+  .mehfil-sec.mf-in .mf-fire-fade {
+    opacity:1; transform:translateY(0);
+  }
+  .mehfil-sec.mf-in .mf-fire-fade img {
+    animation:mf-fire-breathe 6s ease-in-out infinite;
+    animation-delay:1.8s;
+  }
+  .mehfil-sec.mf-in .mf-d1 { opacity:1; transform:translateY(0); transition-delay:.3s; }
+  .mehfil-sec.mf-in .mf-d2 { opacity:1; transform:translateY(0); transition-delay:.7s; }
+  .mehfil-sec.mf-in .mf-d3 { opacity:1; transform:translateY(0); transition-delay:.9s; }
+  .mehfil-sec.mf-in .mf-d4 { opacity:1; transform:translateY(0); transition-delay:1.2s; }
+  .mehfil-sec.mf-in .mf-d5 { opacity:1; transform:translateY(0); transition-delay:1.5s; }
+  /* Slow breathing — different offsets so nothing pulses together */
+  .mehfil-sec.mf-in .mf-ta { animation:mf-text-breathe 9s ease-in-out infinite; animation-delay:2.4s; }
+  .mehfil-sec.mf-in .mf-tb { animation:mf-text-breathe 11s ease-in-out infinite; animation-delay:5.2s; }
+  .mehfil-sec.mf-in .mf-tc { animation:mf-text-breathe 8s ease-in-out infinite; animation-delay:7.0s; }
+  /* ── Layout ── */
+  .mehfil-sec {
+    background:var(--char);
+    min-height:94vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:52px 56px 60px;
+    border-top:1px solid rgba(196,88,10,.07);
+    position:relative;
+    overflow:visible;
+  }
+  .mehfil-sec::before {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:radial-gradient(ellipse 60% 50% at 50% 48%, rgba(196,88,10,.06) 0%, transparent 70%);
+    pointer-events:none;
+    z-index:0;
+  }
+  .mehfil-sec > * { position:relative; z-index:1; }
+  .mf-eyebrow {
+    font-family:'DM Mono',monospace;
+    font-size:11px;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--ember);
+    text-align:center;
+    margin:0 0 40px;
+  }
+  .mf-stage {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    width:100%;
+    max-width:980px;
+    margin:0 auto;
+  }
+  .mf-col { flex:1; max-width:210px; }
+  .mf-col-left  { text-align:right; }
+  .mf-col-right { text-align:left; }
+  .mf-line {
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(17px,1.75vw,23px);
+    color:rgba(212,201,184,.80);
+    font-style:italic;
+    font-weight:300;
+    line-height:2.1;
+    margin:0;
+  }
+  .mf-center-col {
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .mf-img {
+    width:clamp(280px,36vw,460px);
+    height:auto;
+    display:block;
+  }
+  .mf-murmur {
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(14px,1.4vw,18px);
+    color:rgba(212,201,184,.48);
+    font-style:italic;
+    font-weight:300;
+    line-height:1.9;
+    margin:14px 0 0;
+    text-align:center;
+    max-width:280px;
+  }
+  .mf-bottom {
+    text-align:center;
+    margin-top:28px;
+    width:100%;
+  }
+  .mf-divider {
+    width:32px; height:1px;
+    background:linear-gradient(to right, var(--ember-deep), var(--flame));
+    margin:0 auto 28px;
+  }
+  .mf-title {
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(22px,2.4vw,32px);
+    color:var(--parchment);
+    font-weight:300;
+    font-style:italic;
+    line-height:1.4;
+    margin:0;
+  }
+  .mf-title .mf-word {
+    color:var(--amber);
+    text-shadow:0 0 40px rgba(232,147,10,.40);
+  }
+  @media(max-width:768px) {
+    .mehfil-sec { padding:72px 24px; min-height:auto; }
+    .mf-stage   { flex-direction:column; gap:8px; }
+    .mf-col     { max-width:100%; text-align:center !important; }
+    .mf-img     { width:clamp(200px,58vw,290px); }
+    .mf-eyebrow { margin-bottom:40px; }
+  }
+</style>
 
-    <span class="jn-outro-arabic" aria-label="Junoon">جنون</span>
-    <span class="jn-outro-brought">brought you here.</span>
+<section class="mehfil-sec" id="mehfil">
 
-    <p class="jn-outro-p" style="margin-top:32px;">This is why the first journey is here.</p>
+  <p class="mf-eyebrow mf-fade mf-d1">Every day ends the same way.</p>
 
-    <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(212,201,184,.28);margin-top:48px;">The first expedition departs September 19, 2026.</p>
+  <div class="mf-stage">
+
+    <div class="mf-col mf-col-left mf-fade mf-d2">
+      <p class="mf-line mf-ta">
+        You're cold.<br>Cleaned up.<br>Fed.
+      </p>
+    </div>
+
+    <div class="mf-center-col mf-fire-fade">
+      <img src="images/junoon-campfire-3-transparent.png" alt="" aria-hidden="true" class="mf-img">
+      <p class="mf-murmur mf-tb">
+        The road gets quiet.<br>The questions don't.
+      </p>
+    </div>
+
+    <div class="mf-col mf-col-right mf-fade mf-d3">
+      <p class="mf-line mf-tb">
+        Someone lights the fire.<br>Chai is poured.
+      </p>
+    </div>
+
   </div>
+
+  <div class="mf-bottom mf-fade mf-d5">
+    <div class="mf-divider mf-fade mf-d4"></div>
+    <p class="mf-title mf-tc">
+      This is the <span class="mf-word">Mehfil</span>.
+    </p>
+  </div>
+
 </section>
 
 <!-- ─────────────────────────────────────────── -->
 <!-- CTA                                         -->
 <!-- ─────────────────────────────────────────── -->
-<div style="background:var(--char);padding:72px 56px;text-align:center;border-top:1px solid rgba(196,88,10,.08);">
+<div style="background:var(--char-warm);padding:88px 56px;text-align:center;border-top:1px solid rgba(196,88,10,.08);">
+  <img src="images/junoon-calli-cta.png" alt="جنون" style="width:clamp(100px,14vw,160px);height:auto;display:block;margin:0 auto 12px;filter:drop-shadow(0 0 24px rgba(196,88,10,.35));opacity:.92;">
+  <span style="font-family:'Cormorant Garamond',serif;font-size:clamp(16px,1.8vw,22px);color:var(--ash);font-weight:300;font-style:italic;display:block;margin-bottom:12px;">brought you here.</span>
+  <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(212,201,184,.28);margin:0 0 40px;">The first expedition departs September 19, 2026.</p>
   <a href="expedition.html" class="btn-primary" style="display:inline-block;margin-bottom:16px;">See the Expedition →</a>
   <br>
   <a href="#" class="btn-secondary" data-modal="email" style="display:inline-block;margin-top:4px;">Stay in the Loop →</a>
@@ -577,6 +746,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="js/script.js"></script>
+<script>
+  (function() {
+    var sec = document.getElementById('mehfil');
+    if (!sec) return;
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('mf-in');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    obs.observe(sec);
+  })();
+</script>
 <script>
   const hamburger = document.getElementById('navHamburger');
   const mobileMenu = document.getElementById('navMobile');

@@ -188,14 +188,15 @@ nav.scrolled{background:rgba(15,13,11,.93);backdrop-filter:blur(20px);padding:13
 .who-text{font-size:14px;color:var(--ink-muted);line-height:1.7}
 
 /* INCLUDED */
-.inc-sec{background:var(--char-warm);padding:130px 56px;border-top:1px solid rgba(196,88,10,.07)}
+.inc-sec{background:var(--parchment);padding:130px 56px;border-top:1px solid rgba(26,22,18,.08)}
 .inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.inc-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,3.6vw,62px);color:var(--heat);font-weight:300;margin-bottom:30px}
-.inc-row{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid rgba(212,201,184,.05);align-items:flex-start;font-size:13px;color:var(--smoke);line-height:1.55}
+.inc-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,3.6vw,62px);color:var(--ink);font-weight:300;margin-bottom:30px}
+.inc-row{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid rgba(26,22,18,.09);align-items:flex-start;font-size:13px;color:var(--ink-muted);line-height:1.55}
 .inc-row:last-child{border-bottom:none}
-.inc-mark{color:var(--flame);font-size:11px;margin-top:1px;flex-shrink:0}
+.inc-mark{color:var(--ember);font-size:11px;margin-top:1px;flex-shrink:0}
 .inc-not{color:var(--smoke);font-size:11px;margin-top:1px;flex-shrink:0}
-.inc-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--ash);margin-top:28px;margin-bottom:12px;display:block}
+.inc-sub{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-muted);margin-top:28px;margin-bottom:12px;display:block}
+.inc-sec .sec-label{color:var(--ember-deep)}
 
 /* INVESTMENT */
 .inv-sec{background:var(--parchment);padding:130px 56px}
