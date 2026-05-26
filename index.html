@@ -590,31 +590,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="js/script.js"></script>
-<script>
-  const hamburger = document.getElementById('navHamburger');
-  const mobileMenu = document.getElementById('navMobile');
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    mobileMenu.style.display = 'flex';
-    requestAnimationFrame(() => {
-      mobileMenu.classList.toggle('open', !isOpen);
-      hamburger.classList.toggle('open', !isOpen);
-      hamburger.setAttribute('aria-expanded', String(!isOpen));
-      document.body.style.overflow = isOpen ? '' : 'hidden';
-    });
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
-    });
-  });
-</script>
 <!-- Brevo Form Script -->
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
@@ -639,26 +615,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var closeBtn = document.getElementById('modalClose');
   var form = document.getElementById('modal-form');
   var successMsg = document.getElementById('modalSuccess');
-
-  function openModal(e) {
-    if (e) e.preventDefault();
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal() {
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('[data-modal="email"]').forEach(function(el) {
-    el.addEventListener('click', openModal);
-  });
+  function openModal(e) { if (e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  document.querySelectorAll('[data-modal="email"]').forEach(function(el){ el.addEventListener('click', openModal); });
   closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) closeModal();
-  });
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
   if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form)}).then(function(){ form.style.display='none'; successMsg.style.display='block'; }).catch(function(){ }); }); }
 })();

@@ -729,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <!-- EMAIL MODAL -->
-<div id="emailModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+<div id="emailModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Stay in the loop">
   <div class="modal-box">
     <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
     <p class="modal-heading">Feed Your Fire</p>
@@ -746,78 +746,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script src="js/script.js"></script>
-<script>
-  (function() {
-    var sec = document.getElementById('mehfil');
-    if (!sec) return;
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          e.target.classList.add('mf-in');
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    obs.observe(sec);
-  })();
-</script>
-<script>
-  const hamburger = document.getElementById('navHamburger');
-  const mobileMenu = document.getElementById('navMobile');
-
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    mobileMenu.style.display = 'flex';
-    requestAnimationFrame(() => {
-      mobileMenu.classList.toggle('open', !isOpen);
-      hamburger.classList.toggle('open', !isOpen);
-      hamburger.setAttribute('aria-expanded', String(!isOpen));
-      document.body.style.overflow = isOpen ? '' : 'hidden';
-    });
-  });
-
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
-    });
-  });
-</script>
-<!-- Brevo Form Script -->
-<script>
-  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-  window.LOCALE = 'en';
-  window.EMAIL_INVALID_MESSAGE = "That doesn't look like a valid email. Try again.";
-  window.REQUIRED_ERROR_MESSAGE = "Drop your info in first.";
-  window.GENERIC_INVALID_MESSAGE = "That doesn't look right. Try again.";
-  window.translation = {
-    common: {
-      selectedList: '{quantity} list selected',
-      selectedLists: '{quantity} lists selected',
-      selectedOption: '{quantity} selected',
-      selectedOptions: '{quantity} selected',
-    }
-  };
-  var AUTOHIDE = Boolean(0);
-</script>
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-<script>
-(function () {
-  var modal = document.getElementById('emailModal');
-  var closeBtn = document.getElementById('modalClose');
-  var form = document.getElementById('modal-form');
-  var successMsg = document.getElementById('modalSuccess');
-  function openModal(e) { if (e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
-  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
-  document.querySelectorAll('[data-modal="email"]').forEach(function(el){ el.addEventListener('click', openModal); });
-  closeBtn.addEventListener('click', closeModal);
-  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
-  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form)}).then(function(){ form.style.display='none'; successMsg.style.display='block'; }).catch(function(){ }); }); }
-})();
-</script>
 </body>
 </html>
