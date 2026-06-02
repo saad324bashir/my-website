@@ -165,6 +165,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 @media(max-width:960px) {
   .hero-spec-bar { display: none; }
 }
+
+/* ── Mobile Floating CTA Bar ── */
+.mobile-cta-bar {
+  display: none;
+}
+@media(max-width:960px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(10,8,6,0.94);
+    border-top: 1px solid rgba(196,88,10,.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 16px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    gap: 10px;
+    align-items: center;
+  }
+  .mobile-cta-details {
+    flex: 1;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: rgba(212,201,184,.6);
+    text-decoration: none;
+    padding: 11px 0;
+    border: 1px solid rgba(212,201,184,.14);
+    transition: color .2s, border-color .2s;
+  }
+  .mobile-cta-details:hover { color: var(--amber); border-color: rgba(196,88,10,.4); }
+  .mobile-cta-apply {
+    flex: 1.4;
+    text-align: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--char);
+    background: var(--amber);
+    text-decoration: none;
+    padding: 12px 0;
+    transition: background .2s;
+    font-weight: 500;
+  }
+  .mobile-cta-apply:hover { background: var(--flame); }
+  /* Push footer content above the bar */
+  body { padding-bottom: 68px; }
+}
 </style>
 <!-- Brevo Form Styles -->
 <style>
@@ -586,6 +640,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </form>
     <p class="modal-success" id="modalSuccess">The fire's lit. We'll see you on the road.</p>
   </div>
+</div>
+
+<!-- MOBILE FLOATING CTA BAR -->
+<div class="mobile-cta-bar" aria-label="Quick actions">
+  <a href="#" class="mobile-cta-details" data-modal="email">Send Details</a>
+  <a href="https://tally.so/r/xXNDY9" class="mobile-cta-apply" target="_blank" rel="noopener">Apply →</a>
 </div>
 
 <script src="js/script.js"></script>
