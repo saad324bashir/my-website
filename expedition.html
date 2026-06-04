@@ -881,4 +881,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- MOBILE FLOATING CTA BAR -->
 <div class="mobile-cta-bar" aria-label="Quick actions">
-  <a href="#" class="mobile-cta-details" data-modal="email">Send D
+  <a href="#" class="mobile-cta-details" data-modal="email">Send Details</a>
+  <a href="https://tally.so/r/xXNDY9" class="mobile-cta-apply" target="_blank" rel="noopener">Apply →</a>
+</div>
+
+<script src="js/script.js"></script>
+
+<!-- Brevo Form Script -->
+<script>
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = "That doesn't look like a valid email. Try again.";
+  window.REQUIRED_ERROR_MESSAGE = "Drop your info in first.";
+  window.GENERIC_INVALID_MESSAGE = "That doesn't look right. Try again.";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script>
+(function () {
+  var modal = document.getElementById('emailModal');
+  var closeBtn = document.getElementById('modalClose');
+  var form = document.getElementById('modal-form');
+  var successMsg = document.getElementById('modalSuccess');
+  function openModal(e) { if (e) e.preventDefault(); modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
+  function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  document.querySelectorAll('[data-modal="email"]').forEach(function(el){ el.addEventListener('click', openModal); });
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+  if (form) { form.addEventListener('submit', function(e){ e.preventDefault(); fetch(form.action,{method:'POST',body:new FormData(form)}).then(function(){ form.style.display='none'; successMsg.style.display='block'; }).catch(function(){ }); }); }
+})();
+</script>
+</body>
+</html>
+                                                                                              
