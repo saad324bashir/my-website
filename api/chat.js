@@ -102,12 +102,12 @@ const KNOWLEDGE_BASE = `# KNOWLEDGE BASE — Junoon: The Karakoram Ignition
 - Fuel for the full route
 - 4x4 support vehicle throughout, with licensed mechanic
 - English-speaking local guide
-- Breakfast and dinner daily
+- Breakfast and dinner daily (lunches are not included)
 - All accommodation — guesthouses chosen for character and location, not stars
 - All permits, national park fees, road tolls
 - Daily route briefings and nightly group sessions
 - Airport pickup and drop-off in Islamabad
-- First expedition only: a custom Junoon Journeys leather jacket, and the Skardu → Islamabad return flight — over the same peaks you spent two weeks riding beneath
+- First expedition only: a custom Junoon Journeys leather jacket, and the domestic Skardu → Islamabad flight at the end of the expedition (the internal leg back to Islamabad, over the same peaks you spent two weeks riding beneath — not an international flight home)
 
 ## Not included
 
@@ -165,6 +165,11 @@ NOT FOR: anyone wanting a packaged, frictionless holiday; beginners or unlicense
 6. Prep packet: gear list, packing guide, visa guidance, route detail.
 7. Balance ($2,450) due August 15.
 8. September 19 — Islamabad. The road begins.
+
+## Precision — never paraphrase these loosely
+
+- Meals: breakfast and dinner only. Never say "all meals" or imply lunch is covered — lunches are excluded.
+- Included flight: only the domestic Skardu → Islamabad flight at the end of the expedition. Never call it a "flight home," a "return flight home," or imply international flights are included — they are not.
 
 ## NOT FINALIZED — never state as fact, always route to application or email
 
