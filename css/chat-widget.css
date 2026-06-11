@@ -1,0 +1,230 @@
+/* Junoon Trip Guide — chat widget. Matches site palette/fonts from css/style.css.
+   Scoped under #jn-chat to avoid touching any existing styles. */
+
+#jn-chat,
+#jn-chat * { box-sizing: border-box; }
+
+/* ── Launcher button ── */
+#jn-chat-launch {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: var(--ember, #C4580A);
+  color: var(--heat, #FDF0DC);
+  border: 1px solid var(--ember, #C4580A);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .25s, transform .25s, opacity .2s;
+  box-shadow: 0 6px 24px rgba(0,0,0,.45);
+}
+#jn-chat-launch:hover { background: var(--flame, #E8930A); transform: translateY(-1px); }
+#jn-chat-launch .jn-launch-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--heat, #FDF0DC);
+  box-shadow: 0 0 8px rgba(253,240,220,.8);
+}
+#jn-chat.open #jn-chat-launch { opacity: 0; pointer-events: none; }
+
+/* ── Panel ── */
+#jn-chat-panel {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 901;
+  width: 380px;
+  max-width: calc(100vw - 48px);
+  height: 560px;
+  max-height: calc(100vh - 48px);
+  display: none;
+  flex-direction: column;
+  background: var(--char-warm, #1C1814);
+  border: 1px solid rgba(196,88,10,.22);
+  box-shadow: 0 18px 60px rgba(0,0,0,.6);
+  overflow: hidden;
+}
+#jn-chat.open #jn-chat-panel { display: flex; }
+
+/* ── Header ── */
+#jn-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  background: var(--char, #0F0D0B);
+  border-bottom: 1px solid rgba(196,88,10,.18);
+}
+#jn-chat-header .jn-h-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--heat, #FDF0DC);
+  line-height: 1;
+}
+#jn-chat-header .jn-h-sub {
+  display: block;
+  margin-top: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--flame, #E8930A);
+}
+#jn-chat-close {
+  background: none;
+  border: none;
+  color: rgba(212,201,184,.5);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: color .2s;
+}
+#jn-chat-close:hover { color: var(--amber, #F0B445); }
+
+/* ── Message log ── */
+#jn-chat-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(196,88,10,.05), transparent 60%),
+    var(--char-warm, #1C1814);
+}
+#jn-chat-log::-webkit-scrollbar { width: 8px; }
+#jn-chat-log::-webkit-scrollbar-thumb { background: rgba(196,88,10,.22); }
+
+.jn-msg {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 300;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 86%;
+}
+.jn-msg a {
+  color: var(--amber, #F0B445);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.jn-msg-bot {
+  align-self: flex-start;
+  color: var(--parchment, #D4C9B8);
+}
+.jn-msg-user {
+  align-self: flex-end;
+  color: var(--heat, #FDF0DC);
+  background: rgba(196,88,10,.16);
+  border: 1px solid rgba(196,88,10,.22);
+  padding: 9px 13px;
+}
+
+/* Typing indicator */
+.jn-typing { display: inline-flex; gap: 4px; align-items: center; padding: 2px 0; }
+.jn-typing span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--flame, #E8930A);
+  opacity: .4;
+  animation: jn-blink 1.2s infinite;
+}
+.jn-typing span:nth-child(2) { animation-delay: .2s; }
+.jn-typing span:nth-child(3) { animation-delay: .4s; }
+@keyframes jn-blink { 0%,100%{opacity:.25} 50%{opacity:1} }
+
+/* ── Suggestion chips ── */
+#jn-chat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 18px 14px;
+}
+.jn-chip {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--parchment, #D4C9B8);
+  background: transparent;
+  border: 1px solid rgba(212,201,184,.18);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+}
+.jn-chip:hover { border-color: rgba(196,88,10,.5); color: var(--amber, #F0B445); }
+
+/* ── Input row ── */
+#jn-chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid rgba(196,88,10,.16);
+  background: var(--char, #0F0D0B);
+}
+#jn-chat-input {
+  flex: 1;
+  resize: none;
+  background: var(--char-warm, #1C1814);
+  border: 1px solid rgba(212,201,184,.16);
+  color: var(--parchment, #D4C9B8);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 10px 12px;
+  max-height: 96px;
+  outline: none;
+}
+#jn-chat-input:focus { border-color: rgba(196,88,10,.45); }
+#jn-chat-input::placeholder { color: rgba(212,201,184,.4); }
+#jn-chat-input:disabled { opacity: .5; }
+#jn-chat-send {
+  flex: 0 0 auto;
+  align-self: stretch;
+  padding: 0 16px;
+  background: var(--ember, #C4580A);
+  color: var(--heat, #FDF0DC);
+  border: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .2s;
+}
+#jn-chat-send:hover { background: var(--flame, #E8930A); }
+#jn-chat-send:disabled { opacity: .4; cursor: default; }
+
+#jn-chat-disclaimer {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(212,201,184,.28);
+  text-align: center;
+  padding: 0 12px 10px;
+  background: var(--char, #0F0D0B);
+}
+
+/* ── Mobile: full-screen panel ── */
+@media (max-width: 600px) {
+  #jn-chat-panel {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    bottom: 0;
+    right: 0;
+    border: none;
+  }
+  #jn-chat-launch {
+    bottom: 76px; /* clear the site's mobile CTA bar */
+    right: 16px;
+  }
+}
