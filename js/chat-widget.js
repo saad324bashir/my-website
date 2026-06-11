@@ -12,7 +12,7 @@
   var APPLY_URL = 'https://tally.so/r/xXNDY9';
   var EMAIL = 'saad@junoonjourneys.com';
 
-  var GREETING = "I'm the Junoon Trip Guide — an AI assistant for this expedition. Ask me about the route, what's included, who it's for, or how to apply.";
+  var GREETING = "I'm the Junoon Expedition Guide — an AI assistant for this expedition. Ask me about the route, what's included, who it's for, or how to apply.";
   var CAP_MESSAGE = "That's a lot of road covered. For the rest: apply at " + APPLY_URL + " or email " + EMAIL + ".";
   var FALLBACK_MESSAGE = "The guide is offline right now. Email " + EMAIL + " — replies resume late July — or apply at " + APPLY_URL + ".";
 
@@ -150,16 +150,16 @@
     root = el('div', null, { id: 'jn-chat' });
 
     // Launcher
-    var launch = el('button', null, { id: 'jn-chat-launch', 'aria-label': 'Open the Trip Guide' });
-    launch.innerHTML = '<span class="jn-launch-dot"></span>Trip Guide';
+    var launch = el('button', null, { id: 'jn-chat-launch', 'aria-label': 'Open the Expedition Guide' });
+    launch.innerHTML = '<span class="jn-launch-dot"></span>Expedition Guide';
     launch.addEventListener('click', open);
 
     // Panel
-    panel = el('div', null, { id: 'jn-chat-panel', role: 'dialog', 'aria-label': 'Junoon Trip Guide' });
+    panel = el('div', null, { id: 'jn-chat-panel', role: 'dialog', 'aria-label': 'Junoon Expedition Guide' });
 
     var header = el('div', null, { id: 'jn-chat-header' });
     var titleWrap = el('div');
-    titleWrap.innerHTML = '<span class="jn-h-title">Trip Guide</span><span class="jn-h-sub">AI assistant</span>';
+    titleWrap.innerHTML = '<span class="jn-h-title">Expedition Guide</span><span class="jn-h-sub">AI assistant</span>';
     var closeBtn = el('button', null, { id: 'jn-chat-close', 'aria-label': 'Close' });
     closeBtn.innerHTML = '&times;';
     closeBtn.addEventListener('click', close);
